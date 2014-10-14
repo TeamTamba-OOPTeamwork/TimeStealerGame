@@ -1,0 +1,10 @@
+E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.exe.config
+E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.exe
+E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.pdb
+E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.Form1.resources
+E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.Properties.Resources.resources
+E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csproj.GenerateResource.Cache
+E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.exe
+E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.pdb
+E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csprojResolveAssemblyReference.cache
+E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.Form.resources
