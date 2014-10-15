@@ -9,7 +9,7 @@ namespace TeamworkTAMBA
 
     public class Teamwork : Enemy
     {
-        public Teamwork(Image image,Point location,Char id) :
+        public Teamwork(Image image,Point location,int id) :
             base(image,location,id)
         {
             

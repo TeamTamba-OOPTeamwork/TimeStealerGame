@@ -9,7 +9,7 @@ namespace TeamworkTAMBA
 
     public class Tedi : Firend
     {
-        public Tedi(Image image,Point location,Char id) :
+        public Tedi(Image image,Point location,int id) :
             base(image,location,id)
         {
             

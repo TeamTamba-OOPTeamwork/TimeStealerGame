@@ -9,7 +9,7 @@ namespace TeamworkTAMBA
 
     public class Furniture : StaticObjects
     {
-        public Furniture(Image image,Point location,Char id) :
+        public Furniture(Image image,Point location,int id) :
             base(image,location,id)
         {
             

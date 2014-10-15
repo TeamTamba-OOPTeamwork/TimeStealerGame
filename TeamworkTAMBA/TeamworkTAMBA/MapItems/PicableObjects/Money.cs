@@ -9,7 +9,7 @@ namespace TeamworkTAMBA
 
     public class Money : PicableObjects
     {
-        public Money(Image image,Point location,Char id) :
+        public Money(Image image,Point location,int id) :
             base(image,location,id)
         {
             

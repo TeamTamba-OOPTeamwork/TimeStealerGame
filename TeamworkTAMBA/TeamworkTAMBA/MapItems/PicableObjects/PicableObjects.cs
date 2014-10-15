@@ -9,7 +9,7 @@ namespace TeamworkTAMBA
 
     public class PicableObjects : MapItems
     {
-        public PicableObjects(Image image,Point location,Char id) :
+        public PicableObjects(Image image,Point location,int id) :
             base(image,location,id)
         {
             

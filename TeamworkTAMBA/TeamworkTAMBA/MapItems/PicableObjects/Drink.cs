@@ -9,7 +9,7 @@ namespace TeamworkTAMBA
 
     public class Drink : PicableObjects
     {
-        public Drink(Image image,Point location,Char id) :
+        public Drink(Image image,Point location,int id) :
             base(image,location,id)
         {
             

@@ -9,7 +9,7 @@ namespace TeamworkTAMBA
 
     public class Didko : Firend
     {
-        public Didko(Image image,Point location,Char id) :
+        public Didko(Image image,Point location,int id) :
             base(image,location,id)
         {
             

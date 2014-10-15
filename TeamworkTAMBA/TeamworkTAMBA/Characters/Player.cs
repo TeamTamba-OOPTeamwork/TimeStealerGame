@@ -1,22 +1,15 @@
 ﻿namespace TeamworkTAMBA
 {
     using System.Drawing;
+    using System.Windows.Forms;
 
     public class Player : Characters
     {
-        enum Position
+        public PictureBox PictureBoxPlayer { get; set; }
+        public Player(PictureBox picture = null, int id = 0) :
+            base(new Bitmap("index.jpg"),new Point(0,0), id)
         {
-            Left, Right, Up, Down
+            this.PictureBoxPlayer = picture;
         }
-        public Player() :
-            base(new Bitmap("index.jpg"),new Point(0,0), 'p')
-        {
-        }
-
-        //public void Move(int x, int y)
-        //{
-        //    location.X += x * Map.mapCellSize;
-        //    location.Y += x * Map.mapCellSize;
-        //}
     }
 }

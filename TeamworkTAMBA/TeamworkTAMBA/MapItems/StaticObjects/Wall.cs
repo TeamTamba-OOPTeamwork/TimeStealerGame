@@ -9,7 +9,7 @@ namespace TeamworkTAMBA
 
     public class Wall : StaticObjects
     {
-        public Wall(Image image,Point location,Char id) :
+        public Wall(Image image,Point location,int id) :
             base(image,location,id)
         {
             

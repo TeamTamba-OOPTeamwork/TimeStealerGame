@@ -9,7 +9,7 @@ namespace TeamworkTAMBA
 
     public class Vlado : Firend
     {
-        public Vlado(Image image,Point location,Char id) :
+        public Vlado(Image image,Point location,int id) :
             base(image,location,id)
         {
             

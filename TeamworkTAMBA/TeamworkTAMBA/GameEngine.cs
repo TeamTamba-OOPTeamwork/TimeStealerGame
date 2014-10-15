@@ -5,7 +5,6 @@
 
     public class GameEngine
     {
-        private Map map;
 
         private Player player;
 
@@ -18,20 +17,12 @@
             gameForm = form;
             gameForm.Width = 420; //Map.mapRowSize * Map.mapCellSize;
             gameForm.Height = 430; //Map.mapColSize * Map.mapCellSize;
-            
-            map = new Map(gameForm);
-            
 
+            this.Map = new Map(@"C:\Users\zonta_000\Desktop\map.txt");
+            this.Map.DrawMap(gameForm);
         }
 
         public Player Player { get; set; }
         public Map Map { get; set; }
-
-        //void Draw()
-        //{
-        //    Graphics device;
-        //    Image img = new Bitmap(gameForm.Width,gameForm.Height);
-        //    device = Graphics.FromImage(img);
-        //}
     }
 }

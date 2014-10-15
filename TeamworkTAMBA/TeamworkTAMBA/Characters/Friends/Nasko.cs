@@ -9,7 +9,7 @@ namespace TeamworkTAMBA
 
     public class Nasko : Firend
     {
-        public Nasko(Image image,Point location,Char id) :
+        public Nasko(Image image,Point location,int id) :
             base(image,location,id)
         {
             

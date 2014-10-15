@@ -22,9 +22,9 @@ namespace TeamworkTAMBA
             }
         }
 
-        public Char ID { get; set; }
+        public int ID { get; set; }
 
-        public GameObject(Image image, Point location, Char id)
+        public GameObject(Image image, Point location, int id)
         {
             this.Image = image;
             this.Location = location;

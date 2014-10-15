@@ -14,6 +14,7 @@
 
         private List<PictureBox> cells;
 
+        public Player Player { get; set; }  
         public List<PictureBox> Cells
         {
             get
@@ -23,19 +24,24 @@
         }
 
         public List<List<char>> Field { get; set; }
+        public List<Characters> Characters { get; set; } 
         
-        public Map(Form form)
+        public Map(string pathToFile)
         {
             this.Field = new List<List<char>>();
             cells = new List<PictureBox>();
+            Initiaize(pathToFile);
+            this.Player = new Player();
+        }
 
-            Initiaize(@"C:\Users\zonta_000\Desktop\map.txt");
-
+        public void DrawMap(Form form)
+        {
             for (int row = 0; row < mapColSize; row++)
             {
                 for (int col = 0; col < mapRowSize; col++)
                 {
                     PictureBox pb = new PictureBox();
+                    
                     switch (this.Field[col][row])
                     {
                         case '+':
@@ -68,6 +74,7 @@
                 }
             }
         }
+
         public void Initiaize(string file)
         {
             try

@@ -9,7 +9,7 @@ namespace TeamworkTAMBA
 
     public class SuperVlado : Firend
     {
-        public SuperVlado(Image image,Point location,Char id) :
+        public SuperVlado(Image image,Point location,int id) :
             base(image,location,id)
         {
             

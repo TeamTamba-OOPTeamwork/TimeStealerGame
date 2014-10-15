@@ -9,7 +9,7 @@ namespace TeamworkTAMBA
 
     public class Firend : Characters
     {
-        public Firend(Image image,Point location,Char id) :
+        public Firend(Image image,Point location,int id) :
             base(image,location,id)
         {
             

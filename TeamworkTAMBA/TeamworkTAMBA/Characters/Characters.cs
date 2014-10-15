@@ -6,7 +6,7 @@ namespace TeamworkTAMBA
 
     public class Characters : GameObject
     {
-        public Characters(Image image,Point location,Char id) :
+        public Characters(Image image,Point location,int id) :
             base(image,location,id)
         {
             

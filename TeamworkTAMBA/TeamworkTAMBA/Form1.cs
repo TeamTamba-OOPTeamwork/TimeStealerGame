@@ -27,14 +27,50 @@ namespace TeamworkTAMBA
             }
         }
 
-        private void Form1_Paint(object sender, PaintEventArgs e)
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            e.Graphics.DrawImage(new Bitmap("index.jpg"), 430, 430, 40, 40);
-        }
+            if (e.KeyCode == Keys.Left)
+            {
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+            }
+            else if (e.KeyCode == Keys.Right)
+            {
 
+            }
+            else if (e.KeyCode == Keys.Up)
+            {
+
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                foreach (var pictureBox in this.game.Map.Cells)
+                {
+                    pictureBox.Parent = null;
+                }
+
+                var moved = false;
+                for (int i = 0; i < this.game.Map.Field.Count; i++)
+                {
+                    for (int j = 0; j < this.game.Map.Field[i].Count; j++)
+                    {
+                        if (this.game.Map.Field[i][j] == 'p')
+                        {
+                            this.game.Map.Field[i][j] = '+';
+                            this.game.Map.Field[i + 1][j] = 'p';
+                            moved = true;
+                            
+                            break;
+                        }
+                    }
+
+                    if (moved)
+                    {
+                        this.game.Map.DrawMap(this);
+                        break;
+                    }
+                }
+
+            }
         }
 
         

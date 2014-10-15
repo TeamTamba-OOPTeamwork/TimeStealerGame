@@ -9,7 +9,7 @@ namespace TeamworkTAMBA
 
     public class Column : StaticObjects
     {
-        public Column(Image image,Point location,Char id) :
+        public Column(Image image,Point location,int id) :
             base(image,location,id)
         {
             
