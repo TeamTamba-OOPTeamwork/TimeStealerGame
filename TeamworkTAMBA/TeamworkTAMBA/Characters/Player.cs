@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TeamworkTAMBA
+﻿namespace TeamworkTAMBA
 {
+    using System.Drawing;
+
     public class Player : Characters
     {
-        private string name;
-
-        public Player(string name)
+        enum Position
         {
-            this.Name = name;
+            Left, Right, Up, Down
+        }
+        public Player() :
+            base(new Bitmap("index.jpg"),new Point(0,0), 'p')
+        {
         }
 
-        public string Name { get; set; }
+        //public void Move(int x, int y)
+        //{
+        //    location.X += x * Map.mapCellSize;
+        //    location.Y += x * Map.mapCellSize;
+        //}
     }
 }

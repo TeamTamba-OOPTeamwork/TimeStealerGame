@@ -5,7 +5,14 @@ using System.Text;
 
 namespace TeamworkTAMBA
 {
+    using System.Drawing;
+
     public class PicableObjects : MapItems
     {
+        public PicableObjects(Image image,Point location,Char id) :
+            base(image,location,id)
+        {
+            
+        }
     }
 }

@@ -7,4 +7,3 @@ E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.cspr
 E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.exe
 E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.pdb
 E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csprojResolveAssemblyReference.cache
-E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.Form.resources

@@ -1,17 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace TeamworkTAMBA
 {
     using System.Drawing;
+    using System.Windows.Forms;
 
     public class GameObject
     {
+        public Point location;
         public Image Image { get; set; }
 
-        public Point Location { get; set; }
+        public Point Location
+        {
+            get
+            {
+                return this.location;
+            }
+            set
+            {
+                this.location = value;
+            }
+        }
 
         public Char ID { get; set; }
 

@@ -99,7 +99,7 @@
   <Class Name="TeamworkTAMBA.GameObject">
     <Position X="11.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAIAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAgAAAAAIAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>GameObject.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -160,7 +160,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Vlado">
-    <Position X="8.75" Y="5.75" Width="1.5" />
+    <Position X="8.75" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Characters\Friends\Vlado.cs</FileName>
@@ -188,7 +188,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Nakov">
-    <Position X="11.75" Y="2.5" Width="1.5" />
+    <Position X="13.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Characters\Friends\Nakov.cs</FileName>

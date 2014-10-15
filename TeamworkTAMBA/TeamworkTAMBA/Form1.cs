@@ -3,27 +3,40 @@ using System.Windows.Forms;
 
 namespace TeamworkTAMBA
 {
-    using System.Security.Cryptography.X509Certificates;
+    using System.Drawing;
 
     public partial class Form1 : Form
     {
         private GameEngine game;
+
         public Form1()
         {
             InitializeComponent();
-            game = new GameEngine(this);
+            this.game = new GameEngine(this);
+        }
 
-            //Player player = new Player("pesho");
-            //Map map = new Map();
-            //GameEngine engine = new GameEngine(map, player);
-            //map.Initiaize(@"C:\Users\zonta_000\Desktop\map.txt");
+        public GameEngine Game
+        {
+            get
+            {
+                return this.game;
+            }
+            set
+            {
+                this.game = value;
+            }
+        }
 
-
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawImage(new Bitmap("index.jpg"), 430, 430, 40, 40);
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+
+        
     }
 }

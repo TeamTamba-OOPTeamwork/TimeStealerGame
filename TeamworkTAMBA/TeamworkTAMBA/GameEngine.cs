@@ -1,29 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TeamworkTAMBA
+﻿namespace TeamworkTAMBA
 {
+    using System.Drawing;
+    using System.Windows.Forms;
+
     public class GameEngine
     {
         private Map map;
 
         private Player player;
 
-        private Form1 gameForm;
+        private Form gameForm;
 
-        public GameEngine(Form1 form)
+        private Graphics GFX;
+
+        public GameEngine(Form form)
         {
             gameForm = form;
-            gameForm.Width = Map.mapRowSize * Map.mapCellSize;
-            gameForm.Height = Map.mapColSize * Map.mapCellSize;
+            gameForm.Width = 420; //Map.mapRowSize * Map.mapCellSize;
+            gameForm.Height = 430; //Map.mapColSize * Map.mapCellSize;
+            
+            map = new Map(gameForm);
+            
 
-            map = new Map(form);
         }
 
         public Player Player { get; set; }
         public Map Map { get; set; }
+
+        //void Draw()
+        //{
+        //    Graphics device;
+        //    Image img = new Bitmap(gameForm.Width,gameForm.Height);
+        //    device = Graphics.FromImage(img);
+        //}
     }
 }

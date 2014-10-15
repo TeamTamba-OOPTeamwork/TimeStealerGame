@@ -12,22 +12,33 @@
         public int mapRowSize, mapColSize;
         public const int mapCellSize = 40;
 
-        private List<PictureBox> cells; 
+        private List<PictureBox> cells;
+
+        public List<PictureBox> Cells
+        {
+            get
+            {
+                return this.cells;
+            }
+        }
+
         public List<List<char>> Field { get; set; }
         
-        public Map(Form1 form)
+        public Map(Form form)
         {
             this.Field = new List<List<char>>();
             cells = new List<PictureBox>();
 
-            for (int row = 0; row < mapRowSize; row++)
+            Initiaize(@"C:\Users\zonta_000\Desktop\map.txt");
+
+            for (int row = 0; row < mapColSize; row++)
             {
-                for (int col = 0; col < mapColSize; col++)
+                for (int col = 0; col < mapRowSize; col++)
                 {
                     PictureBox pb = new PictureBox();
-                    switch (this.Field[row][col])
+                    switch (this.Field[col][row])
                     {
-                        case '+': 
+                        case '+':
                             break;
                         case '1':
                             pb.BackColor = Color.Gray;
