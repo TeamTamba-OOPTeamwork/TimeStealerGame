@@ -5,11 +5,24 @@
 
     public class Player : Characters
     {
-        public PictureBox PictureBoxPlayer { get; set; }
-        public Player(PictureBox picture = null, int id = 0) :
-            base(new Bitmap("index.jpg"),new Point(0,0), id)
+        // constructor for the Form1
+        public Player(Image image, Point location, int id) :
+            base(image, location, id)
         {
-            this.PictureBoxPlayer = picture;
+            
+        }
+
+        // constructor for the battle form
+        public Player(Image image, int health, int attackPower) :
+            base(image, health, attackPower)
+        {
+
+        }
+
+        public void Move(int x, int y)
+        {
+            this.location.X += x;
+            this.location.Y += y;
         }
     }
 }

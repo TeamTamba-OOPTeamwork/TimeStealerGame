@@ -9,100 +9,93 @@
 
     public class Map
     {
-        public int mapRowSize, mapColSize;
-        public const int mapCellSize = 40;
+        public const int mapTileSize = 40;    
 
-        private List<PictureBox> cells;
-
-        public Player Player { get; set; }  
-        public List<PictureBox> Cells
+        // malko se povtarq koda s Gameobject mojebi moje da se prigodi napravo
+        // toi da se polzva bez structora
+        private struct Tile
         {
-            get
+            public Image img;
+            public Point loc;
+            public bool walkable;
+        }
+
+        private List<Tile> mapTiles;
+
+        public Map(Form form)
+        {
+            mapTiles = new List<Tile>();
+            Initiaize("Level1.txt");
+        }
+
+        public void DrawMap(Graphics device)
+        {
+            foreach (Tile t in mapTiles)
             {
-                return this.cells;
+                device.DrawImage(t.img, t.loc);
             }
         }
 
-        public List<List<char>> Field { get; set; }
-        public List<Characters> Characters { get; set; } 
-        
-        public Map(string pathToFile)
-        {
-            this.Field = new List<List<char>>();
-            cells = new List<PictureBox>();
-            Initiaize(pathToFile);
-            this.Player = new Player();
-        }
-
-        public void DrawMap(Form form)
-        {
-            for (int row = 0; row < mapColSize; row++)
-            {
-                for (int col = 0; col < mapRowSize; col++)
-                {
-                    PictureBox pb = new PictureBox();
-                    
-                    switch (this.Field[col][row])
-                    {
-                        case '+':
-                            break;
-                        case '1':
-                            pb.BackColor = Color.Gray;
-                            break;
-                        case '2':
-                            pb.BackColor = Color.White;
-                            break;
-                        case '@':
-                            pb.BackColor = Color.Red;
-                            break;
-                        case '#':
-                            pb.BackColor = Color.Green;
-                            break;
-                        case 'p':
-                            pb.BackColor = Color.Yellow;
-                            break;
-                        case '!':
-                            pb.BackColor = Color.Blue;
-                            break;
-                        default: break;
-                    }
-                    pb.Width = mapCellSize;
-                    pb.Height = mapCellSize;
-                    pb.Location = new Point(row * mapCellSize, col * mapCellSize);
-                    pb.Parent = form;
-                    this.cells.Add(pb);
-                }
-            }
-        }
-
-        public void Initiaize(string file)
+        // ednovremmeno 4ete ot file red po red i preobrazuva char-ovete v Tile (40X40) ot kartata
+        // TO DO: da se slojat razmera na bloka koito 6te se polzva v igrata
+        // da se narisuva nivoto realno kak 6te izglejda
+        // da se slojat kartinkite i drugite nedvijimi predmeti koito 6te se polzvat
+        private void Initiaize(string mapName)
         {
             try
             {
-                using (StreamReader sr = new StreamReader(file))
+                using (StreamReader sr = new StreamReader(mapName))
                 {
-                    int countRow = 0;
-                    String line = sr.ReadToEnd();
-                    var array  = line.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
-                    mapRowSize = array.Length;
-                    mapColSize = array[0].Length;
-                    foreach (var singleLine in array)
+                    int col = 0;
+                   
+                    while (!sr.EndOfStream)
                     {
-                        List<char> currentRowList = new List<char>();
-                        for (int i = 0; i < singleLine.Length; i++)
+                        string line = sr.ReadLine();
+
+                        for (int row = 0; row < line.Length; row++)
                         {
-                            currentRowList.Add(singleLine[i]);
+                            Tile t = new Tile();
+                            t.loc = new Point(row * mapTileSize, col * mapTileSize);
+                            switch (line[row].ToString())
+                            {
+                                case "+": 
+                                    t.img = new Bitmap("../../Graphics/FloorTile.jpg");
+                                    t.walkable = true; 
+                                    break;
+                                case "-":
+                                    t.img = new Bitmap("../../Graphics/WallTile.jpg");
+                                    t.walkable = false;
+                                    break;
+                                default:
+                                    break;
+                            }
+                            mapTiles.Add(t);
                         }
-                        this.Field.Add(currentRowList);
-                        countRow++;
-                    }
+                        col++;
+                    }                   
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(e.Message);
+            }         
+        }
+        // proverqva kade ima ne6ta prez koito ne se minava
+        // vklu4itelno i ramkite na Formata
+        public bool IsWalkable(Point loc)
+        {
+            foreach (Tile t in mapTiles)
+            {
+                if (t.loc == loc)
+                {
+                    if (t.walkable)
+                    {
+                        return true;
+                    }
+                }
             }
+            return false;
         }
     }
 }

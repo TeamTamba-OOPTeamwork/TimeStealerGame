@@ -7,3 +7,26 @@ E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.cspr
 E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.exe
 E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.pdb
 E:\VisualStudioProjects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csprojResolveAssemblyReference.cache
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\TeamworkTAMBA\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.exe.config
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.exe
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.pdb
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csprojResolveAssemblyReference.cache
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.CombatForm.resources
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.Form1.resources
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.Properties.Resources.resources
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csproj.GenerateResource.Cache
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\TeamworkTAMBA\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.exe
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\TeamworkTAMBA\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.pdb
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\Version2\TeamworkTAMBA\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.exe.config
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\Version2\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.exe
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\Version2\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.pdb
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\Version2\TeamworkTAMBA\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.exe
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\Version2\TeamworkTAMBA\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.pdb
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\Version2\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csprojResolveAssemblyReference.cache
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\Version2\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.CombatForm.resources
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\Version2\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.Form1.resources
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\Version2\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.Properties.Resources.resources
+C:\Users\Vladimir\Documents\Visual Studio 2012\Projects\Version2\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csproj.GenerateResource.Cache
+C:\Users\Vladimir\Documents\GitHub\Game\TeamworkTAMBA\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.exe.config
+C:\Users\Vladimir\Documents\GitHub\Game\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.exe
+C:\Users\Vladimir\Documents\GitHub\Game\TeamworkTAMBA\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.pdb
