@@ -7,7 +7,7 @@ namespace TeamworkTAMBA
 {
     using System.Drawing;
 
-    public class Tedi : Firend
+    public class Tedi : Friend
     {
         public Tedi(Image image,Point location,int id) :
             base(image,location,id)

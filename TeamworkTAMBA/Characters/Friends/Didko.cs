@@ -7,12 +7,12 @@ namespace TeamworkTAMBA
 {
     using System.Drawing;
 
-    public class Didko : Firend
+    public class Didko : Friend
     {
-        public Didko(Image image,Point location,int id) :
-            base(image,location,id)
+        public Didko(Image image, Point location, int id) :
+            base(image, location, id)
         {
-            
+
         }
     }
 }

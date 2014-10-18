@@ -7,7 +7,7 @@ namespace TeamworkTAMBA
 {
     using System.Drawing;
 
-    public class SuperVlado : Firend
+    public class SuperVlado : Friend
     {
         public SuperVlado(Image image,Point location,int id) :
             base(image,location,id)

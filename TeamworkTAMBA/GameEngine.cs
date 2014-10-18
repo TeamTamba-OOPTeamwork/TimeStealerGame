@@ -20,29 +20,21 @@
         private CombatForm combatForm;
         private Form gameForm;
         private List<Enemy> enemies;
-        private PictureBox mapSprites;
+        private List<Friend> friends;
         private bool isInCombat;
-        private Map map;
-        private Graphics device;
+        public Map map;
+        private DrawEngine drawEngine;
 
         public GameEngine(Form form)
         {
-            gameForm = form;
-            map = new Map(gameForm);
-            // TO DO: da se startira pri koliziq s enemy, a ne 
-            // pri puskane na igrata
-
+            this.gameForm = form;
+            this.map = new Map(gameForm);
 
             isInCombat = false;
             Bitmap playerSpr = new Bitmap("../../Graphics/Player.png");
-            player = new Player(playerSpr, new Point(0, 0), 1);
+            this.player = new Player(playerSpr, new Point(0, 0), 1);
 
-            mapSprites = new PictureBox();
 
-            mapSprites.Width = gameForm.Width;
-            mapSprites.Height = gameForm.Height;
-            mapSprites.BackColor = Color.Transparent;
-            mapSprites.Parent = gameForm;
 
             // TO DO: da se iznese v metod i da se mahnat izmislenite kordinati
             // za da se polu4at to4ni kordinati trqbva da sa kratni na goleminata na 1 Tile(40 v momenta)
@@ -52,30 +44,72 @@
                 new Enemy(monsterSpr, new Point(80, 80), 0)
             };
 
-            Draw();
+            this.drawEngine = new DrawEngine(this, gameForm);
+            drawEngine.Draw();
+
+            // Draw();
         }
-
-        // risuva/prerisuva vsi4ko na formata
-        private void Draw()
+        public List<Friend> Friends
         {
-
-            Image img = new Bitmap(gameForm.Width, gameForm.Height); //o4ertava ramkata na PictureBox-a
-            device = Graphics.FromImage(img);
-
-            // kolkoto po nadolu se risuva obekt tolkova po-napred sedi vav formata
-            map.DrawMap(device);
-
-            // risuva celiq list sas jivotni posle 6te se pravi koliziq 
-            // sas sa6tiqt list
-
-            foreach (Enemy en in enemies)
+            get
             {
-                en.Draw(device);
+                return this.friends;
             }
 
-            player.Draw(device);
-            mapSprites.Image = img; // slaga vsi4ki spritove v pictureboxa
+            set
+            {
+                this.friends = value;
+            }
         }
+
+        public List<Enemy> Enemies
+        {
+            get
+            {
+                return this.enemies;
+            }
+
+            set
+            {
+                this.enemies = value;
+            }
+        }
+
+        public Player Player
+        {
+            get
+            {
+                return this.player;
+            }
+
+            set
+            {
+                this.player = value;
+            }
+        }
+
+
+        // risuva/prerisuva vsi4ko na formata
+        //private void Draw()
+        //{
+
+        //    Image img = new Bitmap(gameForm.Width, gameForm.Height); //o4ertava ramkata na PictureBox-a
+        //    device = Graphics.FromImage(img);
+
+        //    // kolkoto po nadolu se risuva obekt tolkova po-napred sedi vav formata
+        //    map.DrawMap(device);
+
+        //    // risuva celiq list sas jivotni posle 6te se pravi koliziq 
+        //    // sas sa6tiqt list
+
+        //    foreach (Enemy en in enemies)
+        //    {
+        //        en.Draw(device);
+        //    }
+
+        //    player.Draw(device);
+        //    mapSprites.Image = img; // slaga vsi4ki spritove v pictureboxa
+        //}
 
         // sybira skorossta na igra4a sas sega6nite mu kordinata i polu4ava novite
         // vrazva se sas Form1.cs za da se dviji po neq
@@ -103,9 +137,12 @@
                 nextMove = new Point(0, playerSpeed);
             }
 
+            // drawEngine.RemoveObject(player);
+
             DetectCollision(nextMove, map);
 
-            Draw();// prerisuva novata poziciq na geroq na kartata
+            //drawEngine.AddObject(player);
+            drawEngine.Draw();
         }
 
         // TO DO: logika za koliziq s jivotnite
@@ -120,16 +157,18 @@
             {
                 player.Move(0, 0);
             }
+
             if (mapItemType is Floor)
             {
                 player.Move(playerNextMove.X, playerNextMove.Y);
             }
+
             if (mapItemType is Floor && mapItemType.ID == 2)
             {
                 player.Location = new Point(FIRST_VISIBLE_CELL, playerNextLocation.Y);
                 map.DrawNextLevel();
-
             }
+
             if (mapItemType is Floor && mapItemType.ID == 1)
             {
                 player.Location = new Point(LAST_VISIBLE_CELL, playerNextLocation.Y);
@@ -137,12 +176,12 @@
 
             }
 
-            //to do same think for friends
+            //to do: same thing for friends
             if (enemy is Enemy)
             {
                 combatForm = new CombatForm();
                 combatForm.Visible = true;
-                enemy.Image = new Bitmap("../../Graphics/FloorTile.jpg");
+                drawEngine.RemoveObject(enemy);
             }
         }
     }

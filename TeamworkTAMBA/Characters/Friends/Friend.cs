@@ -7,12 +7,12 @@ namespace TeamworkTAMBA
 {
     using System.Drawing;
 
-    public class Firend : Characters
+    public class Friend : Characters
     {
-        public Firend(Image image,Point location,int id) :
-            base(image,location,id)
+        public Friend(Image image, Point location, int id) :
+            base(image, location, id)
         {
-            
+
         }
     }
 }
