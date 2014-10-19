@@ -15,7 +15,8 @@ namespace TeamworkTAMBA
         Enemy enemy;
         Player player;
         bool isInCombat;
-        private bool isAlive = true;
+        private bool isEnemyAlive = true;
+        bool isPlayerAlive = true;
 
         // TO DO: da se inicializirat igra4a i gadinata v constructora
         // Da se vikne StartCombat
@@ -32,6 +33,10 @@ namespace TeamworkTAMBA
             Bitmap monsterSpr = new Bitmap("../../Graphics/monster.jpg");
             this.enemy = new Enemy(monsterSpr, 50, 5);
 
+            progressBar2.Maximum = enemy.Health;
+            progressBar1.Maximum = player.Health;
+
+
         }
 
         public void StartCombat(Player player, Enemy enemy)
@@ -39,63 +44,152 @@ namespace TeamworkTAMBA
             isInCombat = true;
 
         }
-
+        
+        //The picture boxes
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-            MessageBox.Show(Combat().ToString());
 
+        //The weapones check boxes
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+            }
+            else
+            {
+                richTextBox1.Text = "You can not fight the Homeworks without programing skills!";
+                checkBox1.Checked = true;
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                player.AttackPower += 10;
+            }
+            else
+            {
+                player.AttackPower -= 10;
+            }
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (checkBox3.Checked)
+            {
+                player.AttackPower += 10;
+            }
+            else
+            {
+                player.AttackPower -= 10;
+            }
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (isAlive)
+            if (checkBox4.Checked)
             {
-                MessageBox.Show(Combat().ToString());
+                player.AttackPower += 10;
             }
             else
             {
-                MessageBox.Show("The homework is dead!");
+                player.AttackPower -= 10;
             }
         }
 
-        private double Combat()
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
-            Refresh();
-            Application.DoEvents();
-            double newEnemyHealth = enemy.Health -= player.AttackPower;
-
-            if (enemy.Health < 1)
+            if (checkBox5.Checked)
             {
-                isAlive = false;
+                player.AttackPower += 10;
             }
-            return newEnemyHealth;
+            else
+            {
+                player.AttackPower -= 10;
+            }
         }
 
-        private void progressBar2_Click(object sender, EventArgs e)
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
-            Refresh();
-            Application.DoEvents();
-            progressBar2.Value = enemy.Health;
+            if (checkBox6.Checked)
+            {
+                player.AttackPower += 10;
+            }
+            else
+            {
+                player.AttackPower -= 10;
+            }
+        }
+
+        //The text box
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+        //The "Do it button"
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (isPlayerAlive && isEnemyAlive)
+            {
+                Combat();
+            }
+            
+        }
+
+        private void Combat()
+        {
+            int playerRandomDamage = RandomDamageGenerator(player.AttackPower);
+            int newEnemyHealth = enemy.Health -= playerRandomDamage;
+            int enemyRandomDamage = RandomDamageGenerator(enemy.AttackPower);
+            int newPlayerHealth = player.Health -= enemyRandomDamage;
+
+            if (enemy.Health > 0)
+            {
+                progressBar2.Value = newEnemyHealth;
+                richTextBox1.Text = "You have hit the homework for " + playerRandomDamage + "\nThe home work now have " + enemy.Health + " health.";
+            }
+            else
+            {
+                progressBar2.Value = progressBar2.Minimum;
+                isEnemyAlive = false;
+                richTextBox1.Text = "You have hit the homework for " + playerRandomDamage + "\nThe homework is dead!";
+                player.Health = newPlayerHealth;
+            }
+
+            if (player.Health > 0)
+            {
+                progressBar1.Value = newPlayerHealth;
+                richTextBox2.Text = "But the Home Work hit you back for " + enemyRandomDamage + 
+                    "\nYou have now " + player.Health + " health";
+            }
+            else
+            {
+                progressBar1.Value = progressBar1.Minimum;
+                isPlayerAlive = false;
+                richTextBox2.Text = "The Homework hit you back for " + enemyRandomDamage +
+                                    "\nYou were killed form a Home work.. You sux!";
+            }
+            
+            //return newEnemyHealth;
+        }
+
+        private int RandomDamageGenerator(int damage)
+        {
+            Random randomDanage = new Random();
+            int currentDamage = randomDanage.Next(1, damage);
+
+            return currentDamage;
         }
     }
 }
