@@ -9,8 +9,8 @@ namespace TeamworkTAMBA
 
     public class SuperVlado : Friend
     {
-        public SuperVlado(Image image,Point location,int id) :
-            base(image,location,id)
+        public SuperVlado(SpriteType spriteType,Point location,int id) :
+            base(spriteType, location, id)
         {
             
         }

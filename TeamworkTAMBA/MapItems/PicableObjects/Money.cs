@@ -9,10 +9,10 @@ namespace TeamworkTAMBA
 
     public class Money : PicableObjects
     {
-        public Money(Image image,Point location,int id) :
-            base(image,location,id)
+        public Money(SpriteType sriteType, Point location, int id) :
+            base(sriteType, location, id)
         {
-            
+
         }
     }
 }

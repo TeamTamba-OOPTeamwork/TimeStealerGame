@@ -55,7 +55,7 @@
     <Compile Include="IDrawable.cs" />
     <Compile Include="MapItems\StaticObjects\Column.cs" />
     <Compile Include="MapItems\StaticObjects\Floor.cs" />
-    <Compile Include="SpiteType.cs" />
+    <Compile Include="SpriteType.cs" />
     <Compile Include="Weapons\CSharp.cs" />
     <Compile Include="Weapons\CSS.cs" />
     <Compile Include="Characters\Friends\Didko.cs" />

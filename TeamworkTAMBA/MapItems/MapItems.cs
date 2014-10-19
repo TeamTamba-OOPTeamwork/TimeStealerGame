@@ -9,8 +9,8 @@ namespace TeamworkTAMBA
 
     public class MapItems : GameObject
     {
-        public MapItems(Image image, Point location, int id) :
-            base(image, location, id)
+        public MapItems(SpriteType sriteType, Point location, int id) :
+            base(sriteType, location, id)
         {
 
         }

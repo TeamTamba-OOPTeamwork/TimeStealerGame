@@ -9,8 +9,8 @@ namespace TeamworkTAMBA
 
     public class Lecture : Enemy
     {
-        public Lecture(Image image,Point location,int id) :
-            base(image,location,id)
+        public Lecture(SpriteType spriteType,Point location,int id) :
+            base(spriteType, location, id)
         {
             
         }

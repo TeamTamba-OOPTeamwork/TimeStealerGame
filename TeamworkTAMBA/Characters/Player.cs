@@ -6,15 +6,15 @@
     public class Player : Characters
     {
         // constructor for the Form1
-        public Player(Image image, Point location, int id) :
-            base(image, location, id)
+        public Player(SpriteType sriteType, Point location, int id) :
+            base(sriteType, location, id)
         {
 
         }
 
         // constructor for the battle form
-        public Player(Image image, int health, int attackPower) :
-            base(image, health, attackPower)
+        public Player(SpriteType sriteType, int health, int attackPower) :
+            base(sriteType, health, attackPower)
         {
 
         }

@@ -12,11 +12,11 @@ namespace TeamworkTAMBA
 {
     public partial class CombatForm : Form
     {
-        Enemy enemy;
-        Player player;
-        bool isInCombat;
+        private Enemy enemy;
+        private Player player;
+        private bool isInCombat;
         private bool isEnemyAlive = true;
-        bool isPlayerAlive = true;
+        private bool isPlayerAlive = true;
 
         // TO DO: da se inicializirat igra4a i gadinata v constructora
         // Da se vikne StartCombat
@@ -24,17 +24,17 @@ namespace TeamworkTAMBA
         // Da se naredqt buttoni i poleta prez Disgna na Formata
         // Da se sloji text box i da se varje s butonite
 
-        public CombatForm()
+        public CombatForm(Player player, Enemy enemy)
         {
             InitializeComponent();
-            var pic = "";
-            Bitmap playerSpr = new Bitmap("../../Graphics/Player.png");
-            this.player = new Player(playerSpr, 100, 10);
-            Bitmap monsterSpr = new Bitmap("../../Graphics/monster.jpg");
-            this.enemy = new Enemy(monsterSpr, 50, 5);
+            this.enemy = enemy;
+            this.enemy.AttackPower = 5;
+            this.player = player;
+            this.player.AttackPower = 10;
 
-            progressBar2.Maximum = enemy.Health;
-            progressBar1.Maximum = player.Health;
+            progressBar2.Maximum = 100;
+            progressBar1.Maximum = 100;
+            progressBar1.Value = player.Health;
 
 
         }
@@ -44,7 +44,7 @@ namespace TeamworkTAMBA
             isInCombat = true;
 
         }
-        
+
         //The picture boxes
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -136,7 +136,7 @@ namespace TeamworkTAMBA
         {
 
         }
-        
+
         //The "Do it button"
         private void button1_Click(object sender, EventArgs e)
         {
@@ -144,7 +144,7 @@ namespace TeamworkTAMBA
             {
                 Combat();
             }
-            
+
         }
 
         private void Combat()
@@ -170,7 +170,7 @@ namespace TeamworkTAMBA
             if (player.Health > 0)
             {
                 progressBar1.Value = newPlayerHealth;
-                richTextBox2.Text = "But the Home Work hit you back for " + enemyRandomDamage + 
+                richTextBox2.Text = "But the Home Work hit you back for " + enemyRandomDamage +
                     "\nYou have now " + player.Health + " health";
             }
             else
@@ -180,7 +180,7 @@ namespace TeamworkTAMBA
                 richTextBox2.Text = "The Homework hit you back for " + enemyRandomDamage +
                                     "\nYou were killed form a Home work.. You sux!";
             }
-            
+
             //return newEnemyHealth;
         }
 
@@ -190,6 +190,11 @@ namespace TeamworkTAMBA
             int currentDamage = randomDanage.Next(1, damage);
 
             return currentDamage;
+        }
+
+        public int GetPlayerHelth()
+        {
+            return this.player.Health;
         }
     }
 }

@@ -9,8 +9,8 @@ namespace TeamworkTAMBA
 
     public class Tedi : Friend
     {
-        public Tedi(Image image,Point location,int id) :
-            base(image,location,id)
+        public Tedi(SpriteType spriteType,Point location,int id) :
+            base(spriteType, location, id)
         {
             
         }

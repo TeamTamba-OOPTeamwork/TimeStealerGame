@@ -44,19 +44,11 @@
             Initiaize("../../Levels/Level" + currentLevel.ToString("0#") + ".txt");
         }
 
-        public void DrowPreviusNextLevel()
+        public void DrawPreviusNextLevel()
         {
             currentLevel--;
             this.MapTiles = new List<GameObject>();
             Initiaize("../../Levels/Level" + currentLevel.ToString("0#") + ".txt");
-        }
-
-        public void DrawMap(Graphics device)
-        {
-            foreach (var t in mapTiles)
-            {
-                device.DrawImage(t.Image, t.Location);
-            }
         }
 
         // ednovremmeno 4ete ot file red po red i preobrazuva char-ovete v Tile (40X40) ot kartata
@@ -84,16 +76,16 @@
                             switch (line[row].ToString())
                             {
                                 case "+":
-                                    item = new Floor(new Bitmap("../../Graphics/FloorTile.jpg"), itemlocation, 0);
+                                    item = new Floor(SpriteType.Floor, itemlocation, 0);
                                     break;
                                 case "-":
-                                    item = new Wall(new Bitmap("../../Graphics/WallTile.jpg"), itemlocation, 0);
+                                    item = new Wall(SpriteType.Wall, itemlocation, 0);
                                     break;
                                 case "n":
-                                    item = new Floor(new Bitmap("../../Graphics/FloorTile.jpg"), itemlocation, 2); //next level
+                                    item = new Floor(SpriteType.Floor, itemlocation, 2); //next level
                                     break;
                                 case "l":
-                                    item = new Floor(new Bitmap("../../Graphics/FloorTile.jpg"), itemlocation, 1); //previus level
+                                    item = new Floor(SpriteType.Floor, itemlocation, 1); //previus level
                                     break;
                                 default:
                                     break;

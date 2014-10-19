@@ -10,8 +10,8 @@ namespace TeamworkTAMBA
 
     class Homework : Enemy
     {
-        public Homework(Image image,Point location,int id) :
-            base(image,location,id)
+        public Homework(SpriteType spriteType,Point location,int id) :
+            base(spriteType,location,id)
         {
             
         }

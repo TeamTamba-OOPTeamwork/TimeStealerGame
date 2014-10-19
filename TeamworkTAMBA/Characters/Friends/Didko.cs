@@ -9,8 +9,8 @@ namespace TeamworkTAMBA
 
     public class Didko : Friend
     {
-        public Didko(Image image, Point location, int id) :
-            base(image, location, id)
+        public Didko(SpriteType spriteType, Point location, int id) :
+            base(spriteType, location, id)
         {
 
         }

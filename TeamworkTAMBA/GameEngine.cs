@@ -31,20 +31,24 @@
             this.map = new Map(gameForm);
 
             isInCombat = false;
-            Bitmap playerSpr = new Bitmap("../../Graphics/Player.png");
-            this.player = new Player(playerSpr, new Point(0, 0), 1);
+            // Bitmap playerSpr = new Bitmap("../../Graphics/Player.png");
+            this.player = new Player(SpriteType.Player, new Point(0, 0), 1);
 
 
 
             // TO DO: da se iznese v metod i da se mahnat izmislenite kordinati
             // za da se polu4at to4ni kordinati trqbva da sa kratni na goleminata na 1 Tile(40 v momenta)
-            Bitmap monsterSpr = new Bitmap("../../Graphics/monster.jpg");
+            // Bitmap monsterSpr = new Bitmap("../../Graphics/monster.jpg");
             enemies = new List<Enemy>(){
-                new Enemy(monsterSpr, new Point(240, 280), 0),
-                new Enemy(monsterSpr, new Point(80, 80), 0)
+                new Enemy(SpriteType.Enemy, new Point(240, 280), 0),
+                new Enemy(SpriteType.Enemy, new Point(80, 80), 0)
             };
 
-            this.drawEngine = new DrawEngine(this, gameForm);
+            var listOfObjects = new List<GameObject>();
+            listOfObjects.AddRange(map.MapTiles);
+            listOfObjects.AddRange(enemies);
+            listOfObjects.Add(player);
+            this.drawEngine = new DrawEngine(gameForm, listOfObjects);
             drawEngine.Draw();
 
             // Draw();
@@ -172,17 +176,24 @@
             if (mapItemType is Floor && mapItemType.ID == 1)
             {
                 player.Location = new Point(LAST_VISIBLE_CELL, playerNextLocation.Y);
-                map.DrowPreviusNextLevel();
+                map.DrawPreviusNextLevel();
 
             }
 
             //to do: same thing for friends
             if (enemy is Enemy)
             {
-                combatForm = new CombatForm();
+                combatForm = new CombatForm(player, enemy);
                 combatForm.Visible = true;
-                drawEngine.RemoveObject(enemy);
+                player.Health = combatForm.GetPlayerHelth();
+                RemoveObject(enemy);
             }
+        }
+
+        private void RemoveObject(Enemy enemy)
+        {
+            this.enemies.Remove(enemy);
+            this.drawEngine.Remove(enemy);
         }
     }
 }

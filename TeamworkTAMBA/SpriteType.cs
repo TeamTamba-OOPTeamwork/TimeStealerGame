@@ -1,8 +1,9 @@
 ﻿namespace TeamworkTAMBA
 {
-    public enum SpiteType
+    public enum SpriteType
     {
         Player,
+        Enemy,
         Homework,
         Lecture,
         Teamwork,

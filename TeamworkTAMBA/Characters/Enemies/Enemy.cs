@@ -12,14 +12,14 @@ namespace TeamworkTAMBA
         private bool isAlive; // pri == false da trie kartinkata ot ekrana 
                                 // na formata i da priklu4va bitkata
 
-        public Enemy(Image image,Point location,int id) :
-            base(image,location,id)
+        public Enemy(SpriteType sriteType,Point location,int id) :
+            base(sriteType, location, id)
         {
             this.IsAlive = true;
         }
 
-        public Enemy(Image image, int health, int attackPower) :
-            base(image, health, attackPower)
+        public Enemy(SpriteType sriteType, int health, int attackPower) :
+            base(sriteType, health, attackPower)
         {
             
         }

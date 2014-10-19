@@ -9,8 +9,8 @@ namespace TeamworkTAMBA
 
     public class Friend : Characters
     {
-        public Friend(Image image, Point location, int id) :
-            base(image, location, id)
+        public Friend(SpriteType sriteType, Point location, int id) :
+            base(sriteType, location, id)
         {
 
         }

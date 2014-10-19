@@ -9,13 +9,13 @@ namespace TeamworkTAMBA
         private int health;
         private int attackPower;
 
-        public Characters(Image image,Point location,int id) :
-            base(image,location,id)
+        public Characters(SpriteType sriteType,Point location,int id) :
+            base(sriteType, location, id)
         {
-            
+            this.Health = 100;
         }
 
-        public Characters(Image image, int health, int attackPower)
+        public Characters(SpriteType sriteType, int health, int attackPower)
         {
             this.Health = health;
             this.AttackPower = attackPower;

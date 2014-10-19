@@ -8,6 +8,6 @@ namespace TeamworkTAMBA
 {
     public interface IDrawable
     {
-        SpiteType SpiteType { get; set; }
+        SpriteType SpiteType { get; set; }
     }
 }

@@ -9,10 +9,10 @@ namespace TeamworkTAMBA
 
     public class Food : PicableObjects
     {
-        public Food(Image image,Point location,int id) :
-            base(image,location,id)
+        public Food(SpriteType sriteType, Point location, int id) :
+            base(sriteType, location, id)
         {
-            
+
         }
     }
 }

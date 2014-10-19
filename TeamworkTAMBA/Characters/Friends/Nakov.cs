@@ -9,8 +9,8 @@ namespace TeamworkTAMBA
 
     public class Nakov : Friend
     {
-        public Nakov(Image image,Point location,int id) :
-            base(image,location,id)
+        public Nakov(SpriteType spriteType,Point location,int id) :
+            base(spriteType, location, id)
         {
             
         }

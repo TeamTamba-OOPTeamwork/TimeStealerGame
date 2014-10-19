@@ -9,10 +9,10 @@ namespace TeamworkTAMBA
 
     public class StaticObjects : MapItems
     {
-        public StaticObjects(Image image,Point location,int id) :
-            base(image,location,id)
+        public StaticObjects(SpriteType sriteType, Point location, int id) :
+            base(sriteType, location, id)
         {
-            
+
         }
     }
 }

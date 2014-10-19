@@ -9,10 +9,10 @@ namespace TeamworkTAMBA
 
     public class Wall : StaticObjects
     {
-        public Wall(Image image,Point location,int id) :
-            base(image,location,id)
+        public Wall(SpriteType sriteType, Point location, int id) :
+            base(sriteType, location, id)
         {
-            
+
         }
     }
 }

@@ -10,16 +10,40 @@
 
     public class DrawEngine
     {
+        private const string Player = "../../Graphics/Player.png";
+        private const string Enemy = "../../Graphics/monster.jpg";
+        private const string Homework = null;
+        private const string Lecture = null;
+        private const string Teamwork = null;
+        private const string Didko = null;
+        private const string Nakov = null;
+        private const string Nasko = null;
+        private const string SuperVlado = null;
+        private const string Tedi = null;
+        private const string Vlado = null;
+        private const string Wall = "../../Graphics/WallTile.jpg";
+        private const string Drink = null;
+        private const string Food = null;
+        private const string Money = null;
+        private const string Floor = "../../Graphics/FloorTile.jpg";
+        private const string Furniture = null;
+        private const string Column = null;
+
+
+
+
         private Graphics device;
-        private GameEngine gameEngine;
         private PictureBox mapSprites;
         private Form form;
         private Image img;
 
-        public DrawEngine(GameEngine gameEngine, Form form)
+        private IList<GameObject> drawableList = new List<GameObject>();
+
+        public DrawEngine(Form form, IList<GameObject> drawableList)
         {
-            this.gameEngine = gameEngine;
+
             this.form = form;
+            this.drawableList = drawableList;
 
             this.mapSprites = new PictureBox();
             mapSprites.Width = form.Width;
@@ -34,33 +58,80 @@
             img = new Bitmap(this.form.Width, this.form.Height); //o4ertava ramkata na PictureBox-a
             device = Graphics.FromImage(img);
 
-            this.gameEngine.map.DrawMap(device);
-
-            foreach (var e in this.gameEngine.Enemies)
+            foreach (var item in drawableList)
             {
-                this.AddObject(e);
+                DrawObject(item);
             }
-
-            //foreach (var fr in this.gameEngine.Friends)
-            //{
-            //     this.AddObject(fr);
-            //}
-
-            this.AddObject(this.gameEngine.Player);
 
 
             mapSprites.Image = img;
         }
 
-        public void AddObject(GameObject gameObject)
+        public void Add(GameObject gameobj)
         {
-            device.DrawImage(gameObject.Image, gameObject.Location);
+            this.drawableList.Add(gameobj);
+        }
+
+        public void Remove(GameObject gameobj)
+        {
+            this.drawableList.Remove(gameobj);
+        }
+
+
+        private void DrawObject(GameObject gameObj)
+        {
+            device.DrawImage(GetImage(gameObj), gameObj.Location);
 
         }
 
-        public void RemoveObject(GameObject gameObject)
+        
+
+        private Image GetImage(GameObject gameObj)
         {
-            gameObject.Image = new Bitmap("../../Graphics/FloorTile.jpg");
+            Image image = null;
+            switch (gameObj.SpiteType)
+            {
+                case SpriteType.Player: image = Image.FromFile(Player);
+                    break;
+                case SpriteType.Enemy: image = Image.FromFile(Enemy);
+                    break;
+                case SpriteType.Homework:
+                    break;
+                case SpriteType.Lecture:
+                    break;
+                case SpriteType.Teamwork:
+                    break;
+                case SpriteType.Didko:
+                    break;
+                case SpriteType.Nakov:
+                    break;
+                case SpriteType.Nasko:
+                    break;
+                case SpriteType.SuperVlado:
+                    break;
+                case SpriteType.Tedi:
+                    break;
+                case SpriteType.Vlado:
+                    break;
+                case SpriteType.Wall: image = Image.FromFile(Wall);
+                    break;
+                case SpriteType.Drink:
+                    break;
+                case SpriteType.Food:
+                    break;
+                case SpriteType.Money:
+                    break;
+                case SpriteType.Floor: image = Image.FromFile(Floor);
+                    break;
+                case SpriteType.Furniture:
+                    break;
+                case SpriteType.Column:
+                    break;
+                default:
+                    break;
+            }
+
+            return image;
         }
     }
 }

@@ -9,8 +9,8 @@ namespace TeamworkTAMBA
 
     public class Floor : StaticObjects
     {
-        public Floor(Image image, Point location, int id) :
-            base(image, location, id)
+        public Floor(SpriteType sriteType, Point location, int id) :
+            base(sriteType, location, id)
         {
 
         }
