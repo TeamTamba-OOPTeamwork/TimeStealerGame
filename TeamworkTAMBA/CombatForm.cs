@@ -36,7 +36,12 @@ namespace TeamworkTAMBA
             progressBar1.Maximum = 100;
             progressBar1.Value = player.Health;
 
-
+            this.ControlBox = false;
+           
+            labelPlayersHealth.Text = "Health: " + player.Health;
+            labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
+            labelEnemyHealth.Text = "Health: " + enemy.Health;
+            labelEnemyDmg.Text = "Damage: " + "1-" + enemy.AttackPower;
         }
 
         public void StartCombat(Player player, Enemy enemy)
@@ -75,10 +80,12 @@ namespace TeamworkTAMBA
             if (checkBox2.Checked)
             {
                 player.AttackPower += 10;
+                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
+                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
         }
 
@@ -88,10 +95,12 @@ namespace TeamworkTAMBA
             if (checkBox3.Checked)
             {
                 player.AttackPower += 10;
+                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
+                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
         }
 
@@ -100,10 +109,12 @@ namespace TeamworkTAMBA
             if (checkBox4.Checked)
             {
                 player.AttackPower += 10;
+                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
+                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
         }
 
@@ -112,10 +123,12 @@ namespace TeamworkTAMBA
             if (checkBox5.Checked)
             {
                 player.AttackPower += 10;
+                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
+                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
         }
 
@@ -124,10 +137,12 @@ namespace TeamworkTAMBA
             if (checkBox6.Checked)
             {
                 player.AttackPower += 10;
+                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
+                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
         }
 
@@ -140,6 +155,7 @@ namespace TeamworkTAMBA
                 checkBox4.Checked = true;
                 checkBox5.Checked = true;
                 checkBox6.Checked = true;
+                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
             else
             {
@@ -148,6 +164,7 @@ namespace TeamworkTAMBA
                 checkBox4.Checked = false;
                 checkBox5.Checked = false;
                 checkBox6.Checked = false;
+                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
         }
 
@@ -163,6 +180,12 @@ namespace TeamworkTAMBA
             if (isPlayerAlive && isEnemyAlive)
             {
                 Combat();
+                labelPlayersHealth.Text = "Health: " + player.Health;
+                labelEnemyHealth.Text = "Health: " + enemy.Health;
+            }
+            else
+            {
+                
             }
 
         }
@@ -185,6 +208,8 @@ namespace TeamworkTAMBA
                 isEnemyAlive = false;
                 richTextBox1.Text = "You have hit the Homework for " + playerRandomDamage + "\nThe Homework is dead!";
                 player.Health = newPlayerHealth;
+                
+                exit.Visible = true;
             }
 
             if (player.Health > 0)
@@ -217,6 +242,9 @@ namespace TeamworkTAMBA
             return this.player.Health;
         }
 
-        
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
