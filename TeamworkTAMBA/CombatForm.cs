@@ -131,6 +131,26 @@ namespace TeamworkTAMBA
             }
         }
 
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox7.Checked)
+            {
+                checkBox2.Checked = true;
+                checkBox3.Checked = true;
+                checkBox4.Checked = true;
+                checkBox5.Checked = true;
+                checkBox6.Checked = true;
+            }
+            else
+            {
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
+                checkBox4.Checked = false;
+                checkBox5.Checked = false;
+                checkBox6.Checked = false;
+            }
+        }
+
         //The text box
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -157,20 +177,20 @@ namespace TeamworkTAMBA
             if (enemy.Health > 0)
             {
                 progressBar2.Value = newEnemyHealth;
-                richTextBox1.Text = "You have hit the homework for " + playerRandomDamage + "\nThe home work now have " + enemy.Health + " health.";
+                richTextBox1.Text = "You have hit the Homework for " + playerRandomDamage + "\nThe Homework now have " + enemy.Health + " health.";
             }
             else
             {
                 progressBar2.Value = progressBar2.Minimum;
                 isEnemyAlive = false;
-                richTextBox1.Text = "You have hit the homework for " + playerRandomDamage + "\nThe homework is dead!";
+                richTextBox1.Text = "You have hit the Homework for " + playerRandomDamage + "\nThe Homework is dead!";
                 player.Health = newPlayerHealth;
             }
 
             if (player.Health > 0)
             {
                 progressBar1.Value = newPlayerHealth;
-                richTextBox2.Text = "But the Home Work hit you back for " + enemyRandomDamage +
+                richTextBox2.Text = "But the Homework hit you back for " + enemyRandomDamage +
                     "\nYou have now " + player.Health + " health";
             }
             else
@@ -178,7 +198,7 @@ namespace TeamworkTAMBA
                 progressBar1.Value = progressBar1.Minimum;
                 isPlayerAlive = false;
                 richTextBox2.Text = "The Homework hit you back for " + enemyRandomDamage +
-                                    "\nYou were killed form a Home work.. You sux!";
+                                    "\nYou were killed form a Homework.. You sux!";
             }
 
             //return newEnemyHealth;
@@ -196,5 +216,7 @@ namespace TeamworkTAMBA
         {
             return this.player.Health;
         }
+
+        
     }
 }
