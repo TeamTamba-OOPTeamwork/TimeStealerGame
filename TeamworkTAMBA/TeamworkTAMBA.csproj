@@ -133,6 +133,15 @@
     <Content Include="Levels\Level02.txt" />
     <Content Include="Levels\Level01.txt" />
     <Content Include="Levels\SymbolsMeaning.txt" />
+    <Content Include="Sprites\sprite01.txt" />
+    <Content Include="Sprites\sprite02.txt" />
+    <Content Include="Sprites\sprite03.txt" />
+    <Content Include="Sprites\sprite04.txt" />
+    <Content Include="Sprites\sprite05.txt" />
+    <Content Include="Sprites\sprite06.txt" />
+    <Content Include="Sprites\sprite07.txt" />
+    <Content Include="Sprites\sprite08.txt" />
+    <Content Include="Sprites\sprite09.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
