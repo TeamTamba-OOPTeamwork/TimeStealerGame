@@ -52,11 +52,11 @@
       <DependentUpon>CombatForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DrawEngine.cs" />
-    <Compile Include="FriendlyForm.cs">
+    <Compile Include="PickupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FriendlyForm.Designer.cs">
-      <DependentUpon>FriendlyForm.cs</DependentUpon>
+    <Compile Include="PickupForm.Designer.cs">
+      <DependentUpon>PickupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="IDrawable.cs" />
     <Compile Include="MapItems\StaticObjects\Air.cs" />
@@ -100,8 +100,8 @@
     <EmbeddedResource Include="CombatForm.resx">
       <DependentUpon>CombatForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FriendlyForm.resx">
-      <DependentUpon>FriendlyForm.cs</DependentUpon>
+    <EmbeddedResource Include="PickupForm.resx">
+      <DependentUpon>PickupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameForm.resx">
       <DependentUpon>GameForm.cs</DependentUpon>

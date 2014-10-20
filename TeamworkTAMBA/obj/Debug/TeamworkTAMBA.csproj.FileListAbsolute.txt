@@ -48,4 +48,4 @@ C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\obj\Debug\Te
 C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.GameForm.resources
 C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.Properties.Resources.resources
 C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csproj.GenerateResource.Cache
-C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.FriendlyForm.resources
+C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.PickupForm.resources

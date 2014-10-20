@@ -155,9 +155,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Enabled = false;
             this.richTextBox1.Location = new System.Drawing.Point(177, 12);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(266, 145);
             this.richTextBox1.TabIndex = 9;
             this.richTextBox1.Text = "";
@@ -183,9 +183,9 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Enabled = false;
             this.richTextBox2.Location = new System.Drawing.Point(177, 163);
             this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
             this.richTextBox2.Size = new System.Drawing.Size(266, 144);
             this.richTextBox2.TabIndex = 12;
             this.richTextBox2.Text = "";

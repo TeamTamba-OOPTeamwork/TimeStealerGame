@@ -84,13 +84,13 @@ namespace TeamworkTAMBA
             if (checkBox2.Checked)
             {
                 player.AttackPower += 10;
-                knowlageUsage += 1;
+                knowlageUsage += 10;
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
-                knowlageUsage -= 1;
+                knowlageUsage -= 10;
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
         }
@@ -216,7 +216,9 @@ namespace TeamworkTAMBA
 
             if (player.Knowledge < 1)
             {
+                player.Knowledge = 0;
                 playerKnowledgeProgressbar.Value = playerKnowledgeProgressbar.Minimum;
+                
                 checkBox2.Checked = false;
                 checkBox3.Checked = false;
                 checkBox4.Checked = false;
