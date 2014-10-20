@@ -134,9 +134,6 @@
     <Content Include="Graphics\Player.png" />
     <Content Include="Graphics\railing.png" />
     <Content Include="Graphics\wall.jpg" />
-    <Content Include="Levels\Level02.txt" />
-    <Content Include="Levels\Level01.txt" />
-    <Content Include="Levels\SymbolsMeaning.txt" />
     <Content Include="Sprites\sprite01.txt" />
     <Content Include="Sprites\sprite02.txt" />
     <Content Include="Sprites\sprite03.txt" />
