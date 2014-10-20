@@ -30,6 +30,8 @@
         private const string Column = null;
 
 
+        Image playerSpr, enemySpr, homeworkSpr, lectureSpr, teamworkSpr, didkoSpr, nakovSpr, naskoSpr, superVladoSpr, tediSpr,
+        vladoSpr, wallSpr, drinkSpr, foodSpr, moneySpr, floorSpr, furnitureSpr, columnSpr;
 
 
         private Graphics device;
@@ -50,6 +52,7 @@
             mapSprites.Height = form.Height;
             mapSprites.BackColor = Color.Transparent;
             mapSprites.Parent = form;
+            this.LoadResources();
         }
 
         // risuva/prerisuva vsi4ko na formata
@@ -84,20 +87,20 @@
 
         }
 
-        
+
 
         private Image GetImage(GameObject gameObj)
         {
             Image image = null;
             switch (gameObj.SpiteType)
             {
-                case SpriteType.Player: image = Image.FromFile(Player);
+                case SpriteType.Player: image = this.playerSpr;
                     break;
-                case SpriteType.Enemy: image = Image.FromFile(Enemy);
+                case SpriteType.Enemy: image = this.enemySpr;
                     break;
-                case SpriteType.Homework:
+                case SpriteType.Homework: image = this.homeworkSpr;
                     break;
-                case SpriteType.Lecture:
+                case SpriteType.Lecture: image = this.lectureSpr;
                     break;
                 case SpriteType.Teamwork:
                     break;
@@ -113,7 +116,7 @@
                     break;
                 case SpriteType.Vlado:
                     break;
-                case SpriteType.Wall: image = Image.FromFile(Wall);
+                case SpriteType.Wall: image = this.wallSpr;
                     break;
                 case SpriteType.Drink:
                     break;
@@ -121,7 +124,7 @@
                     break;
                 case SpriteType.Money:
                     break;
-                case SpriteType.Floor: image = Image.FromFile(Floor);
+                case SpriteType.Floor: image = this.floorSpr;
                     break;
                 case SpriteType.Furniture:
                     break;
@@ -132,6 +135,29 @@
             }
 
             return image;
+        }
+
+
+        public void LoadResources()
+        {
+            this.playerSpr = Image.FromFile(Player);
+            this.enemySpr = Image.FromFile(Enemy);
+            this.homeworkSpr = null;
+            this.lectureSpr = null;
+            this.teamworkSpr = null;
+            this.didkoSpr = null;
+            this.nakovSpr = null;
+            this.naskoSpr = null;
+            this.superVladoSpr = null;
+            this.tediSpr = null;
+            this.vladoSpr = null;
+            this.wallSpr = Image.FromFile(Wall);
+            this.drinkSpr = null;
+            this.foodSpr = null;
+            this.moneySpr = null;
+            this.floorSpr = Image.FromFile(Floor);
+            this.furnitureSpr = null;
+            this.columnSpr = null;
         }
     }
 }
