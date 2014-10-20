@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace TeamworkTAMBA
 {
+    using TeamworkTAMBA.Enums;
+
     public partial class CombatForm : Form
     {
         private Enemy enemy;
@@ -46,6 +48,33 @@ namespace TeamworkTAMBA
             labelEnemyHealth.Text = "Health: " + enemy.Health;
             labelEnemyDmg.Text = "Damage: " + "1-" + enemy.AttackPower;
             playerKnowlageLabel.Text = "Knowlage: " + player.Knowledge;
+
+            foreach (var weapon in this.player.Weapons)
+            {
+                if (weapon.Power == 0)
+                { 
+                    switch (weapon.WeaponType)
+                    {
+                        case WeaponTypes.Java:
+                            checkBox2.Enabled = false;
+                            break;
+                        case WeaponTypes.HTML:
+                            checkBox3.Enabled = false;
+                            break;
+                        case WeaponTypes.CSS:
+                            checkBox4.Enabled = false;
+                            break;
+                        case WeaponTypes.JavaScript:
+                            checkBox5.Enabled = false;
+                            break;
+                        case WeaponTypes.PHP:
+                            checkBox6.Enabled = false;
+                            break;
+                    }
+
+                }
+            }
+
         }
 
         public void StartCombat(Player player, Enemy enemy)

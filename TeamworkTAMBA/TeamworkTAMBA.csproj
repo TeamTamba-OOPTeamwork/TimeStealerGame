@@ -52,6 +52,7 @@
       <DependentUpon>CombatForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DrawEngine.cs" />
+    <Compile Include="Enums\WeaponTypes.cs" />
     <Compile Include="PickupForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,8 +64,6 @@
     <Compile Include="MapItems\StaticObjects\Coffee.cs" />
     <Compile Include="MapItems\StaticObjects\Floor.cs" />
     <Compile Include="SpriteType.cs" />
-    <Compile Include="Weapons\CSharp.cs" />
-    <Compile Include="Weapons\CSS.cs" />
     <Compile Include="Characters\Friends\Didko.cs" />
     <Compile Include="Characters\Enemies\Enemy.cs" />
     <Compile Include="Characters\Friends\Friend.cs" />
@@ -78,15 +77,11 @@
     <Compile Include="MapItems\StaticObjects\Desk.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="Characters\Enemies\Homework.cs" />
-    <Compile Include="Weapons\HTML.cs" />
     <Compile Include="MapItems\MapItems.cs" />
-    <Compile Include="Weapons\Java.cs" />
-    <Compile Include="Weapons\JavaScript.cs" />
     <Compile Include="Characters\Enemies\Exam.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Characters\Friends\Nakov.cs" />
     <Compile Include="Characters\Friends\Nasko.cs" />
-    <Compile Include="Weapons\PHP.cs" />
     <Compile Include="Characters\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
