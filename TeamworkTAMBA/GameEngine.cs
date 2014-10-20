@@ -160,24 +160,29 @@
             {
                 player.Location = new Point(FIRST_VISIBLE_CELL, playerNextLocation.Y);
                 //map.DrawNextSprite();
+                this.map.DrawNextSprite();
+                this.drawEngine.ChangeMapSprite(this.map.MapTiles);
             }
 
             if (mapItemType is Floor && mapItemType.ID == 2)
             {
                 player.Location = new Point(LAST_VISIBLE_CELL, playerNextLocation.Y);
-                //map.DrawPreviousSprite();
+                this.map.DrawPreviousSprite();
+                this.drawEngine.ChangeMapSprite(this.map.MapTiles);
             }
 
             if (mapItemType is Floor && mapItemType.ID == 3)
             {
                 player.Location = new Point(playerNextLocation.X, FIRST_VISIBLE_CELL);
-                //map.DrawNextSprite();
+                this.map.DrawLowerSprite();
+                this.drawEngine.ChangeMapSprite(this.map.MapTiles);
             }
 
             if (mapItemType is Floor && mapItemType.ID == 4)
             {
                 player.Location = new Point(playerNextLocation.X, LAST_VISIBLE_CELL);
-                //map.DrawPreviousSprite();
+                this.map.DrawUpperSprite();
+                this.drawEngine.ChangeMapSprite(this.map.MapTiles);
             }
 
             // TO DO: same thing for friends

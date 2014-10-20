@@ -51,6 +51,19 @@
             Initiaize("../../Sprites/sprite" + currentSprite.ToString("0#") + ".txt");
         }
 
+        public void DrawLowerSprite()
+        {
+            currentSprite += 3;
+            this.MapTiles = new List<GameObject>();
+            Initiaize("../../Sprites/sprite" + currentSprite.ToString("0#") + ".txt");
+        }
+        public void DrawUpperSprite()
+        {
+            currentSprite -= 3;
+            this.MapTiles = new List<GameObject>();
+            Initiaize("../../Sprites/sprite" + currentSprite.ToString("0#") + ".txt");
+        }
+
         // ednovremmeno 4ete ot file red po red i preobrazuva char-ovete v Tile (40X40) ot kartata
         // TO DO: da se slojat razmera na bloka koito 6te se polzva v igrata
         // da se narisuva nivoto realno kak 6te izglejda

@@ -7,3 +7,4 @@ W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\obj\Debug
 W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csproj.GenerateResource.Cache
 W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.exe
 W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.pdb
+W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csprojResolveAssemblyReference.cache
