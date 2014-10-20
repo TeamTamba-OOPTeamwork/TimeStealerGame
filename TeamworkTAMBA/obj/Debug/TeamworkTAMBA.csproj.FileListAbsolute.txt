@@ -28,3 +28,24 @@ F:\Windows-Forms\Games\SoftUniProgect\Game.git\Me3\TeamworkTAMBA\obj\Debug\Teamw
 F:\Windows-Forms\Games\SoftUniProgect\Game.git\Me3\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.GameForm.resources
 F:\Windows-Forms\Games\SoftUniProgect\Game.git\Me3\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.Properties.Resources.resources
 F:\Windows-Forms\Games\SoftUniProgect\Game.git\Me3\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csproj.GenerateResource.Cache
+C:\Users\Mike\Desktop\New project\Game\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.exe.config
+C:\Users\Mike\Desktop\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.exe
+C:\Users\Mike\Desktop\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.pdb
+C:\Users\Mike\Desktop\New project\Game\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.exe
+C:\Users\Mike\Desktop\New project\Game\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.pdb
+C:\Users\Mike\Desktop\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Desktop\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.CombatForm.resources
+C:\Users\Mike\Desktop\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.GameForm.resources
+C:\Users\Mike\Desktop\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.Properties.Resources.resources
+C:\Users\Mike\Desktop\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csproj.GenerateResource.Cache
+C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.exe.config
+C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.exe
+C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.pdb
+C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.exe
+C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.pdb
+C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csprojResolveAssemblyReference.cache
+C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.CombatForm.resources
+C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.GameForm.resources
+C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.Properties.Resources.resources
+C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csproj.GenerateResource.Cache
+C:\Dropbox\04 -TeamWork - Team Tamba\New project\Game\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.FriendlyForm.resources

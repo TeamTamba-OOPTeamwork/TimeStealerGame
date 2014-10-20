@@ -17,6 +17,7 @@ namespace TeamworkTAMBA
         private bool isInCombat;
         private bool isEnemyAlive = true;
         private bool isPlayerAlive = true;
+        private int knowlageUsage = 0;
 
         // TO DO: da se inicializirat igra4a i gadinata v constructora
         // Da se vikne StartCombat
@@ -31,17 +32,20 @@ namespace TeamworkTAMBA
             this.enemy.AttackPower = 5;
             this.player = player;
             this.player.AttackPower = 10;
+            
 
             progressBar2.Maximum = 100;
             progressBar1.Maximum = 100;
             progressBar1.Value = player.Health;
+            playerKnowledgeProgressbar.Value = player.Knowledge;
 
-            this.ControlBox = false;
+            //this.ControlBox = false;
            
             labelPlayersHealth.Text = "Health: " + player.Health;
             labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             labelEnemyHealth.Text = "Health: " + enemy.Health;
             labelEnemyDmg.Text = "Damage: " + "1-" + enemy.AttackPower;
+            playerKnowlageLabel.Text = "Knowlage: " + player.Knowledge;
         }
 
         public void StartCombat(Player player, Enemy enemy)
@@ -80,11 +84,13 @@ namespace TeamworkTAMBA
             if (checkBox2.Checked)
             {
                 player.AttackPower += 10;
+                knowlageUsage += 1;
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
+                knowlageUsage -= 1;
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
         }
@@ -95,11 +101,13 @@ namespace TeamworkTAMBA
             if (checkBox3.Checked)
             {
                 player.AttackPower += 10;
+                knowlageUsage += 1;
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
+                knowlageUsage -= 1;
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
         }
@@ -109,11 +117,13 @@ namespace TeamworkTAMBA
             if (checkBox4.Checked)
             {
                 player.AttackPower += 10;
+                knowlageUsage += 1;
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
+                knowlageUsage -= 1;
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
         }
@@ -123,11 +133,13 @@ namespace TeamworkTAMBA
             if (checkBox5.Checked)
             {
                 player.AttackPower += 10;
+                knowlageUsage += 1;
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
+                knowlageUsage -= 1;
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
         }
@@ -137,11 +149,13 @@ namespace TeamworkTAMBA
             if (checkBox6.Checked)
             {
                 player.AttackPower += 10;
+                knowlageUsage += 1;
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
+                knowlageUsage -= 1;
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
         }
@@ -182,6 +196,7 @@ namespace TeamworkTAMBA
                 Combat();
                 labelPlayersHealth.Text = "Health: " + player.Health;
                 labelEnemyHealth.Text = "Health: " + enemy.Health;
+                playerKnowlageLabel.Text = "Knowlage: " + player.Knowledge;
             }
             else
             {
@@ -192,10 +207,28 @@ namespace TeamworkTAMBA
 
         private void Combat()
         {
+            player.Knowledge -= knowlageUsage;
+            playerKnowledgeProgressbar.Value = player.Knowledge;
             int playerRandomDamage = RandomDamageGenerator(player.AttackPower);
             int newEnemyHealth = enemy.Health -= playerRandomDamage;
             int enemyRandomDamage = RandomDamageGenerator(enemy.AttackPower);
             int newPlayerHealth = player.Health -= enemyRandomDamage;
+
+            if (player.Knowledge < 1)
+            {
+                playerKnowledgeProgressbar.Value = playerKnowledgeProgressbar.Minimum;
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
+                checkBox4.Checked = false;
+                checkBox5.Checked = false;
+                checkBox6.Checked = false;
+
+                checkBox2.Enabled = false;
+                checkBox3.Enabled = false;
+                checkBox4.Enabled = false;
+                checkBox5.Enabled = false;
+                checkBox6.Enabled = false;
+            }
 
             if (enemy.Health > 0)
             {

@@ -18,6 +18,7 @@
 
         private Player player;
         private CombatForm combatForm;
+        private FriendlyForm friendlyForm;
         private Form gameForm;
         private List<GameObject> enemies;  // TO DO characters
         private Dictionary<int, List<GameObject>> CharatersAndItems;
@@ -198,6 +199,11 @@
                 combatForm.Visible = true;
                 player.Health = combatForm.GetPlayerHelth();
                 RemoveObject(enemy);
+            }
+            if (enemy is Coffee)
+            {
+                friendlyForm = new FriendlyForm(player, enemy as Coffee);
+                friendlyForm.Visible = true;
             }
         }
 

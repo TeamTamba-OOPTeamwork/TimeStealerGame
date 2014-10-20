@@ -47,6 +47,8 @@
             this.labelPlayerDmg = new System.Windows.Forms.Label();
             this.labelEnemyHealth = new System.Windows.Forms.Label();
             this.labelEnemyDmg = new System.Windows.Forms.Label();
+            this.playerKnowledgeProgressbar = new System.Windows.Forms.ProgressBar();
+            this.playerKnowlageLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +80,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(12, 203);
+            this.checkBox1.Location = new System.Drawing.Point(15, 220);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(40, 17);
             this.checkBox1.TabIndex = 2;
@@ -89,7 +91,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(12, 226);
+            this.checkBox2.Location = new System.Drawing.Point(15, 243);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(49, 17);
             this.checkBox2.TabIndex = 3;
@@ -100,7 +102,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(12, 249);
+            this.checkBox3.Location = new System.Drawing.Point(15, 266);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(56, 17);
             this.checkBox3.TabIndex = 4;
@@ -111,7 +113,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(12, 272);
+            this.checkBox4.Location = new System.Drawing.Point(15, 289);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(47, 17);
             this.checkBox4.TabIndex = 5;
@@ -122,7 +124,7 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(12, 295);
+            this.checkBox5.Location = new System.Drawing.Point(15, 312);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(76, 17);
             this.checkBox5.TabIndex = 6;
@@ -133,7 +135,7 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(12, 318);
+            this.checkBox6.Location = new System.Drawing.Point(15, 335);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(48, 17);
             this.checkBox6.TabIndex = 7;
@@ -165,7 +167,7 @@
             // 
             this.progressBar1.Location = new System.Drawing.Point(12, 134);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(101, 30);
+            this.progressBar1.Size = new System.Drawing.Size(101, 23);
             this.progressBar1.Step = 1;
             this.progressBar1.TabIndex = 10;
             this.progressBar1.Value = 100;
@@ -223,7 +225,7 @@
             // labelPlayerDmg
             // 
             this.labelPlayerDmg.AutoSize = true;
-            this.labelPlayerDmg.Location = new System.Drawing.Point(23, 166);
+            this.labelPlayerDmg.Location = new System.Drawing.Point(12, 204);
             this.labelPlayerDmg.Name = "labelPlayerDmg";
             this.labelPlayerDmg.Size = new System.Drawing.Size(63, 13);
             this.labelPlayerDmg.TabIndex = 16;
@@ -247,11 +249,30 @@
             this.labelEnemyDmg.TabIndex = 18;
             this.labelEnemyDmg.Text = "EnemyDmg";
             // 
+            // playerKnowledgeProgressbar
+            // 
+            this.playerKnowledgeProgressbar.Location = new System.Drawing.Point(15, 174);
+            this.playerKnowledgeProgressbar.Name = "playerKnowledgeProgressbar";
+            this.playerKnowledgeProgressbar.Size = new System.Drawing.Size(100, 23);
+            this.playerKnowledgeProgressbar.Step = 1;
+            this.playerKnowledgeProgressbar.TabIndex = 19;
+            // 
+            // playerKnowlageLabel
+            // 
+            this.playerKnowlageLabel.AutoSize = true;
+            this.playerKnowlageLabel.Location = new System.Drawing.Point(23, 158);
+            this.playerKnowlageLabel.Name = "playerKnowlageLabel";
+            this.playerKnowlageLabel.Size = new System.Drawing.Size(86, 13);
+            this.playerKnowlageLabel.TabIndex = 20;
+            this.playerKnowlageLabel.Text = "Player Knowlage";
+            // 
             // CombatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 366);
+            this.Controls.Add(this.playerKnowlageLabel);
+            this.Controls.Add(this.playerKnowledgeProgressbar);
             this.Controls.Add(this.labelEnemyDmg);
             this.Controls.Add(this.labelEnemyHealth);
             this.Controls.Add(this.labelPlayerDmg);
@@ -302,6 +323,8 @@
         private System.Windows.Forms.Label labelPlayerDmg;
         private System.Windows.Forms.Label labelEnemyHealth;
         private System.Windows.Forms.Label labelEnemyDmg;
+        private System.Windows.Forms.ProgressBar playerKnowledgeProgressbar;
+        private System.Windows.Forms.Label playerKnowlageLabel;
 
     }
 }
