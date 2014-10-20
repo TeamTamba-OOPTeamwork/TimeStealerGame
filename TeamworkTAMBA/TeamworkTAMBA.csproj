@@ -54,15 +54,14 @@
     <Compile Include="DrawEngine.cs" />
     <Compile Include="IDrawable.cs" />
     <Compile Include="MapItems\StaticObjects\Air.cs" />
+    <Compile Include="MapItems\StaticObjects\Coffee.cs" />
     <Compile Include="MapItems\StaticObjects\Floor.cs" />
     <Compile Include="SpriteType.cs" />
     <Compile Include="Weapons\CSharp.cs" />
     <Compile Include="Weapons\CSS.cs" />
     <Compile Include="Characters\Friends\Didko.cs" />
-    <Compile Include="MapItems\PicableObjects\Drink.cs" />
     <Compile Include="Characters\Enemies\Enemy.cs" />
     <Compile Include="Characters\Friends\Friend.cs" />
-    <Compile Include="MapItems\PicableObjects\Food.cs" />
     <Compile Include="GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,12 +77,10 @@
     <Compile Include="Weapons\Java.cs" />
     <Compile Include="Weapons\JavaScript.cs" />
     <Compile Include="Characters\Enemies\Exam.cs" />
-    <Compile Include="MapItems\PicableObjects\Money.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Characters\Friends\Nakov.cs" />
     <Compile Include="Characters\Friends\Nasko.cs" />
     <Compile Include="Weapons\PHP.cs" />
-    <Compile Include="MapItems\PicableObjects\PicableObjects.cs" />
     <Compile Include="Characters\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,6 +124,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Graphics\air.png" />
+    <Content Include="Graphics\coffee.png" />
     <Content Include="Graphics\desk.png" />
     <Content Include="Graphics\floor.jpg" />
     <Content Include="Graphics\gate.png" />

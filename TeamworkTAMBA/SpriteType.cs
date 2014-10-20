@@ -14,9 +14,7 @@
         Tedi,
         Vlado,
         Wall,
-        Drink,
-        Food,
-        Money,
+        Coffee,
         Floor,
         Desk,
         Air

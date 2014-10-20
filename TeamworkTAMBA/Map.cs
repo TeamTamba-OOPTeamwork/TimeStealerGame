@@ -105,6 +105,9 @@
                                 case "f":
                                     item = new Floor(SpriteType.Floor, itemlocation, 0);
                                     break;
+                                case "c":
+                                    item = new Coffee(SpriteType.Coffee, itemlocation, 0);
+                                    break;
                                 case "n":
                                     item = new Floor(SpriteType.Floor, itemlocation, 1); // next sprite
                                     break;

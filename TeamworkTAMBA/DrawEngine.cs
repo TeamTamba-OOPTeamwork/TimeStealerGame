@@ -22,16 +22,14 @@
         private const string Tedi = null;
         private const string Vlado = null;
         private const string Wall = "../../Graphics/wall.jpg";
-        private const string Drink = null;
-        private const string Food = null;
-        private const string Money = null;
+        private const string Coffee = "../../Graphics/coffee.png";
         private const string Floor = "../../Graphics/floor.jpg";
         private const string Desk = "../../Graphics/desk.png";
         private const string Air = "../../Graphics/air.png";
 
 
         Image playerSpr, enemySpr, homeworkSpr, examSpr, teamworkSpr, didkoSpr, nakovSpr, naskoSpr, superVladoSpr, tediSpr,
-        vladoSpr, wallSpr, drinkSpr, foodSpr, moneySpr, floorSpr, deskSpr, airSpr;
+        vladoSpr, wallSpr, coffeeSpr, floorSpr, deskSpr, airSpr;
 
 
         private Graphics device;
@@ -130,11 +128,7 @@
                     break;
                 case SpriteType.Wall: image = this.wallSpr;
                     break;
-                case SpriteType.Drink:
-                    break;
-                case SpriteType.Food:
-                    break;
-                case SpriteType.Money:
+                case SpriteType.Coffee: image = this.coffeeSpr;
                     break;
                 case SpriteType.Floor: image = this.floorSpr;
                     break;
@@ -163,9 +157,7 @@
             this.tediSpr = null;
             this.vladoSpr = null;
             this.wallSpr = Image.FromFile(Wall);
-            this.drinkSpr = null;
-            this.foodSpr = null;
-            this.moneySpr = null;
+            this.coffeeSpr = Image.FromFile(Coffee);
             this.floorSpr = Image.FromFile(Floor);
             this.deskSpr = Image.FromFile(Desk);
             this.airSpr = Image.FromFile(Air);
