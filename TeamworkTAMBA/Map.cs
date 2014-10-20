@@ -10,7 +10,7 @@
     public class Map
     {
         public const int mapTileSize = 40;
-        private int currentLevel;
+        private int currentSprite;
 
         // malko se povtarq koda s Gameobject mojebi moje da se prigodi napravo
         // toi da se polzva bez structora
@@ -34,21 +34,21 @@
 
         public Map(Form form)
         {
-            DrawNextLevel();
+            DrawNextSprite();
         }
 
-        public void DrawNextLevel()
+        public void DrawNextSprite()
         {
-            currentLevel++;
+            currentSprite++;
             this.MapTiles = new List<GameObject>();
-            Initiaize("../../Levels/Level" + currentLevel.ToString("0#") + ".txt");
+            Initiaize("../../Sprites/sprite" + currentSprite.ToString("0#") + ".txt");
         }
 
-        public void DrawPreviusNextLevel()
+        public void DrawPreviousSprite()
         {
-            currentLevel--;
+            currentSprite--;
             this.MapTiles = new List<GameObject>();
-            Initiaize("../../Levels/Level" + currentLevel.ToString("0#") + ".txt");
+            Initiaize("../../Sprites/sprite" + currentSprite.ToString("0#") + ".txt");
         }
 
         // ednovremmeno 4ete ot file red po red i preobrazuva char-ovete v Tile (40X40) ot kartata
@@ -70,22 +70,40 @@
                         for (int row = 0; row < line.Length; row++)
                         {
                             GameObject item = new GameObject();
-                            //-40 so we can hide first tile from screen
-                            var itemlocation = new Point(row * mapTileSize - 40, col * mapTileSize);
+                            // -40 so we can hide first tile from screen
+                            var itemlocation = new Point(row * mapTileSize - 40, col * mapTileSize - 40);
 
                             switch (line[row].ToString())
                             {
-                                case "+":
-                                    item = new Floor(SpriteType.Floor, itemlocation, 0);
-                                    break;
-                                case "-":
+                                case "w":
                                     item = new Wall(SpriteType.Wall, itemlocation, 0);
                                     break;
+                                case "r":
+                                    item = new Wall(SpriteType.Wall, itemlocation, 0);
+                                    break;
+                                case "g":
+                                    item = new Floor(SpriteType.Floor, itemlocation, 0);
+                                    break;
+                                case "d":
+                                    item = new Desk(SpriteType.Desk, itemlocation, 0);
+                                    break;
+                                case "a":
+                                    item = new Air(SpriteType.Air, itemlocation, 0);
+                                    break;
+                                case "f":
+                                    item = new Floor(SpriteType.Floor, itemlocation, 0);
+                                    break;
                                 case "n":
-                                    item = new Floor(SpriteType.Floor, itemlocation, 2); //next level
+                                    item = new Floor(SpriteType.Floor, itemlocation, 1); // next sprite
+                                    break;
+                                case "p":
+                                    item = new Floor(SpriteType.Floor, itemlocation, 2); // previous sprite
                                     break;
                                 case "l":
-                                    item = new Floor(SpriteType.Floor, itemlocation, 1); //previus level
+                                    item = new Floor(SpriteType.Floor, itemlocation, 3); // lower sprite
+                                    break;
+                                case "u":
+                                    item = new Floor(SpriteType.Floor, itemlocation, 4); // upper sprite
                                     break;
                                 default:
                                     break;

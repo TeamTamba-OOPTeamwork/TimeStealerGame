@@ -5,7 +5,7 @@
         Player,
         Enemy,
         Homework,
-        Lecture,
+        Exam,
         Teamwork,
         Didko,
         Nakov,
@@ -18,7 +18,7 @@
         Food,
         Money,
         Floor,
-        Furniture,
-        Column
+        Desk,
+        Air
     }
 }

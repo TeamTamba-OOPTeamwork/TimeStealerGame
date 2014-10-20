@@ -32,7 +32,7 @@
 
             isInCombat = false;
             // Bitmap playerSpr = new Bitmap("../../Graphics/Player.png");
-            this.player = new Player(SpriteType.Player, new Point(0, 0), 1);
+            this.player = new Player(SpriteType.Player, new Point(40, 40), 1);
 
 
 
@@ -167,20 +167,31 @@
                 player.Move(playerNextMove.X, playerNextMove.Y);
             }
 
-            if (mapItemType is Floor && mapItemType.ID == 2)
-            {
-                player.Location = new Point(FIRST_VISIBLE_CELL, playerNextLocation.Y);
-                map.DrawNextLevel();
-            }
-
             if (mapItemType is Floor && mapItemType.ID == 1)
             {
-                player.Location = new Point(LAST_VISIBLE_CELL, playerNextLocation.Y);
-                map.DrawPreviusNextLevel();
-
+                player.Location = new Point(FIRST_VISIBLE_CELL, playerNextLocation.Y);
+                //map.DrawNextSprite();
             }
 
-            //to do: same thing for friends
+            if (mapItemType is Floor && mapItemType.ID == 2)
+            {
+                player.Location = new Point(LAST_VISIBLE_CELL, playerNextLocation.Y);
+                //map.DrawPreviousSprite();
+            }
+
+            if (mapItemType is Floor && mapItemType.ID == 3)
+            {
+                player.Location = new Point(playerNextLocation.X, FIRST_VISIBLE_CELL);
+                //map.DrawNextSprite();
+            }
+
+            if (mapItemType is Floor && mapItemType.ID == 4)
+            {
+                player.Location = new Point(playerNextLocation.X, LAST_VISIBLE_CELL);
+                //map.DrawPreviousSprite();
+            }
+
+            // TO DO: same thing for friends
             if (enemy is Enemy)
             {
                 combatForm = new CombatForm(player, enemy);

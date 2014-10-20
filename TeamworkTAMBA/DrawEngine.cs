@@ -10,10 +10,10 @@
 
     public class DrawEngine
     {
-        private const string Player = "../../Graphics/Player.png";
+        private const string Player = "../../Graphics/player.png";
         private const string Enemy = "../../Graphics/monster.jpg";
         private const string Homework = null;
-        private const string Lecture = null;
+        private const string Exam = null;
         private const string Teamwork = null;
         private const string Didko = null;
         private const string Nakov = null;
@@ -21,17 +21,17 @@
         private const string SuperVlado = null;
         private const string Tedi = null;
         private const string Vlado = null;
-        private const string Wall = "../../Graphics/WallTile.jpg";
+        private const string Wall = "../../Graphics/wall.jpg";
         private const string Drink = null;
         private const string Food = null;
         private const string Money = null;
-        private const string Floor = "../../Graphics/FloorTile.jpg";
-        private const string Furniture = null;
-        private const string Column = null;
+        private const string Floor = "../../Graphics/floor.jpg";
+        private const string Desk = "../../Graphics/desk.png";
+        private const string Air = "../../Graphics/air.png";
 
 
-        Image playerSpr, enemySpr, homeworkSpr, lectureSpr, teamworkSpr, didkoSpr, nakovSpr, naskoSpr, superVladoSpr, tediSpr,
-        vladoSpr, wallSpr, drinkSpr, foodSpr, moneySpr, floorSpr, furnitureSpr, columnSpr;
+        Image playerSpr, enemySpr, homeworkSpr, examSpr, teamworkSpr, didkoSpr, nakovSpr, naskoSpr, superVladoSpr, tediSpr,
+        vladoSpr, wallSpr, drinkSpr, foodSpr, moneySpr, floorSpr, deskSpr, airSpr;
 
 
         private Graphics device;
@@ -43,7 +43,6 @@
 
         public DrawEngine(Form form, IList<GameObject> drawableList)
         {
-
             this.form = form;
             this.drawableList = drawableList;
 
@@ -66,7 +65,6 @@
                 DrawObject(item);
             }
 
-
             mapSprites.Image = img;
         }
 
@@ -80,13 +78,10 @@
             this.drawableList.Remove(gameobj);
         }
 
-
         private void DrawObject(GameObject gameObj)
         {
             device.DrawImage(GetImage(gameObj), gameObj.Location);
-
         }
-
 
 
         private Image GetImage(GameObject gameObj)
@@ -100,7 +95,7 @@
                     break;
                 case SpriteType.Homework: image = this.homeworkSpr;
                     break;
-                case SpriteType.Lecture: image = this.lectureSpr;
+                case SpriteType.Exam: image = this.examSpr;
                     break;
                 case SpriteType.Teamwork:
                     break;
@@ -126,9 +121,9 @@
                     break;
                 case SpriteType.Floor: image = this.floorSpr;
                     break;
-                case SpriteType.Furniture:
+                case SpriteType.Desk: image = this.deskSpr;
                     break;
-                case SpriteType.Column:
+                case SpriteType.Air: image = this.airSpr;
                     break;
                 default:
                     break;
@@ -143,7 +138,7 @@
             this.playerSpr = Image.FromFile(Player);
             this.enemySpr = Image.FromFile(Enemy);
             this.homeworkSpr = null;
-            this.lectureSpr = null;
+            this.examSpr = null;
             this.teamworkSpr = null;
             this.didkoSpr = null;
             this.nakovSpr = null;
@@ -156,8 +151,8 @@
             this.foodSpr = null;
             this.moneySpr = null;
             this.floorSpr = Image.FromFile(Floor);
-            this.furnitureSpr = null;
-            this.columnSpr = null;
+            this.deskSpr = Image.FromFile(Desk);
+            this.airSpr = Image.FromFile(Air);
         }
     }
 }
