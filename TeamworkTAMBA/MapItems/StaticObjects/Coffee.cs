@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace TeamworkTAMBA
 {
     using System.Drawing;
 
-    public class Drink : PicableObjects
+    public class Coffee : StaticObjects
     {
-        public Drink(SpriteType sriteType, Point location, int id) :
+        public Coffee(SpriteType sriteType, Point location, int id) :
             base(sriteType, location, id)
         {
 
