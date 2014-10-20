@@ -20,6 +20,7 @@ namespace TeamworkTAMBA
         private bool isEnemyAlive = true;
         private bool isPlayerAlive = true;
         private int knowlageUsage = 0;
+        private bool isWeaponAllowed = true;
 
         // TO DO: da se inicializirat igra4a i gadinata v constructora
         // Da se vikne StartCombat
@@ -57,43 +58,28 @@ namespace TeamworkTAMBA
                     {
                         case WeaponTypes.Java:
                             checkBox2.Enabled = false;
+                            isWeaponAllowed = false;
                             break;
                         case WeaponTypes.HTML:
                             checkBox3.Enabled = false;
+                            isWeaponAllowed = false;
                             break;
                         case WeaponTypes.CSS:
                             checkBox4.Enabled = false;
+                            isWeaponAllowed = false;
                             break;
                         case WeaponTypes.JavaScript:
                             checkBox5.Enabled = false;
+                            isWeaponAllowed = false;
                             break;
                         case WeaponTypes.PHP:
                             checkBox6.Enabled = false;
+                            isWeaponAllowed = false;
                             break;
                     }
-
                 }
             }
-
         }
-
-        public void StartCombat(Player player, Enemy enemy)
-        {
-            isInCombat = true;
-
-        }
-
-        //The picture boxes
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         //The weapones check boxes
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -193,11 +179,27 @@ namespace TeamworkTAMBA
         {
             if (checkBox7.Checked)
             {
-                checkBox2.Checked = true;
-                checkBox3.Checked = true;
-                checkBox4.Checked = true;
-                checkBox5.Checked = true;
-                checkBox6.Checked = true;
+                if (isWeaponAllowed)
+                {
+                    checkBox2.Checked = true;
+                }
+                if (isWeaponAllowed)
+                {
+                    checkBox3.Checked = true;
+                }
+                if (isWeaponAllowed)
+                {
+                    checkBox4.Checked = true;
+                }
+                if (isWeaponAllowed)
+                {
+                    checkBox5.Checked = true;
+                }
+                if (isWeaponAllowed)
+                {
+                    checkBox6.Checked = true;
+                }
+                
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
             else
@@ -227,11 +229,6 @@ namespace TeamworkTAMBA
                 labelEnemyHealth.Text = "Health: " + enemy.Health;
                 playerKnowlageLabel.Text = "Knowlage: " + player.Knowledge;
             }
-            else
-            {
-                
-            }
-
         }
 
         private void Combat()

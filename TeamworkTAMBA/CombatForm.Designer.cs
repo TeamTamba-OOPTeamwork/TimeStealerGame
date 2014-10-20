@@ -62,7 +62,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -73,7 +72,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // checkBox1
             // 
@@ -216,7 +214,7 @@
             // 
             this.labelPlayersHealth.AutoSize = true;
             this.labelPlayersHealth.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.labelPlayersHealth.Location = new System.Drawing.Point(23, 118);
+            this.labelPlayersHealth.Location = new System.Drawing.Point(12, 118);
             this.labelPlayersHealth.Name = "labelPlayersHealth";
             this.labelPlayersHealth.Size = new System.Drawing.Size(72, 13);
             this.labelPlayersHealth.TabIndex = 15;
@@ -234,7 +232,7 @@
             // labelEnemyHealth
             // 
             this.labelEnemyHealth.AutoSize = true;
-            this.labelEnemyHealth.Location = new System.Drawing.Point(510, 118);
+            this.labelEnemyHealth.Location = new System.Drawing.Point(501, 118);
             this.labelEnemyHealth.Name = "labelEnemyHealth";
             this.labelEnemyHealth.Size = new System.Drawing.Size(70, 13);
             this.labelEnemyHealth.TabIndex = 17;
@@ -243,7 +241,7 @@
             // labelEnemyDmg
             // 
             this.labelEnemyDmg.AutoSize = true;
-            this.labelEnemyDmg.Location = new System.Drawing.Point(510, 160);
+            this.labelEnemyDmg.Location = new System.Drawing.Point(501, 158);
             this.labelEnemyDmg.Name = "labelEnemyDmg";
             this.labelEnemyDmg.Size = new System.Drawing.Size(61, 13);
             this.labelEnemyDmg.TabIndex = 18;
@@ -251,7 +249,7 @@
             // 
             // playerKnowledgeProgressbar
             // 
-            this.playerKnowledgeProgressbar.Location = new System.Drawing.Point(15, 174);
+            this.playerKnowledgeProgressbar.Location = new System.Drawing.Point(12, 174);
             this.playerKnowledgeProgressbar.Name = "playerKnowledgeProgressbar";
             this.playerKnowledgeProgressbar.Size = new System.Drawing.Size(100, 23);
             this.playerKnowledgeProgressbar.Step = 1;
@@ -260,7 +258,7 @@
             // playerKnowlageLabel
             // 
             this.playerKnowlageLabel.AutoSize = true;
-            this.playerKnowlageLabel.Location = new System.Drawing.Point(23, 158);
+            this.playerKnowlageLabel.Location = new System.Drawing.Point(12, 158);
             this.playerKnowlageLabel.Name = "playerKnowlageLabel";
             this.playerKnowlageLabel.Size = new System.Drawing.Size(86, 13);
             this.playerKnowlageLabel.TabIndex = 20;
