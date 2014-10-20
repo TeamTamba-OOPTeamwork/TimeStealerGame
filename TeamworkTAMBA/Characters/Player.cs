@@ -43,7 +43,7 @@
             this.location.Y += y;
         }
 
-        private void InitializeWeapons()
+        public void InitializeWeapons()
         {
             this.Weapons = new List<Weapons>()
                 {

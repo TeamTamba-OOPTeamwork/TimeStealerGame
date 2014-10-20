@@ -19,6 +19,7 @@
         private Player player;
         private CombatForm combatForm;
         private PickupForm _pickupForm;
+        private FriendForm friendForm;
         private Form gameForm;
         private List<GameObject> enemies;  // TO DO characters
         private Dictionary<int, List<GameObject>> CharatersAndItems;
@@ -204,6 +205,11 @@
             {
                 _pickupForm = new PickupForm(player, enemy as Coffee);
                 _pickupForm.Visible = true;
+            }
+            if (enemy is Friend)
+            {
+                friendForm = new FriendForm(player, enemy as Friend);
+                friendForm.Visible = true;
             }
         }
 

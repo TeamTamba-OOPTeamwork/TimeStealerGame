@@ -50,6 +50,8 @@ namespace TeamworkTAMBA
             labelEnemyDmg.Text = "Damage: " + "1-" + enemy.AttackPower;
             playerKnowlageLabel.Text = "Knowlage: " + player.Knowledge;
 
+
+            // Bugva se obshtiqt buton, shte go opravq
             foreach (var weapon in this.player.Weapons)
             {
                 if (weapon.Power == 0)
@@ -175,6 +177,7 @@ namespace TeamworkTAMBA
             }
         }
 
+        // Bugva se obshtiqt buton, shte go opravq
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox7.Checked)
