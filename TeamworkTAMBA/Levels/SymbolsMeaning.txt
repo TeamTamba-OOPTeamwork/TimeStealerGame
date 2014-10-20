@@ -1,4 +1,0 @@
-﻿+  => can move
--  => brick
-l  => last level
-n  => next level
