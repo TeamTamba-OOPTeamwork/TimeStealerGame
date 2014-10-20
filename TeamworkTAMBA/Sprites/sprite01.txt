@@ -1,6 +1,6 @@
 uuuuuuuuuuuuuuuuu
 prrrrrrrrrrrrrrrn
-prfffffcffffffffn
+prffffffffffffffn
 prffffffffffffffn
 pwwwwwgwwwwwwwwwn
 pwfffffffwfdffffn
@@ -10,7 +10,7 @@ pwfffffddwfffffdn
 pwffdffffgffwwwwn
 pwffdffffgffdffdn
 pwffdffffwffdffdn
-pwfcdffdfwffffffn
+pwffdffdfwffffffn
 pwffdffdfwfddddfn
 pwffdffffwffffffn
 pwwwwffdfwwwwwwwn
