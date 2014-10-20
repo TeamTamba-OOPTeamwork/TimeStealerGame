@@ -126,10 +126,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Graphics\FloorTile.jpg" />
-    <Content Include="Graphics\monster.jpg" />
+    <Content Include="Graphics\air.png" />
+    <Content Include="Graphics\desk.png" />
+    <Content Include="Graphics\floor.jpg" />
+    <Content Include="Graphics\gate.png" />
     <Content Include="Graphics\Player.png" />
-    <Content Include="Graphics\WallTile.jpg" />
+    <Content Include="Graphics\railing.png" />
+    <Content Include="Graphics\wall.jpg" />
     <Content Include="Levels\Level02.txt" />
     <Content Include="Levels\Level01.txt" />
     <Content Include="Levels\SymbolsMeaning.txt" />
