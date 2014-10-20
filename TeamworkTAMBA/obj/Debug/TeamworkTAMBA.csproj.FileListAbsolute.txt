@@ -8,3 +8,13 @@ W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\obj\Debug
 W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.exe
 W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.pdb
 W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csprojResolveAssemblyReference.cache
+F:\Windows-Forms\Games\SoftUniProgect\Game.git\trunk\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.exe.config
+F:\Windows-Forms\Games\SoftUniProgect\Game.git\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.exe
+F:\Windows-Forms\Games\SoftUniProgect\Game.git\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.pdb
+F:\Windows-Forms\Games\SoftUniProgect\Game.git\trunk\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.exe
+F:\Windows-Forms\Games\SoftUniProgect\Game.git\trunk\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.pdb
+F:\Windows-Forms\Games\SoftUniProgect\Game.git\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csprojResolveAssemblyReference.cache
+F:\Windows-Forms\Games\SoftUniProgect\Game.git\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.CombatForm.resources
+F:\Windows-Forms\Games\SoftUniProgect\Game.git\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.GameForm.resources
+F:\Windows-Forms\Games\SoftUniProgect\Game.git\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.Properties.Resources.resources
+F:\Windows-Forms\Games\SoftUniProgect\Game.git\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csproj.GenerateResource.Cache

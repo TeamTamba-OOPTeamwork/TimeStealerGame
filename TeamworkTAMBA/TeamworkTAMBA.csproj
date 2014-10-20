@@ -134,14 +134,23 @@
     <Content Include="Graphics\Player.png" />
     <Content Include="Graphics\railing.png" />
     <Content Include="Graphics\wall.jpg" />
+    <Content Include="Sprites\spriteCharacter01.txt" />
     <Content Include="Sprites\sprite01.txt" />
+    <Content Include="Sprites\spriteCharacter02.txt" />
     <Content Include="Sprites\sprite02.txt" />
+    <Content Include="Sprites\spriteCharacter03.txt" />
     <Content Include="Sprites\sprite03.txt" />
+    <Content Include="Sprites\spriteCharacter04.txt" />
     <Content Include="Sprites\sprite04.txt" />
+    <Content Include="Sprites\spriteCharacter05.txt" />
     <Content Include="Sprites\sprite05.txt" />
+    <Content Include="Sprites\spriteCharacter06.txt" />
     <Content Include="Sprites\sprite06.txt" />
+    <Content Include="Sprites\spriteCharacter07.txt" />
     <Content Include="Sprites\sprite07.txt" />
+    <Content Include="Sprites\spriteCharacter08.txt" />
     <Content Include="Sprites\sprite08.txt" />
+    <Content Include="Sprites\spriteCharacter09.txt" />
     <Content Include="Sprites\sprite09.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

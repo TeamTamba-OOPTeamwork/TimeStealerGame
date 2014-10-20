@@ -10,58 +10,57 @@
     public class Map
     {
         public const int mapTileSize = 40;
-        private int currentSprite;
 
-        // malko se povtarq koda s Gameobject mojebi moje da se prigodi napravo
-        // toi da se polzva bez structora
-        private GameObject mapItem;
+        public int CurrentSprite { get; set; }
 
+        public List<GameObject> MapTiles { get; set; }
 
-        private List<GameObject> mapTiles;
-
-        public List<GameObject> MapTiles
-        {
-            get
-            {
-                return this.mapTiles;
-            }
-
-            set
-            {
-                this.mapTiles = value;
-            }
-        }
+        public Dictionary<int, List<GameObject>> CharatersAndItems { get; set; }
 
         public Map(Form form)
         {
-            DrawNextSprite();
+            this.CharatersAndItems = new Dictionary<int, List<GameObject>>();
+            this.DrawNextSprite();
+            this.InitiaizeCharatersAndItems();
+        }
+
+        private void InitiaizeCharatersAndItems()
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                
+                this.CharatersAndItems.Add(i, new List<GameObject>(){
+                new Enemy(SpriteType.Enemy, new Point(240, 280), 0),
+                new Enemy(SpriteType.Enemy, new Point(80, 80), 0)
+                });
+            }
         }
 
         public void DrawNextSprite()
         {
-            currentSprite++;
+            CurrentSprite++;
             this.MapTiles = new List<GameObject>();
-            Initiaize("../../Sprites/sprite" + currentSprite.ToString("0#") + ".txt");
+            Initiaize("../../Sprites/sprite" + CurrentSprite.ToString("0#") + ".txt");
         }
 
         public void DrawPreviousSprite()
         {
-            currentSprite--;
+            CurrentSprite--;
             this.MapTiles = new List<GameObject>();
-            Initiaize("../../Sprites/sprite" + currentSprite.ToString("0#") + ".txt");
+            Initiaize("../../Sprites/sprite" + CurrentSprite.ToString("0#") + ".txt");
         }
 
         public void DrawLowerSprite()
         {
-            currentSprite += 3;
+            CurrentSprite += 3;
             this.MapTiles = new List<GameObject>();
-            Initiaize("../../Sprites/sprite" + currentSprite.ToString("0#") + ".txt");
+            Initiaize("../../Sprites/sprite" + CurrentSprite.ToString("0#") + ".txt");
         }
         public void DrawUpperSprite()
         {
-            currentSprite -= 3;
+            CurrentSprite -= 3;
             this.MapTiles = new List<GameObject>();
-            Initiaize("../../Sprites/sprite" + currentSprite.ToString("0#") + ".txt");
+            Initiaize("../../Sprites/sprite" + CurrentSprite.ToString("0#") + ".txt");
         }
 
         // ednovremmeno 4ete ot file red po red i preobrazuva char-ovete v Tile (40X40) ot kartata
