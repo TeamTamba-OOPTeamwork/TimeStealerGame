@@ -39,7 +39,7 @@
             // TO DO: da se iznese v metod i da se mahnat izmislenite kordinati
             // za da se polu4at to4ni kordinati trqbva da sa kratni na goleminata na 1 Tile(40 v momenta)
             // Bitmap monsterSpr = new Bitmap("../../Graphics/monster.jpg");
-            enemies = new List<GameObject>(){
+            enemies = new List<Enemy>(){
                 new Enemy(SpriteType.Enemy, new Point(240, 280), 0),
                 new Enemy(SpriteType.Enemy, new Point(80, 80), 0)
             };
@@ -53,9 +53,20 @@
 
             // Draw();
         }
-       
+        public List<Friend> Friends
+        {
+            get
+            {
+                return this.friends;
+            }
 
-        public List<GameObject> Enemies
+            set
+            {
+                this.friends = value;
+            }
+        }
+
+        public List<Enemy> Enemies
         {
             get
             {
@@ -183,14 +194,14 @@
             // TO DO: same thing for friends
             if (enemy is Enemy)
             {
-                combatForm = new CombatForm(player, enemy as Enemy);
+                combatForm = new CombatForm(player, enemy);
                 combatForm.Visible = true;
                 player.Health = combatForm.GetPlayerHelth();
                 RemoveObject(enemy);
             }
         }
 
-        private void RemoveObject(GameObject enemy)
+        private void RemoveObject(Enemy enemy)
         {
             this.enemies.Remove(enemy);
             this.drawEngine.Remove(enemy);

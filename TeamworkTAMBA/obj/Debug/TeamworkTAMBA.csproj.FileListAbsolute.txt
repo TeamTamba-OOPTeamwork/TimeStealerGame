@@ -1,7 +1,6 @@
 W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.exe.config
 W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.exe
 W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\bin\Debug\TeamworkTAMBA.pdb
-W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.csprojResolveAssemblyReference.cache
 W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.CombatForm.resources
 W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.GameForm.resources
 W:\_SoftUni\2014-09-OOP\TeamWork\TeamTambaGameRepo\trunk\TeamworkTAMBA\obj\Debug\TeamworkTAMBA.Properties.Resources.resources

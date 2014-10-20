@@ -41,16 +41,12 @@
 
         private IList<GameObject> backgroundItems = new List<GameObject>();
 
-        private IList<GameObject> charactersAndItems = new List<GameObject>();
+        private IList<GameObject> drawableList = new List<GameObject>();
 
-        private Player player;
-
-        public DrawEngine(Form form, List<GameObject> backgroundItems, List<GameObject> charactersAndItems, Player player)
+        public DrawEngine(Form form, IList<GameObject> drawableList)
         {
             this.form = form;
-            this.backgroundItems = backgroundItems;
-            this.charactersAndItems = charactersAndItems;
-            this.player = player;
+            this.backgroundItems = drawableList;
 
             this.mapSprites = new PictureBox();
             mapSprites.Width = form.Width;
@@ -66,24 +62,22 @@
             img = new Bitmap(this.form.Width, this.form.Height); //o4ertava ramkata na PictureBox-a
             device = Graphics.FromImage(img);
 
-            foreach (var item in this.backgroundItems)
+            foreach (var item in backgroundItems)
             {
-                this.DrawObject(item);
+                DrawObject(item);
             }
-
-            foreach (var item in this.charactersAndItems)
-            {
-                this.DrawObject(item);
-            }
-
-            this.DrawObject(player);
 
             mapSprites.Image = img;
         }
 
+        public void Add(GameObject gameobj)
+        {
+            this.backgroundItems.Add(gameobj);
+        }
+
         public void Remove(GameObject gameobj)
         {
-            this.charactersAndItems.Remove(gameobj);
+            this.backgroundItems.Remove(gameobj);
         }
 
         private void DrawObject(GameObject gameObj)
@@ -91,11 +85,7 @@
             device.DrawImage(GetImage(gameObj), gameObj.Location);
         }
 
-        private void ChangeMapSprite(List<GameObject>  list)
-        {
-            this.backgroundItems = list;
-        }
-        
+
         private Image GetImage(GameObject gameObj)
         {
             Image image = null;
@@ -143,6 +133,7 @@
 
             return image;
         }
+
 
         public void LoadResources()
         {

@@ -13,7 +13,7 @@
         private const string Player = "../../Graphics/player.png";
         private const string Enemy = "../../Graphics/monster.jpg";
         private const string Homework = null;
-        private const string Exam = null;
+        private const string Lecture = null;
         private const string Teamwork = null;
         private const string Didko = null;
         private const string Nakov = null;
@@ -26,12 +26,12 @@
         private const string Food = null;
         private const string Money = null;
         private const string Floor = "../../Graphics/floor.jpg";
-        private const string Desk = "../../Graphics/desk.png";
-        private const string Air = "../../Graphics/air.png";
+        private const string Furniture = null;
+        private const string Column = null;
 
 
-        Image playerSpr, enemySpr, homeworkSpr, examSpr, teamworkSpr, didkoSpr, nakovSpr, naskoSpr, superVladoSpr, tediSpr,
-        vladoSpr, wallSpr, drinkSpr, foodSpr, moneySpr, floorSpr, deskSpr, airSpr;
+        Image playerSpr, enemySpr, homeworkSpr, lectureSpr, teamworkSpr, didkoSpr, nakovSpr, naskoSpr, superVladoSpr, tediSpr,
+        vladoSpr, wallSpr, drinkSpr, foodSpr, moneySpr, floorSpr, furnitureSpr, columnSpr;
 
 
         private Graphics device;
@@ -39,18 +39,13 @@
         private Form form;
         private Image img;
 
-        private IList<GameObject> backgroundItems = new List<GameObject>();
+        private IList<GameObject> drawableList = new List<GameObject>();
 
-        private IList<GameObject> charactersAndItems = new List<GameObject>();
-
-        private Player player;
-
-        public DrawEngine(Form form, List<GameObject> backgroundItems, List<GameObject> charactersAndItems, Player player)
+        public DrawEngine(Form form, IList<GameObject> drawableList)
         {
+
             this.form = form;
-            this.backgroundItems = backgroundItems;
-            this.charactersAndItems = charactersAndItems;
-            this.player = player;
+            this.drawableList = drawableList;
 
             this.mapSprites = new PictureBox();
             mapSprites.Width = form.Width;
@@ -66,36 +61,34 @@
             img = new Bitmap(this.form.Width, this.form.Height); //o4ertava ramkata na PictureBox-a
             device = Graphics.FromImage(img);
 
-            foreach (var item in this.backgroundItems)
+            foreach (var item in drawableList)
             {
-                this.DrawObject(item);
+                DrawObject(item);
             }
 
-            foreach (var item in this.charactersAndItems)
-            {
-                this.DrawObject(item);
-            }
-
-            this.DrawObject(player);
 
             mapSprites.Image = img;
         }
 
+        public void Add(GameObject gameobj)
+        {
+            this.drawableList.Add(gameobj);
+        }
+
         public void Remove(GameObject gameobj)
         {
-            this.charactersAndItems.Remove(gameobj);
+            this.drawableList.Remove(gameobj);
         }
+
 
         private void DrawObject(GameObject gameObj)
         {
             device.DrawImage(GetImage(gameObj), gameObj.Location);
+
         }
 
-        private void ChangeMapSprite(List<GameObject>  list)
-        {
-            this.backgroundItems = list;
-        }
-        
+
+
         private Image GetImage(GameObject gameObj)
         {
             Image image = null;
@@ -107,7 +100,7 @@
                     break;
                 case SpriteType.Homework: image = this.homeworkSpr;
                     break;
-                case SpriteType.Exam: image = this.examSpr;
+                case SpriteType.Lecture: image = this.lectureSpr;
                     break;
                 case SpriteType.Teamwork:
                     break;
@@ -133,9 +126,9 @@
                     break;
                 case SpriteType.Floor: image = this.floorSpr;
                     break;
-                case SpriteType.Desk: image = this.deskSpr;
+                case SpriteType.Furniture:
                     break;
-                case SpriteType.Air: image = this.airSpr;
+                case SpriteType.Column:
                     break;
                 default:
                     break;
@@ -144,12 +137,13 @@
             return image;
         }
 
+
         public void LoadResources()
         {
             this.playerSpr = Image.FromFile(Player);
             this.enemySpr = Image.FromFile(Enemy);
             this.homeworkSpr = null;
-            this.examSpr = null;
+            this.lectureSpr = null;
             this.teamworkSpr = null;
             this.didkoSpr = null;
             this.nakovSpr = null;
@@ -162,8 +156,8 @@
             this.foodSpr = null;
             this.moneySpr = null;
             this.floorSpr = Image.FromFile(Floor);
-            this.deskSpr = Image.FromFile(Desk);
-            this.airSpr = Image.FromFile(Air);
+            this.furnitureSpr = null;
+            this.columnSpr = null;
         }
     }
 }

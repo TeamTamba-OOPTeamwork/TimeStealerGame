@@ -90,11 +90,6 @@
         {
             device.DrawImage(GetImage(gameObj), gameObj.Location);
         }
-
-        private void ChangeMapSprite(List<GameObject>  list)
-        {
-            this.backgroundItems = list;
-        }
         
         private Image GetImage(GameObject gameObj)
         {

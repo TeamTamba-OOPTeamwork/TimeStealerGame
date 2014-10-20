@@ -53,9 +53,20 @@
 
             // Draw();
         }
-       
+        public List<Friend> Friends
+        {
+            get
+            {
+                return this.friends;
+            }
 
-        public List<GameObject> Enemies
+            set
+            {
+                this.friends = value;
+            }
+        }
+
+        public List<Enemy> Enemies
         {
             get
             {
@@ -183,14 +194,14 @@
             // TO DO: same thing for friends
             if (enemy is Enemy)
             {
-                combatForm = new CombatForm(player, enemy as Enemy);
+                combatForm = new CombatForm(player, enemy);
                 combatForm.Visible = true;
                 player.Health = combatForm.GetPlayerHelth();
                 RemoveObject(enemy);
             }
         }
 
-        private void RemoveObject(GameObject enemy)
+        private void RemoveObject(Enemy enemy)
         {
             this.enemies.Remove(enemy);
             this.drawEngine.Remove(enemy);

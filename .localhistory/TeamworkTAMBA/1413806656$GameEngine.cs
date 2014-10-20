@@ -19,8 +19,8 @@
         private Player player;
         private CombatForm combatForm;
         private Form gameForm;
-        private List<GameObject> enemies;  // TO DO characters
-
+        private List<Enemy> enemies;
+        private List<Friend> friends;
         private bool isInCombat;
         public Map map;
         private DrawEngine drawEngine;
@@ -32,14 +32,14 @@
 
             isInCombat = false;
             // Bitmap playerSpr = new Bitmap("../../Graphics/Player.png");
-            this.player = new Player(SpriteType.Player, new Point(40, 40), 1);
+            this.player = new Player(SpriteType.Player, new Point(0, 0), 1);
 
 
 
             // TO DO: da se iznese v metod i da se mahnat izmislenite kordinati
             // za da se polu4at to4ni kordinati trqbva da sa kratni na goleminata na 1 Tile(40 v momenta)
             // Bitmap monsterSpr = new Bitmap("../../Graphics/monster.jpg");
-            enemies = new List<GameObject>(){
+            enemies = new List<Enemy>(){
                 new Enemy(SpriteType.Enemy, new Point(240, 280), 0),
                 new Enemy(SpriteType.Enemy, new Point(80, 80), 0)
             };
@@ -48,14 +48,25 @@
             listOfObjects.AddRange(map.MapTiles);
             listOfObjects.AddRange(enemies);
             listOfObjects.Add(player);
-            this.drawEngine = new DrawEngine(gameForm, this.map.MapTiles, enemies, player);
+            this.drawEngine = new DrawEngine(gameForm, listOfObjects);
             drawEngine.Draw();
 
             // Draw();
         }
-       
+        public List<Friend> Friends
+        {
+            get
+            {
+                return this.friends;
+            }
 
-        public List<GameObject> Enemies
+            set
+            {
+                this.friends = value;
+            }
+        }
+
+        public List<Enemy> Enemies
         {
             get
             {
@@ -156,41 +167,30 @@
                 player.Move(playerNextMove.X, playerNextMove.Y);
             }
 
-            if (mapItemType is Floor && mapItemType.ID == 1)
-            {
-                player.Location = new Point(FIRST_VISIBLE_CELL, playerNextLocation.Y);
-                //map.DrawNextSprite();
-            }
-
             if (mapItemType is Floor && mapItemType.ID == 2)
             {
+                player.Location = new Point(FIRST_VISIBLE_CELL, playerNextLocation.Y);
+                map.DrawNextSprite();
+            }
+
+            if (mapItemType is Floor && mapItemType.ID == 1)
+            {
                 player.Location = new Point(LAST_VISIBLE_CELL, playerNextLocation.Y);
-                //map.DrawPreviousSprite();
+                map.DrawPreviousSprite();
+
             }
 
-            if (mapItemType is Floor && mapItemType.ID == 3)
-            {
-                player.Location = new Point(playerNextLocation.X, FIRST_VISIBLE_CELL);
-                //map.DrawNextSprite();
-            }
-
-            if (mapItemType is Floor && mapItemType.ID == 4)
-            {
-                player.Location = new Point(playerNextLocation.X, LAST_VISIBLE_CELL);
-                //map.DrawPreviousSprite();
-            }
-
-            // TO DO: same thing for friends
+            //to do: same thing for friends
             if (enemy is Enemy)
             {
-                combatForm = new CombatForm(player, enemy as Enemy);
+                combatForm = new CombatForm(player, enemy);
                 combatForm.Visible = true;
                 player.Health = combatForm.GetPlayerHelth();
                 RemoveObject(enemy);
             }
         }
 
-        private void RemoveObject(GameObject enemy)
+        private void RemoveObject(Enemy enemy)
         {
             this.enemies.Remove(enemy);
             this.drawEngine.Remove(enemy);

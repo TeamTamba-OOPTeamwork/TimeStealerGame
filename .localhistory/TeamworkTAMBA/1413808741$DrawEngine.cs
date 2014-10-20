@@ -45,7 +45,7 @@
 
         private Player player;
 
-        public DrawEngine(Form form, List<GameObject> backgroundItems, List<GameObject> charactersAndItems, Player player)
+        public DrawEngine(Form form, IList<GameObject> backgroundItems, IList<GameObject> charactersAndItems, Player player)
         {
             this.form = form;
             this.backgroundItems = backgroundItems;
@@ -91,11 +91,7 @@
             device.DrawImage(GetImage(gameObj), gameObj.Location);
         }
 
-        private void ChangeMapSprite(List<GameObject>  list)
-        {
-            this.backgroundItems = list;
-        }
-        
+
         private Image GetImage(GameObject gameObj)
         {
             Image image = null;
@@ -143,6 +139,7 @@
 
             return image;
         }
+
 
         public void LoadResources()
         {

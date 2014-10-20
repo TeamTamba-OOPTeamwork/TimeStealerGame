@@ -55,7 +55,7 @@
         }
        
 
-        public List<GameObject> Enemies
+        public List<Enemy> Enemies
         {
             get
             {
