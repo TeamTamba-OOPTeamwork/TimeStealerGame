@@ -132,6 +132,7 @@
     <Content Include="Graphics\Player.png" />
     <Content Include="Graphics\railing.png" />
     <Content Include="Graphics\wall.jpg" />
+    <Content Include="Sprites\floorplan-legend.txt" />
     <Content Include="Sprites\spriteCharacter01.txt" />
     <Content Include="Sprites\sprite01.txt" />
     <Content Include="Sprites\spriteCharacter02.txt" />
