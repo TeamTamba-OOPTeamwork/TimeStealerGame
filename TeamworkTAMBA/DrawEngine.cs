@@ -94,7 +94,7 @@
             this.backgroundItems = list;
         }
 
-        public void ChangecharactersAndItemsSrites(List<GameObject> list)
+        public void ChangeCharactersAndItemsSprites(List<GameObject> list)
         {
             this.charactersAndItems = list;
         }

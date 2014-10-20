@@ -29,7 +29,7 @@
             for (int i = 0; i < 9; i++)
             {
                 
-                this.CharatersAndItems.Add(i, new List<GameObject>(){
+                this.CharatersAndItems.Add(i + 1, new List<GameObject>(){
                 new Enemy(SpriteType.Enemy, new Point(240, 280), 0),
                 new Enemy(SpriteType.Enemy, new Point(80, 80), 0)
                 });

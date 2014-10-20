@@ -21,7 +21,7 @@
         private Form gameForm;
         private List<GameObject> enemies;  // TO DO characters
         private Dictionary<int, List<GameObject>> CharatersAndItems;
-        private int currentSrite;
+        private int currentSprite;
 
         private bool isInCombat;
         public Map map;
@@ -32,7 +32,7 @@
             this.gameForm = form;
             this.map = new Map(gameForm);
             this.CharatersAndItems = map.CharatersAndItems;
-            this.currentSrite = 1;
+            this.currentSprite = 1;
 
             isInCombat = false;
             // Bitmap playerSpr = new Bitmap("../../Graphics/Player.png");
@@ -47,7 +47,7 @@
             //    new Enemy(SpriteType.Enemy, new Point(240, 280), 0),
             //    new Enemy(SpriteType.Enemy, new Point(80, 80), 0)
             //};
-            this.drawEngine = new DrawEngine(gameForm, this.map.MapTiles, this.CharatersAndItems[this.currentSrite], player);
+            this.drawEngine = new DrawEngine(gameForm, this.map.MapTiles, this.CharatersAndItems[this.currentSprite], player);
             drawEngine.Draw();
 
             // Draw();
@@ -143,7 +143,7 @@
             Point playerNextLocation = new Point(player.location.X + playerNextMove.X, player.Location.Y + playerNextMove.Y);
 
             var mapItemType = this.map.MapTiles.Find(x => x.Location == playerNextLocation);
-            var enemy = this.CharatersAndItems[this.currentSrite].Find(x => x.Location == playerNextLocation);
+            var enemy = this.CharatersAndItems[this.currentSprite].Find(x => x.Location == playerNextLocation);
 
             if (mapItemType is Wall)
             {
@@ -160,8 +160,8 @@
                 player.Location = new Point(FIRST_VISIBLE_CELL, playerNextLocation.Y);
                 this.map.DrawNextSprite();
                 this.drawEngine.ChangeMapSprite(this.map.MapTiles);
-                this.currentSrite += 1;
-                this.drawEngine.ChangecharactersAndItemsSrites(this.CharatersAndItems[this.currentSrite]);
+                this.currentSprite += 1;
+                this.drawEngine.ChangeCharactersAndItemsSprites(this.CharatersAndItems[this.currentSprite]);
             }
 
             if (mapItemType is Floor && mapItemType.ID == 2)
@@ -169,8 +169,8 @@
                 player.Location = new Point(LAST_VISIBLE_CELL, playerNextLocation.Y);
                 this.map.DrawPreviousSprite();
                 this.drawEngine.ChangeMapSprite(this.map.MapTiles);
-                this.currentSrite -= 1;
-                this.drawEngine.ChangecharactersAndItemsSrites(this.CharatersAndItems[this.currentSrite]);
+                this.currentSprite -= 1;
+                this.drawEngine.ChangeCharactersAndItemsSprites(this.CharatersAndItems[this.currentSprite]);
             }
 
             if (mapItemType is Floor && mapItemType.ID == 3)
@@ -178,8 +178,8 @@
                 player.Location = new Point(playerNextLocation.X, FIRST_VISIBLE_CELL);
                 this.map.DrawLowerSprite();
                 this.drawEngine.ChangeMapSprite(this.map.MapTiles);
-                this.currentSrite += 3;
-                this.drawEngine.ChangecharactersAndItemsSrites(this.CharatersAndItems[this.currentSrite]);
+                this.currentSprite += 3;
+                this.drawEngine.ChangeCharactersAndItemsSprites(this.CharatersAndItems[this.currentSprite]);
             }
 
             if (mapItemType is Floor && mapItemType.ID == 4)
@@ -187,8 +187,8 @@
                 player.Location = new Point(playerNextLocation.X, LAST_VISIBLE_CELL);
                 this.map.DrawUpperSprite();
                 this.drawEngine.ChangeMapSprite(this.map.MapTiles);
-                this.currentSrite -= 3;
-                this.drawEngine.ChangecharactersAndItemsSrites(this.CharatersAndItems[this.currentSrite]);
+                this.currentSprite -= 3;
+                this.drawEngine.ChangeCharactersAndItemsSprites(this.CharatersAndItems[this.currentSprite]);
             }
 
             // TO DO: same thing for friends
@@ -203,7 +203,7 @@
 
         private void RemoveObject(GameObject enemy)
         {
-            this.CharatersAndItems[this.currentSrite].Remove(enemy);
+            this.CharatersAndItems[this.currentSprite].Remove(enemy);
             this.drawEngine.Remove(enemy);
         }
     }
