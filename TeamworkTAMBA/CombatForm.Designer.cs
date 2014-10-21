@@ -55,7 +55,6 @@
             // 
             // pictureBox2
             // 
-           // this.pictureBox2.Image = global::TeamworkTAMBA.Properties.Resources.monster;
             this.pictureBox2.Location = new System.Drawing.Point(500, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 100);
@@ -201,7 +200,7 @@
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(177, 309);
+            this.exit.Location = new System.Drawing.Point(177, 313);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(266, 43);
             this.exit.TabIndex = 14;

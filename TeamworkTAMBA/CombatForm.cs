@@ -20,12 +20,13 @@ namespace TeamworkTAMBA
         private bool isPlayerAlive = true;
         private int knowlageUsage = 0;
         private DrawEngine drowEngine;
+        private DeadForm deadForm;
 
         public CombatForm(Player player, Enemy enemy, DrawEngine drowEngine)
         {
             InitializeComponent();
             this.enemy = enemy;
-            this.enemy.AttackPower = 5;
+            this.enemy.AttackPower = 50;
             this.player = player;
             this.player.AttackPower = 10;
             this.drowEngine = drowEngine;
@@ -276,6 +277,7 @@ namespace TeamworkTAMBA
                 isPlayerAlive = false;
                 EnemyTextBox.Text = "The Homework hit you back for " + enemyRandomDamage +
                                     "\nYou were killed form a Homework.. You sux!";
+                exit.Visible = true;
             }
         }
 
@@ -294,7 +296,17 @@ namespace TeamworkTAMBA
 
         private void exit_Click(object sender, EventArgs e)
         {
+            die();
             this.Close();
+        }
+
+        private void die()
+        {
+            if (!isPlayerAlive)
+            {
+                deadForm = new DeadForm();
+                deadForm.Visible = Enabled;
+            }
         }
     }
 }
