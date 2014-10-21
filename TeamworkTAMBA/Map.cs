@@ -121,6 +121,10 @@
                                 default:
                                     break;
                             }
+                            if (item.SpiteType == SpriteType.None)
+                            {
+                                continue;
+                            }
                             this.MapTiles.Add(item);
                         }
                         col++;
@@ -218,10 +222,6 @@
                                     break;
                                 default:
                                     break;
-                            }
-                            if (item.SpiteType == SpriteType.None)
-                            {
-                                continue;
                             }
                             list.Add(item);
                         }
