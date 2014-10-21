@@ -26,10 +26,11 @@
         private const string Floor = "../../Graphics/floor.jpg";
         private const string Desk = "../../Graphics/desk.png";
         private const string Air = "../../Graphics/air.png";
+        private const string Time = "../../Graphics/Time.jpg";
 
 
         Image playerSpr, enemySpr, homeworkSpr, examSpr, teamworkSpr, didkoSpr, nakovSpr, naskoSpr, superVladoSpr, tediSpr,
-        vladoSpr, wallSpr, coffeeSpr, floorSpr, deskSpr, airSpr;
+        vladoSpr, wallSpr, coffeeSpr, floorSpr, deskSpr, airSpr, timeSpr;
 
 
         private Graphics device;
@@ -139,6 +140,8 @@
                     break;
                 case SpriteType.Air: image = this.airSpr;
                     break;
+                case SpriteType.Time: image = this.timeSpr;
+                    break;
                 default:
                     break;
             }
@@ -164,6 +167,7 @@
             this.floorSpr = Image.FromFile(Floor);
             this.deskSpr = Image.FromFile(Desk);
             this.airSpr = Image.FromFile(Air);
+            this.timeSpr = Image.FromFile(Time);
         }
     }
 }

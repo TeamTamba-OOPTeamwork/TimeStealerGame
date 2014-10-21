@@ -145,7 +145,7 @@
             Point playerNextLocation = new Point(player.location.X + playerNextMove.X, player.Location.Y + playerNextMove.Y);
 
             var mapItemType = this.map.MapTiles.Find(x => x.Location == playerNextLocation);
-            var enemy = this.CharatersAndItems[this.currentSprite].Find(x => x.Location == playerNextLocation);
+            var charactesAndItems = this.CharatersAndItems[this.currentSprite].Find(x => x.Location == playerNextLocation);
 
             if (mapItemType is Wall)
             {
@@ -194,21 +194,21 @@
             }
 
             // TO DO: same thing for friends
-            if (enemy is Enemy)
+            if (charactesAndItems is Enemy)
             {
-                combatForm = new CombatForm(player, enemy as Enemy, drawEngine);
+                combatForm = new CombatForm(player, charactesAndItems as Enemy, drawEngine);
                 combatForm.Visible = true;
                 player.Health = combatForm.GetPlayerHelth();
-                RemoveObject(enemy);
+                RemoveObject(charactesAndItems);
             }
-            if (enemy is Coffee)
+            if (charactesAndItems is Coffee)
             {
-                _pickupForm = new PickupForm(player, enemy as Coffee);
+                _pickupForm = new PickupForm(player, charactesAndItems as Coffee);
                 _pickupForm.Visible = true;
             }
-            if (enemy is Friend)
+            if (charactesAndItems is Friend)
             {
-                friendForm = new FriendForm(player, enemy as Friend);
+                friendForm = new FriendForm(player, charactesAndItems as Friend);
                 friendForm.Visible = true;
             }
         }

@@ -18,6 +18,7 @@
         Coffee,
         Floor,
         Desk,
-        Air
+        Air,
+        Time
     }
 }

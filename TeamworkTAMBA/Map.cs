@@ -220,6 +220,9 @@
                                 case "C":
                                     item = new Coffee(SpriteType.Coffee, itemlocation, 0);
                                     break;
+                                case "I":
+                                    item = new GameObject(SpriteType.Time, itemlocation, 0);
+                                    break;
                                 default:
                                     break;
                             }
