@@ -86,7 +86,10 @@
 
         private void DrawObject(GameObject gameObj)
         {
-            device.DrawImage(GetImage(gameObj), gameObj.Location);
+            if (gameObj.SpiteType != SpriteType.None)
+            {
+                device.DrawImage(GetImage(gameObj), gameObj.Location);
+            }
         }
 
         public void ChangeMapSprite(List<GameObject> list)

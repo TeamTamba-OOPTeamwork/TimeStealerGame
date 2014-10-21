@@ -219,6 +219,10 @@
                                 default:
                                     break;
                             }
+                            if (item.SpiteType == SpriteType.None)
+                            {
+                                continue;
+                            }
                             list.Add(item);
                         }
                         col++;
