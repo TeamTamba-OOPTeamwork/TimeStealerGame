@@ -16,17 +16,9 @@ namespace TeamworkTAMBA
     {
         private Enemy enemy;
         private Player player;
-        private bool isInCombat;
         private bool isEnemyAlive = true;
         private bool isPlayerAlive = true;
         private int knowlageUsage = 0;
-        private bool isWeaponAllowed = true;
-
-        // TO DO: da se inicializirat igra4a i gadinata v constructora
-        // Da se vikne StartCombat
-        // Da se napravi logika za bitka
-        // Da se naredqt buttoni i poleta prez Disgna na Formata
-        // Da se sloji text box i da se varje s butonite
 
         public CombatForm(Player player, Enemy enemy)
         {
@@ -35,23 +27,22 @@ namespace TeamworkTAMBA
             this.enemy.AttackPower = 5;
             this.player = player;
             this.player.AttackPower = 10;
-            
 
-            progressBar2.Maximum = 100;
-            progressBar1.Maximum = 100;
-            progressBar1.Value = player.Health;
-            playerKnowledgeProgressbar.Value = player.Knowledge;
-
+            //This removex the "x" button to avoid close the battle. It is in comment to easy the tests
             //this.ControlBox = false;
+
+            enemyHealthProgressBar.Maximum = 100;
+            playerHealthProgressBar.Maximum = 100;
+            playerHealthProgressBar.Value = player.Health;
+            playerKnowledgeProgressbar.Value = player.Knowledge;
            
-            labelPlayersHealth.Text = "Health: " + player.Health;
+            labelPlayersTime.Text = "Time: " + player.Health;
             labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
+            labelPlayerKnowlage.Text = "Knowlage: " + player.Knowledge;
             labelEnemyHealth.Text = "Health: " + enemy.Health;
             labelEnemyDmg.Text = "Damage: " + "1-" + enemy.AttackPower;
-            playerKnowlageLabel.Text = "Knowlage: " + player.Knowledge;
-
-
-            // Bugva se obshtiqt buton, shte go opravq
+            
+            //Disables the weapon checkboxes if still not taken from the teacher
             foreach (var weapon in this.player.Weapons)
             {
                 if (weapon.Power == 0)
@@ -59,24 +50,19 @@ namespace TeamworkTAMBA
                     switch (weapon.WeaponType)
                     {
                         case WeaponTypes.Java:
-                            checkBox2.Enabled = false;
-                            isWeaponAllowed = false;
+                            javaCheckBox.Enabled = false;
                             break;
                         case WeaponTypes.HTML:
-                            checkBox3.Enabled = false;
-                            isWeaponAllowed = false;
+                            htmlCheckBox.Enabled = false;
                             break;
                         case WeaponTypes.CSS:
-                            checkBox4.Enabled = false;
-                            isWeaponAllowed = false;
+                            cssCheckBox.Enabled = false;
                             break;
                         case WeaponTypes.JavaScript:
-                            checkBox5.Enabled = false;
-                            isWeaponAllowed = false;
+                            javascriptCheckBox.Enabled = false;
                             break;
                         case WeaponTypes.PHP:
-                            checkBox6.Enabled = false;
-                            isWeaponAllowed = false;
+                            phpCheckBox.Enabled = false;
                             break;
                     }
                 }
@@ -84,21 +70,21 @@ namespace TeamworkTAMBA
         }
 
         //The weapones check boxes
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void CSharpCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (CSharpCheckBox.Checked)
             {
             }
             else
             {
-                richTextBox1.Text = "You can not fight the Homeworks without programing skills!";
-                checkBox1.Checked = true;
+                playerTextBox.Text = "You can not fight the Homeworks without programing skills!";
+                CSharpCheckBox.Checked = true;
             }
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        private void javaCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox2.Checked)
+            if (javaCheckBox.Checked)
             {
                 player.AttackPower += 10;
                 knowlageUsage += 10;
@@ -112,10 +98,10 @@ namespace TeamworkTAMBA
             }
         }
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        private void htmlCheckBox_CheckedChanged(object sender, EventArgs e)
         {
 
-            if (checkBox3.Checked)
+            if (htmlCheckBox.Checked)
             {
                 player.AttackPower += 10;
                 knowlageUsage += 1;
@@ -129,9 +115,9 @@ namespace TeamworkTAMBA
             }
         }
 
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        private void cssCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox4.Checked)
+            if (cssCheckBox.Checked)
             {
                 player.AttackPower += 10;
                 knowlageUsage += 1;
@@ -145,9 +131,9 @@ namespace TeamworkTAMBA
             }
         }
 
-        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        private void javascriptCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox5.Checked)
+            if (javascriptCheckBox.Checked)
             {
                 player.AttackPower += 10;
                 knowlageUsage += 1;
@@ -161,9 +147,9 @@ namespace TeamworkTAMBA
             }
         }
 
-        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        private void phpCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox6.Checked)
+            if (phpCheckBox.Checked)
             {
                 player.AttackPower += 10;
                 knowlageUsage += 1;
@@ -177,60 +163,59 @@ namespace TeamworkTAMBA
             }
         }
 
-        // Bugva se obshtiqt buton, shte go opravq
-        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        private void checkAllBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox7.Checked)
+            if (checkAllBox.Checked)
             {
-                if (isWeaponAllowed)
+                if (javaCheckBox.Enabled)
                 {
-                    checkBox2.Checked = true;
+                    javaCheckBox.Checked = true;
                 }
-                if (isWeaponAllowed)
+                if (htmlCheckBox.Enabled)
                 {
-                    checkBox3.Checked = true;
+                    htmlCheckBox.Checked = true;
                 }
-                if (isWeaponAllowed)
+                if (cssCheckBox.Enabled)
                 {
-                    checkBox4.Checked = true;
+                    cssCheckBox.Checked = true;
                 }
-                if (isWeaponAllowed)
+                if (javascriptCheckBox.Enabled)
                 {
-                    checkBox5.Checked = true;
+                    javascriptCheckBox.Checked = true;
                 }
-                if (isWeaponAllowed)
+                if (phpCheckBox.Enabled)
                 {
-                    checkBox6.Checked = true;
+                    phpCheckBox.Checked = true;
                 }
                 
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
             else
             {
-                checkBox2.Checked = false;
-                checkBox3.Checked = false;
-                checkBox4.Checked = false;
-                checkBox5.Checked = false;
-                checkBox6.Checked = false;
+                javaCheckBox.Checked = false;
+                htmlCheckBox.Checked = false;
+                cssCheckBox.Checked = false;
+                javascriptCheckBox.Checked = false;
+                phpCheckBox.Checked = false;
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
         }
 
-        //The text box
+        //The text box. This is useless
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         //The "Do it button"
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonDoIt_Click(object sender, EventArgs e)
         {
             if (isPlayerAlive && isEnemyAlive)
             {
                 Combat();
-                labelPlayersHealth.Text = "Health: " + player.Health;
+                labelPlayersTime.Text = "Time: " + player.Health;
                 labelEnemyHealth.Text = "Health: " + enemy.Health;
-                playerKnowlageLabel.Text = "Knowlage: " + player.Knowledge;
+                labelPlayerKnowlage.Text = "Knowlage: " + player.Knowledge;
             }
         }
 
@@ -248,29 +233,29 @@ namespace TeamworkTAMBA
                 player.Knowledge = 0;
                 playerKnowledgeProgressbar.Value = playerKnowledgeProgressbar.Minimum;
                 
-                checkBox2.Checked = false;
-                checkBox3.Checked = false;
-                checkBox4.Checked = false;
-                checkBox5.Checked = false;
-                checkBox6.Checked = false;
+                javaCheckBox.Checked = false;
+                htmlCheckBox.Checked = false;
+                cssCheckBox.Checked = false;
+                javascriptCheckBox.Checked = false;
+                phpCheckBox.Checked = false;
 
-                checkBox2.Enabled = false;
-                checkBox3.Enabled = false;
-                checkBox4.Enabled = false;
-                checkBox5.Enabled = false;
-                checkBox6.Enabled = false;
+                javaCheckBox.Enabled = false;
+                htmlCheckBox.Enabled = false;
+                cssCheckBox.Enabled = false;
+                javascriptCheckBox.Enabled = false;
+                phpCheckBox.Enabled = false;
             }
 
             if (enemy.Health > 0)
             {
-                progressBar2.Value = newEnemyHealth;
-                richTextBox1.Text = "You have hit the Homework for " + playerRandomDamage + "\nThe Homework now have " + enemy.Health + " health.";
+                enemyHealthProgressBar.Value = newEnemyHealth;
+                playerTextBox.Text = "You have hit the Homework for " + playerRandomDamage + "\nThe Homework now have " + enemy.Health + " health.";
             }
             else
             {
-                progressBar2.Value = progressBar2.Minimum;
+                enemyHealthProgressBar.Value = enemyHealthProgressBar.Minimum;
                 isEnemyAlive = false;
-                richTextBox1.Text = "You have hit the Homework for " + playerRandomDamage + "\nThe Homework is dead!";
+                playerTextBox.Text = "You have hit the Homework for " + playerRandomDamage + "\nThe Homework is dead!";
                 player.Health = newPlayerHealth;
                 
                 exit.Visible = true;
@@ -278,19 +263,17 @@ namespace TeamworkTAMBA
 
             if (player.Health > 0)
             {
-                progressBar1.Value = newPlayerHealth;
-                richTextBox2.Text = "But the Homework hit you back for " + enemyRandomDamage +
+                playerHealthProgressBar.Value = newPlayerHealth;
+                EnemyTextBox.Text = "But the Homework hit you back for " + enemyRandomDamage +
                     "\nYou have now " + player.Health + " health";
             }
             else
             {
-                progressBar1.Value = progressBar1.Minimum;
+                playerHealthProgressBar.Value = playerHealthProgressBar.Minimum;
                 isPlayerAlive = false;
-                richTextBox2.Text = "The Homework hit you back for " + enemyRandomDamage +
+                EnemyTextBox.Text = "The Homework hit you back for " + enemyRandomDamage +
                                     "\nYou were killed form a Homework.. You sux!";
             }
-
-            //return newEnemyHealth;
         }
 
         private int RandomDamageGenerator(int damage)
