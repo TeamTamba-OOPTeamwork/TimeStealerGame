@@ -2,6 +2,7 @@
 {
     public enum SpriteType
     {
+        None,
         Player,
         Enemy,
         Homework,
