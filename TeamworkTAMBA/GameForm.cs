@@ -19,6 +19,11 @@ namespace TeamworkTAMBA
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             game.MovementControls(e);
+        }
+
+        private void GameForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }        
     }
 }

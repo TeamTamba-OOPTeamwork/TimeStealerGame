@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoryForm.Designer.cs">
+      <DependentUpon>StoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Characters\Characters.cs" />
     <Compile Include="CombatForm.cs">
       <SubType>Form</SubType>
@@ -104,11 +110,17 @@
     <Compile Include="Characters\Friends\Vlado.cs" />
     <Compile Include="MapItems\StaticObjects\Wall.cs" />
     <Compile Include="Weapons\Weapons.cs" />
+    <EmbeddedResource Include="StoryForm.resx">
+      <DependentUpon>StoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CombatForm.resx">
       <DependentUpon>CombatForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FriendForm.resx">
       <DependentUpon>FriendForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PickupForm.resx">
       <DependentUpon>PickupForm.cs</DependentUpon>
