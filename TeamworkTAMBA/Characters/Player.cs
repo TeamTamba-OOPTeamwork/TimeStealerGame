@@ -9,6 +9,7 @@
     public class Player : Characters
     {
         private int knowledge;
+        private int money;
 
         public IList<Weapons> Weapons;
 
@@ -18,12 +19,15 @@
         public const int HTML_POWER = 0;
         public const int JAVA_SCRIPT_POWER = 0;
         public const int PHP_POWER = 0;
+        public const int MONEY = 10;
+        public const int KNOWLEDGE = 100;
 
         // constructor for the Form1
         public Player(SpriteType sriteType, Point location, int id) :
             base(sriteType, location, id)
         {
-            this.Knowledge = 100;
+            this.Knowledge = KNOWLEDGE;
+            this.Money = MONEY;
             this.InitializeWeapons();
         }
 
@@ -31,12 +35,13 @@
         public Player(SpriteType sriteType, int health, int attackPower, int knowledge) :
             base(sriteType, health, attackPower)
         {
-            this.Knowledge = knowledge;
+            this.Knowledge = KNOWLEDGE;
+            this.Money = MONEY;
             this.InitializeWeapons();
         }
 
         public int Knowledge { get; set; }
-
+        public int Money { get; set; }
         public void Move(int x, int y)
         {
             this.location.X += x;
