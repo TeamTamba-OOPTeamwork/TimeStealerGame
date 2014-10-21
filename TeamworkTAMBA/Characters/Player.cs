@@ -10,6 +10,7 @@
     {
         private int knowledge;
         private int money;
+        private int killsCounter;
 
         public IList<Weapons> Weapons;
 
@@ -21,6 +22,7 @@
         public const int PHP_POWER = 0;
         public const int MONEY = 10;
         public const int KNOWLEDGE = 100;
+        public const int KILLSCOUNTER = 0;
 
         // constructor for the Form1
         public Player(SpriteType sriteType, Point location, int id) :
@@ -28,20 +30,23 @@
         {
             this.Knowledge = KNOWLEDGE;
             this.Money = MONEY;
+            this.KillsCounter = KILLSCOUNTER;
             this.InitializeWeapons();
         }
 
         // constructor for the battle form
-        public Player(SpriteType sriteType, int health, int attackPower, int knowledge) :
+        public Player(SpriteType sriteType, int health, int attackPower) :
             base(sriteType, health, attackPower)
         {
             this.Knowledge = KNOWLEDGE;
             this.Money = MONEY;
+            this.KillsCounter = KILLSCOUNTER;
             this.InitializeWeapons();
         }
 
         public int Knowledge { get; set; }
         public int Money { get; set; }
+        public int KillsCounter { get; set; }
         public void Move(int x, int y)
         {
             this.location.X += x;

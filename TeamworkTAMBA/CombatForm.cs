@@ -47,6 +47,9 @@ namespace TeamworkTAMBA
             labelEnemyHealth.Text = "Health: " + enemy.Health;
             labelEnemyDmg.Text = "Damage: " + "1-" + enemy.AttackPower;
 
+            playerMoneyLabel.Text = "Money: " + player.Money;
+            killsLabel.Text = "Kills: " + player.KillsCounter;
+
             //Disables the weapon checkboxes if still not taken from the teacher
             foreach (var weapon in this.player.Weapons)
             {
@@ -282,6 +285,10 @@ namespace TeamworkTAMBA
                 isEnemyAlive = false;
                 playerTextBox.Text = "You have hit the Homework for " + playerRandomDamage + "\nThe Homework is dead!";
                 player.Health = newPlayerHealth;
+                player.KillsCounter++;
+                killsLabel.Text = "Kills: " + player.KillsCounter;
+                player.Money += 10;
+                playerMoneyLabel.Text = "Money: " + player.Money;
 
                 exit.Visible = true;
             }

@@ -45,11 +45,11 @@
             // speach
             // 
             this.speach.AutoSize = true;
-            this.speach.Location = new System.Drawing.Point(90, 145);
+            this.speach.Location = new System.Drawing.Point(31, 147);
             this.speach.Name = "speach";
-            this.speach.Size = new System.Drawing.Size(91, 13);
+            this.speach.Size = new System.Drawing.Size(50, 13);
             this.speach.TabIndex = 2;
-            this.speach.Text = "Nakov`s speache";
+            this.speach.Text = "Speache";
             this.speach.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FriendForm

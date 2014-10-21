@@ -33,7 +33,14 @@ namespace TeamworkTAMBA
                 {
                     if (wep.WeaponType == WeaponTypes.Java)
                     {
-                        wep.Power = 100;
+                        if (player.KillsCounter > 0)
+                        {
+                            wep.Power = 100;
+                        }
+                        else
+                        {
+                            speach.Text = "You must kill at least 1 Homework to earn Java!";
+                        }
                     }
                 }
             }
@@ -44,7 +51,14 @@ namespace TeamworkTAMBA
                 {
                     if (wep.WeaponType == WeaponTypes.HTML)
                     {
-                        wep.Power = 100;
+                        if (player.KillsCounter > 1)
+                        {
+                            wep.Power = 100;
+                        }
+                        else
+                        {
+                            speach.Text = "You must kill at least 1 Homework to earn HTML!";
+                        }
                     }
                 }
             }
@@ -53,9 +67,13 @@ namespace TeamworkTAMBA
                 speach.Text = "Hi, I`m Didko! Take this JavaScript!";
                 foreach (var wep in player.Weapons)
                 {
-                    if (wep.WeaponType == WeaponTypes.JavaScript)
+                    if (player.KillsCounter > 2)
                     {
                         wep.Power = 100;
+                    }
+                    else
+                    {
+                        speach.Text = "You must kill at least 2 Homework to earn JavaScript!";
                     }
                 }
             }
@@ -66,7 +84,14 @@ namespace TeamworkTAMBA
                 {
                     if (wep.WeaponType == WeaponTypes.PHP)
                     {
-                        wep.Power = 100;
+                        if (player.KillsCounter > 3)
+                        {
+                            wep.Power = 100;
+                        }
+                        else
+                        {
+                            speach.Text = "You must kill at least 3 Homework to earn PHP!";
+                        }
                     }
                 }
             }
@@ -75,9 +100,13 @@ namespace TeamworkTAMBA
                 speach.Text = "Hi, I`m Super Vlado! Take this CSS!";
                 foreach (var wep in player.Weapons)
                 {
-                    if (wep.WeaponType == WeaponTypes.CSS)
+                    if (player.KillsCounter > 4)
                     {
                         wep.Power = 100;
+                    }
+                    else
+                    {
+                        speach.Text = "You must kill at least 4 Homework to earn PHP!";
                     }
                 }
             }

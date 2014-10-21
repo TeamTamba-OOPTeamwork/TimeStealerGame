@@ -49,6 +49,8 @@
             this.labelEnemyDmg = new System.Windows.Forms.Label();
             this.playerKnowledgeProgressbar = new System.Windows.Forms.ProgressBar();
             this.labelPlayerKnowlage = new System.Windows.Forms.Label();
+            this.killsLabel = new System.Windows.Forms.Label();
+            this.playerMoneyLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -263,11 +265,31 @@
             this.labelPlayerKnowlage.TabIndex = 20;
             this.labelPlayerKnowlage.Text = "Player Knowlage";
             // 
+            // killsLabel
+            // 
+            this.killsLabel.AutoSize = true;
+            this.killsLabel.Location = new System.Drawing.Point(119, 13);
+            this.killsLabel.Name = "killsLabel";
+            this.killsLabel.Size = new System.Drawing.Size(25, 13);
+            this.killsLabel.TabIndex = 21;
+            this.killsLabel.Text = "Kills";
+            // 
+            // playerMoneyLabel
+            // 
+            this.playerMoneyLabel.AutoSize = true;
+            this.playerMoneyLabel.Location = new System.Drawing.Point(119, 30);
+            this.playerMoneyLabel.Name = "playerMoneyLabel";
+            this.playerMoneyLabel.Size = new System.Drawing.Size(39, 13);
+            this.playerMoneyLabel.TabIndex = 22;
+            this.playerMoneyLabel.Text = "Money";
+            // 
             // CombatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 366);
+            this.Controls.Add(this.playerMoneyLabel);
+            this.Controls.Add(this.killsLabel);
             this.Controls.Add(this.labelPlayerKnowlage);
             this.Controls.Add(this.playerKnowledgeProgressbar);
             this.Controls.Add(this.labelEnemyDmg);
@@ -323,6 +345,8 @@
         private System.Windows.Forms.Label labelEnemyDmg;
         private System.Windows.Forms.ProgressBar playerKnowledgeProgressbar;
         private System.Windows.Forms.Label labelPlayerKnowlage;
+        private System.Windows.Forms.Label killsLabel;
+        private System.Windows.Forms.Label playerMoneyLabel;
 
     }
 }
