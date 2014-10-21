@@ -12,6 +12,8 @@ namespace TeamworkTAMBA
 {
     public partial class DeadForm : Form
     {
+        private StoryForm storyForm;
+        private MainMenuForm mineForm;
         public DeadForm()
         {
             InitializeComponent();
@@ -20,6 +22,13 @@ namespace TeamworkTAMBA
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void restartButton_Click(object sender, EventArgs e)
+        {
+            mineForm = new MainMenuForm();
+            mineForm.Visible = Enabled;
+            this.Close();
         }
     }
 }
