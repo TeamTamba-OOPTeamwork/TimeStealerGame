@@ -109,6 +109,12 @@
     <Compile Include="Characters\Friends\Tedi.cs" />
     <Compile Include="Characters\Friends\Vlado.cs" />
     <Compile Include="MapItems\StaticObjects\Wall.cs" />
+    <Compile Include="StoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoryForm.Designer.cs">
+      <DependentUpon>StoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Weapons\Weapons.cs" />
     <EmbeddedResource Include="CombatForm.resx">
       <DependentUpon>CombatForm.cs</DependentUpon>
@@ -135,6 +141,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StoryForm.resx">
+      <DependentUpon>StoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
