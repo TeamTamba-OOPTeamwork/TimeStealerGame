@@ -19,14 +19,17 @@ namespace TeamworkTAMBA
         private bool isEnemyAlive = true;
         private bool isPlayerAlive = true;
         private int knowlageUsage = 0;
+        private DrawEngine drowEngine;
 
-        public CombatForm(Player player, Enemy enemy)
+        public CombatForm(Player player, Enemy enemy, DrawEngine drowEngine)
         {
             InitializeComponent();
             this.enemy = enemy;
             this.enemy.AttackPower = 5;
             this.player = player;
             this.player.AttackPower = 10;
+            this.drowEngine = drowEngine;
+            this.pictureBox2.Image = drowEngine.GetImage(enemy as GameObject);
 
             //This removex the "x" button to avoid close the battle. It is in comment to easy the tests
             //this.ControlBox = false;
@@ -35,18 +38,18 @@ namespace TeamworkTAMBA
             playerHealthProgressBar.Maximum = 100;
             playerHealthProgressBar.Value = player.Health;
             playerKnowledgeProgressbar.Value = player.Knowledge;
-           
+
             labelPlayersTime.Text = "Time: " + player.Health;
             labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             labelPlayerKnowlage.Text = "Knowlage: " + player.Knowledge;
             labelEnemyHealth.Text = "Health: " + enemy.Health;
             labelEnemyDmg.Text = "Damage: " + "1-" + enemy.AttackPower;
-            
+
             //Disables the weapon checkboxes if still not taken from the teacher
             foreach (var weapon in this.player.Weapons)
             {
                 if (weapon.Power == 0)
-                { 
+                {
                     switch (weapon.WeaponType)
                     {
                         case WeaponTypes.Java:
@@ -187,7 +190,7 @@ namespace TeamworkTAMBA
                 {
                     phpCheckBox.Checked = true;
                 }
-                
+
                 labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
             }
             else
@@ -232,7 +235,7 @@ namespace TeamworkTAMBA
             {
                 player.Knowledge = 0;
                 playerKnowledgeProgressbar.Value = playerKnowledgeProgressbar.Minimum;
-                
+
                 javaCheckBox.Checked = false;
                 htmlCheckBox.Checked = false;
                 cssCheckBox.Checked = false;
@@ -257,7 +260,7 @@ namespace TeamworkTAMBA
                 isEnemyAlive = false;
                 playerTextBox.Text = "You have hit the Homework for " + playerRandomDamage + "\nThe Homework is dead!";
                 player.Health = newPlayerHealth;
-                
+
                 exit.Visible = true;
             }
 

@@ -18,29 +18,29 @@ u - upper sprite
 
 C - coffee
 
-a - c# homework
-b - c# teamwork
-c - c# exam
+h - c# homework
+t - c# teamwork
+e - c# exam
 
-d - java homework
-e - java teamwork
-f - java exam
+h - java homework
+t - java teamwork
+e - java exam
 
-g - html homework
-h - html teamwork
-i - html exam
+h - html homework
+t - html teamwork
+e - html exam
 
-j - css homework
-k - css teamwork
-l - css exam
+h - css homework
+t - css teamwork
+e - css exam
 
-m - javaScript homework
-n - javaScript teamwork
-o - javaScript exam
+h - javaScript homework
+t - javaScript teamwork
+e - javaScript exam
 
-p - php homework
-q - php teamwork
-r - php exam
+h - php homework
+t - php teamwork
+e - php exam
 
 N - Nakov
 A - Nasko

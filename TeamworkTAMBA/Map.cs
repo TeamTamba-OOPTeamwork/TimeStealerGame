@@ -160,13 +160,13 @@
 
                             switch (line[row].ToString())
                             {
-                                case "a":
-                                    item = new Homework(SpriteType.Enemy, itemlocation, 1);
+                                case "h":
+                                    item = new Homework(SpriteType.Homework, itemlocation, 1);
                                     break;
-                                case "b":
+                                case "t":
                                     item = new Teamwork(SpriteType.Teamwork, itemlocation, 1);
                                     break;
-                                case "c":
+                                case "e":
                                     item = new Exam(SpriteType.Exam, itemlocation, 1);
                                     break;
 
@@ -206,13 +206,13 @@
                                     item = new Nasko(SpriteType.Nasko, itemlocation, 0);
                                     break;
                                 case "D":
-                                    item = new Nakov(SpriteType.Didko, itemlocation, 0);
+                                    item = new Didko(SpriteType.Didko, itemlocation, 0);
                                     break;
                                 case "V":
-                                    item = new Nakov(SpriteType.Vlado, itemlocation, 0);
+                                    item = new Vlado(SpriteType.Vlado, itemlocation, 0);
                                     break;
                                 case "K":
-                                    item = new Nakov(SpriteType.SuperVlado, itemlocation, 0);
+                                    item = new SuperVlado(SpriteType.SuperVlado, itemlocation, 0);
                                     break;
                                 case "T":
                                     item = new Nakov(SpriteType.Tedi, itemlocation, 0);

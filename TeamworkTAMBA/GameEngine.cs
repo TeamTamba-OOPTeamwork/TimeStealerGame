@@ -196,7 +196,7 @@
             // TO DO: same thing for friends
             if (enemy is Enemy)
             {
-                combatForm = new CombatForm(player, enemy as Enemy);
+                combatForm = new CombatForm(player, enemy as Enemy, drawEngine);
                 combatForm.Visible = true;
                 player.Health = combatForm.GetPlayerHelth();
                 RemoveObject(enemy);

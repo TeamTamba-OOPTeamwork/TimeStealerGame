@@ -12,15 +12,15 @@
     {
         private const string Player = "../../Graphics/player.png";
         private const string Enemy = "../../Graphics/monster.jpg";
-        private const string Homework = null;
-        private const string Exam = null;
-        private const string Teamwork = null;
-        private const string Didko = null;
-        private const string Nakov = null;
-        private const string Nasko = null;
-        private const string SuperVlado = null;
-        private const string Tedi = null;
-        private const string Vlado = null;
+        private const string Homework = "../../Graphics/homework.png";
+        private const string Exam = "../../Graphics/exam.jpg";
+        private const string Teamwork = "../../Graphics/teamwork.jpg";
+        private const string Didko = "../../Graphics/dido.jpg";
+        private const string Nakov = "../../Graphics/player.png"; //TO DO: have to be change
+        private const string Nasko = "../../Graphics/nasko.jpg";
+        private const string SuperVlado = "../../Graphics/superVlado.jpg";
+        private const string Tedi = "../../Graphics/tedi.jpg";
+        private const string Vlado = "../../Graphics/vlado.png";
         private const string Wall = "../../Graphics/wall.jpg";
         private const string Coffee = "../../Graphics/coffee.png";
         private const string Floor = "../../Graphics/floor.jpg";
@@ -84,7 +84,7 @@
             this.charactersAndItems.Remove(gameobj);
         }
 
-        private void DrawObject(GameObject gameObj)
+        public void DrawObject(GameObject gameObj)
         {
             if (gameObj.SpiteType != SpriteType.None)
             {
@@ -102,7 +102,7 @@
             this.charactersAndItems = list;
         }
 
-        private Image GetImage(GameObject gameObj)
+        public Image GetImage(GameObject gameObj)
         {
             Image image = null;
             switch (gameObj.SpiteType)
@@ -115,19 +115,19 @@
                     break;
                 case SpriteType.Exam: image = this.examSpr;
                     break;
-                case SpriteType.Teamwork:
+                case SpriteType.Teamwork: image = this.teamworkSpr;
                     break;
-                case SpriteType.Didko:
+                case SpriteType.Didko: image = this.didkoSpr;
                     break;
-                case SpriteType.Nakov:
+                case SpriteType.Nakov: image = this.nakovSpr;
                     break;
-                case SpriteType.Nasko:
+                case SpriteType.Nasko: image = this.naskoSpr;
                     break;
-                case SpriteType.SuperVlado:
+                case SpriteType.SuperVlado: image = this.superVladoSpr;
                     break;
-                case SpriteType.Tedi:
+                case SpriteType.Tedi: image = this.tediSpr;
                     break;
-                case SpriteType.Vlado:
+                case SpriteType.Vlado: image = this.vladoSpr;
                     break;
                 case SpriteType.Wall: image = this.wallSpr;
                     break;
@@ -150,15 +150,15 @@
         {
             this.playerSpr = Image.FromFile(Player);
             this.enemySpr = Image.FromFile(Enemy);
-            this.homeworkSpr = null;
-            this.examSpr = null;
-            this.teamworkSpr = null;
-            this.didkoSpr = null;
-            this.nakovSpr = null;
-            this.naskoSpr = null;
-            this.superVladoSpr = null;
-            this.tediSpr = null;
-            this.vladoSpr = null;
+            this.homeworkSpr = Image.FromFile(Homework);
+            this.examSpr = Image.FromFile(Exam);
+            this.teamworkSpr = Image.FromFile(Teamwork);
+            this.didkoSpr = Image.FromFile(Didko);
+            this.nakovSpr = Image.FromFile(Nakov);
+            this.naskoSpr = Image.FromFile(Nasko);
+            this.superVladoSpr = Image.FromFile(SuperVlado);
+            this.tediSpr = Image.FromFile(Tedi);
+            this.vladoSpr = Image.FromFile(Vlado);
             this.wallSpr = Image.FromFile(Wall);
             this.coffeeSpr = Image.FromFile(Coffee);
             this.floorSpr = Image.FromFile(Floor);

@@ -55,7 +55,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::TeamworkTAMBA.Properties.Resources.monster;
+           // this.pictureBox2.Image = global::TeamworkTAMBA.Properties.Resources.monster;
             this.pictureBox2.Location = new System.Drawing.Point(500, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 100);
@@ -292,6 +292,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CombatForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CombatForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

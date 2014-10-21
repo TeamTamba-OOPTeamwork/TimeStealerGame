@@ -60,6 +60,7 @@
             this.Controls.Add(this.nakovSpeach);
             this.Controls.Add(this.okButton);
             this.Name = "FriendForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FriendForm";
             this.ResumeLayout(false);
             this.PerformLayout();
