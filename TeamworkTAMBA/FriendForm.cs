@@ -28,10 +28,54 @@ namespace TeamworkTAMBA
         {
             if (this.friend is Nakov)
             {
-                nakovSpeach.Text = "IM NAKOV! Take this Java!";
+                speach.Text = "IM NAKOV! Take this Java!";
                 foreach (var wep in player.Weapons)
                 {
                     if (wep.WeaponType == WeaponTypes.Java)
+                    {
+                        wep.Power = 100;
+                    }
+                }
+            }
+            else if (this.friend is Vlado)
+            {
+                speach.Text = "Hi, I`m Vlado! Take this HTML!";
+                foreach (var wep in player.Weapons)
+                {
+                    if (wep.WeaponType == WeaponTypes.HTML)
+                    {
+                        wep.Power = 100;
+                    }
+                }
+            }
+            else if (this.friend is Didko)
+            {
+                speach.Text = "Hi, I`m Didko! Take this JavaScript!";
+                foreach (var wep in player.Weapons)
+                {
+                    if (wep.WeaponType == WeaponTypes.JavaScript)
+                    {
+                        wep.Power = 100;
+                    }
+                }
+            }
+            else if (this.friend is Nasko)
+            {
+                speach.Text = "Hi, I`m Nasko! Take this PHP!";
+                foreach (var wep in player.Weapons)
+                {
+                    if (wep.WeaponType == WeaponTypes.PHP)
+                    {
+                        wep.Power = 100;
+                    }
+                }
+            }
+            else if (this.friend is SuperVlado)
+            {
+                speach.Text = "Hi, I`m Super Vlado! Take this CSS!";
+                foreach (var wep in player.Weapons)
+                {
+                    if (wep.WeaponType == WeaponTypes.CSS)
                     {
                         wep.Power = 100;
                     }

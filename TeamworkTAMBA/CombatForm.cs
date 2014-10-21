@@ -22,11 +22,12 @@ namespace TeamworkTAMBA
         private DrawEngine drowEngine;
         private DeadForm deadForm;
 
+
         public CombatForm(Player player, Enemy enemy, DrawEngine drowEngine)
         {
             InitializeComponent();
             this.enemy = enemy;
-            this.enemy.AttackPower = 50;
+            this.enemy.AttackPower = 5;
             this.player = player;
             this.player.AttackPower = 10;
             this.drowEngine = drowEngine;
@@ -216,11 +217,31 @@ namespace TeamworkTAMBA
         {
             if (isPlayerAlive && isEnemyAlive)
             {
-                Combat();
-                labelPlayersTime.Text = "Time: " + player.Health;
-                labelEnemyHealth.Text = "Health: " + enemy.Health;
-                labelPlayerKnowlage.Text = "Knowlage: " + player.Knowledge;
+                if (knowlageUsage > player.Knowledge)
+                {
+                    playerTextBox.Text = "Not enought Knowledge";
+                    checkAllBox.Checked = false;
+                    javaCheckBox.Checked = false;
+                    htmlCheckBox.Checked = false;
+                    cssCheckBox.Checked = false;
+                    javascriptCheckBox.Checked = false;
+                    phpCheckBox.Checked = false;
+
+                    javaCheckBox.Enabled = false;
+                    htmlCheckBox.Enabled = false;
+                    cssCheckBox.Enabled = false;
+                    javascriptCheckBox.Enabled = false;
+                    phpCheckBox.Enabled = false;
+                }
+                else
+                {
+                    Combat();
+                    labelPlayersTime.Text = "Time: " + player.Health;
+                    labelEnemyHealth.Text = "Health: " + enemy.Health;
+                    labelPlayerKnowlage.Text = "Knowlage: " + player.Knowledge;
+                }
             }
+
         }
 
         private void Combat()

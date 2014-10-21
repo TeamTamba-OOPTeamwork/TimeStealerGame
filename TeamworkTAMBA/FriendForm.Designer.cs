@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.okButton = new System.Windows.Forms.Button();
-            this.nakovSpeach = new System.Windows.Forms.Label();
+            this.speach = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // okButton
@@ -42,22 +42,22 @@
             this.okButton.UseVisualStyleBackColor = true;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
-            // nakovSpeach
+            // speach
             // 
-            this.nakovSpeach.AutoSize = true;
-            this.nakovSpeach.Location = new System.Drawing.Point(90, 145);
-            this.nakovSpeach.Name = "nakovSpeach";
-            this.nakovSpeach.Size = new System.Drawing.Size(91, 13);
-            this.nakovSpeach.TabIndex = 2;
-            this.nakovSpeach.Text = "Nakov`s speache";
-            this.nakovSpeach.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.speach.AutoSize = true;
+            this.speach.Location = new System.Drawing.Point(90, 145);
+            this.speach.Name = "speach";
+            this.speach.Size = new System.Drawing.Size(91, 13);
+            this.speach.TabIndex = 2;
+            this.speach.Text = "Nakov`s speache";
+            this.speach.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FriendForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.nakovSpeach);
+            this.Controls.Add(this.speach);
             this.Controls.Add(this.okButton);
             this.Name = "FriendForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -70,6 +70,6 @@
         #endregion
 
         private System.Windows.Forms.Button okButton;
-        private System.Windows.Forms.Label nakovSpeach;
+        private System.Windows.Forms.Label speach;
     }
 }
