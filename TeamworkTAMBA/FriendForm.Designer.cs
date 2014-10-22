@@ -33,6 +33,8 @@
             this.playerHealthLabel = new System.Windows.Forms.Label();
             this.playerSolvedLabel = new System.Windows.Forms.Label();
             this.playerKnowledgeLabel = new System.Windows.Forms.Label();
+            this.bribeBeerCheckbox = new System.Windows.Forms.CheckBox();
+            this.beersLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // okButton
@@ -48,7 +50,7 @@
             // speach
             // 
             this.speach.AutoSize = true;
-            this.speach.Location = new System.Drawing.Point(28, 151);
+            this.speach.Location = new System.Drawing.Point(28, 135);
             this.speach.Name = "speach";
             this.speach.Size = new System.Drawing.Size(50, 13);
             this.speach.TabIndex = 2;
@@ -82,11 +84,33 @@
             this.playerKnowledgeLabel.TabIndex = 5;
             this.playerKnowledgeLabel.Text = "Player Knowledge";
             // 
+            // bribeBeerCheckbox
+            // 
+            this.bribeBeerCheckbox.AutoSize = true;
+            this.bribeBeerCheckbox.Location = new System.Drawing.Point(31, 168);
+            this.bribeBeerCheckbox.Name = "bribeBeerCheckbox";
+            this.bribeBeerCheckbox.Size = new System.Drawing.Size(96, 17);
+            this.bribeBeerCheckbox.TabIndex = 6;
+            this.bribeBeerCheckbox.Text = "Bribe with beer";
+            this.bribeBeerCheckbox.UseVisualStyleBackColor = true;
+            this.bribeBeerCheckbox.CheckedChanged += new System.EventHandler(this.bribeBeerCheckbox_CheckedChanged);
+            // 
+            // beersLabel
+            // 
+            this.beersLabel.AutoSize = true;
+            this.beersLabel.Location = new System.Drawing.Point(13, 83);
+            this.beersLabel.Name = "beersLabel";
+            this.beersLabel.Size = new System.Drawing.Size(71, 13);
+            this.beersLabel.TabIndex = 7;
+            this.beersLabel.Text = "Players Beers";
+            // 
             // FriendForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.beersLabel);
+            this.Controls.Add(this.bribeBeerCheckbox);
             this.Controls.Add(this.playerKnowledgeLabel);
             this.Controls.Add(this.playerSolvedLabel);
             this.Controls.Add(this.playerHealthLabel);
@@ -107,5 +131,7 @@
         private System.Windows.Forms.Label playerHealthLabel;
         private System.Windows.Forms.Label playerSolvedLabel;
         private System.Windows.Forms.Label playerKnowledgeLabel;
+        private System.Windows.Forms.CheckBox bribeBeerCheckbox;
+        private System.Windows.Forms.Label beersLabel;
     }
 }

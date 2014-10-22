@@ -17,6 +17,7 @@ namespace TeamworkTAMBA
         private int coffeePrice = 2;
         private int colaPrice = 5;
         private int redbulPrice = 10;
+        private int beerPrice = 10;
         private int totoalPrice = 0;
         private int currentPlayerMoney;
         private int currentPlayerHealth;
@@ -42,6 +43,7 @@ namespace TeamworkTAMBA
             redbulPriceLabel.Text = redbulPrice.ToString();
 
             playerHealthLabel.Text = "Time: " + player.Health;
+            bearsHaveLabel.Text = "You have: " + player.Beers + " beers.";
 
             TotalCheck();
         }
@@ -180,6 +182,24 @@ namespace TeamworkTAMBA
             //}
 
         }
+        private void beerCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (beerCheckbox.Checked)
+            {
+                currentPlayerMoney = player.Money - beerPrice;
+                playerMoneyLabel.Text = "You have: " + currentPlayerMoney;
+                totoalPrice += beerPrice;
+                totalPriceLabel.Text = "Total: " + totoalPrice;
+               
+                TotalCheck();
+            }
+            else
+            {
+                playerMoneyLabel.Text = "You have: " + player.Money;
+                totalPriceLabel.Text = "Total: " + totoalPrice;
+                TotalCheck();
+            }
+        }
 
         private void TotalCheck()
         {
@@ -236,9 +256,19 @@ namespace TeamworkTAMBA
                 //totalPriceLabel.Text = "Total: " + totoalPrice;
                 //TotalCheck();
             }
+            if (beerCheckbox.Checked)
+            {
+                player.Money -= beerPrice;
+                playerMoneyLabel.Text = "You have: " + player.Money;
+                player.Beers++;
+                bearsHaveLabel.Text = "You have: " + player.Beers + " beers.";
+
+            }
             CheckPlayerHealth();
             playerHealthLabel.Text = "Time: " + player.Health;
             
         }
+
+        
     }
 }

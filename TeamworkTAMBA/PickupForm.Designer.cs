@@ -40,6 +40,9 @@
             this.totalPriceLabel = new System.Windows.Forms.Label();
             this.playerHealthLabel = new System.Windows.Forms.Label();
             this.buyButton = new System.Windows.Forms.Button();
+            this.beerCheckbox = new System.Windows.Forms.CheckBox();
+            this.beerPriceLabel = new System.Windows.Forms.Label();
+            this.bearsHaveLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // exitButton
@@ -65,7 +68,7 @@
             // shopCoffee
             // 
             this.shopCoffee.AutoSize = true;
-            this.shopCoffee.Location = new System.Drawing.Point(12, 93);
+            this.shopCoffee.Location = new System.Drawing.Point(12, 73);
             this.shopCoffee.Name = "shopCoffee";
             this.shopCoffee.Size = new System.Drawing.Size(57, 17);
             this.shopCoffee.TabIndex = 4;
@@ -76,7 +79,7 @@
             // shopCola
             // 
             this.shopCola.AutoSize = true;
-            this.shopCola.Location = new System.Drawing.Point(12, 116);
+            this.shopCola.Location = new System.Drawing.Point(12, 96);
             this.shopCola.Name = "shopCola";
             this.shopCola.Size = new System.Drawing.Size(47, 17);
             this.shopCola.TabIndex = 5;
@@ -87,7 +90,7 @@
             // shopRedbul
             // 
             this.shopRedbul.AutoSize = true;
-            this.shopRedbul.Location = new System.Drawing.Point(12, 139);
+            this.shopRedbul.Location = new System.Drawing.Point(12, 119);
             this.shopRedbul.Name = "shopRedbul";
             this.shopRedbul.Size = new System.Drawing.Size(60, 17);
             this.shopRedbul.TabIndex = 6;
@@ -98,7 +101,7 @@
             // cofeePriceLabel
             // 
             this.cofeePriceLabel.AutoSize = true;
-            this.cofeePriceLabel.Location = new System.Drawing.Point(82, 94);
+            this.cofeePriceLabel.Location = new System.Drawing.Point(82, 74);
             this.cofeePriceLabel.Name = "cofeePriceLabel";
             this.cofeePriceLabel.Size = new System.Drawing.Size(65, 13);
             this.cofeePriceLabel.TabIndex = 7;
@@ -107,7 +110,7 @@
             // colaPriceLabel
             // 
             this.colaPriceLabel.AutoSize = true;
-            this.colaPriceLabel.Location = new System.Drawing.Point(82, 117);
+            this.colaPriceLabel.Location = new System.Drawing.Point(82, 97);
             this.colaPriceLabel.Name = "colaPriceLabel";
             this.colaPriceLabel.Size = new System.Drawing.Size(55, 13);
             this.colaPriceLabel.TabIndex = 8;
@@ -116,7 +119,7 @@
             // redbulPriceLabel
             // 
             this.redbulPriceLabel.AutoSize = true;
-            this.redbulPriceLabel.Location = new System.Drawing.Point(82, 140);
+            this.redbulPriceLabel.Location = new System.Drawing.Point(82, 120);
             this.redbulPriceLabel.Name = "redbulPriceLabel";
             this.redbulPriceLabel.Size = new System.Drawing.Size(68, 13);
             this.redbulPriceLabel.TabIndex = 9;
@@ -125,7 +128,7 @@
             // playerMoneyLabel
             // 
             this.playerMoneyLabel.AutoSize = true;
-            this.playerMoneyLabel.Location = new System.Drawing.Point(26, 61);
+            this.playerMoneyLabel.Location = new System.Drawing.Point(26, 43);
             this.playerMoneyLabel.Name = "playerMoneyLabel";
             this.playerMoneyLabel.Size = new System.Drawing.Size(70, 13);
             this.playerMoneyLabel.TabIndex = 10;
@@ -159,11 +162,43 @@
             this.buyButton.UseVisualStyleBackColor = true;
             this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
             // 
+            // beerCheckbox
+            // 
+            this.beerCheckbox.AutoSize = true;
+            this.beerCheckbox.Location = new System.Drawing.Point(12, 142);
+            this.beerCheckbox.Name = "beerCheckbox";
+            this.beerCheckbox.Size = new System.Drawing.Size(48, 17);
+            this.beerCheckbox.TabIndex = 14;
+            this.beerCheckbox.Text = "Beer";
+            this.beerCheckbox.UseVisualStyleBackColor = true;
+            this.beerCheckbox.CheckedChanged += new System.EventHandler(this.beerCheckbox_CheckedChanged);
+            // 
+            // beerPriceLabel
+            // 
+            this.beerPriceLabel.AutoSize = true;
+            this.beerPriceLabel.Location = new System.Drawing.Point(82, 142);
+            this.beerPriceLabel.Name = "beerPriceLabel";
+            this.beerPriceLabel.Size = new System.Drawing.Size(56, 13);
+            this.beerPriceLabel.TabIndex = 15;
+            this.beerPriceLabel.Text = "Beer Price";
+            // 
+            // bearsHaveLabel
+            // 
+            this.bearsHaveLabel.AutoSize = true;
+            this.bearsHaveLabel.Location = new System.Drawing.Point(161, 143);
+            this.bearsHaveLabel.Name = "bearsHaveLabel";
+            this.bearsHaveLabel.Size = new System.Drawing.Size(65, 13);
+            this.bearsHaveLabel.TabIndex = 16;
+            this.bearsHaveLabel.Text = "Beers in you";
+            // 
             // PickupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.bearsHaveLabel);
+            this.Controls.Add(this.beerPriceLabel);
+            this.Controls.Add(this.beerCheckbox);
             this.Controls.Add(this.buyButton);
             this.Controls.Add(this.playerHealthLabel);
             this.Controls.Add(this.totalPriceLabel);
@@ -197,6 +232,9 @@
         private System.Windows.Forms.Label totalPriceLabel;
         private System.Windows.Forms.Label playerHealthLabel;
         private System.Windows.Forms.Button buyButton;
+        private System.Windows.Forms.CheckBox beerCheckbox;
+        private System.Windows.Forms.Label beerPriceLabel;
+        private System.Windows.Forms.Label bearsHaveLabel;
 
     }
 }
