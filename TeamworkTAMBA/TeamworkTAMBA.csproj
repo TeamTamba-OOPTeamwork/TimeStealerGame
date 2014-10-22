@@ -46,6 +46,12 @@
   <ItemGroup>
     <Compile Include="Characters\Characters.cs" />
     <Compile Include="Characters\Friends\Time.cs" />
+    <Compile Include="Forms\AlexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AlexForm.Designer.cs">
+      <DependentUpon>AlexForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CombatForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
       <DependentUpon>StoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Weapons\Weapons.cs" />
+    <EmbeddedResource Include="Forms\AlexForm.resx">
+      <DependentUpon>AlexForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CombatForm.resx">
       <DependentUpon>CombatForm.cs</DependentUpon>
     </EmbeddedResource>
