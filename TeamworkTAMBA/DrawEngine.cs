@@ -19,7 +19,7 @@
         private const string Nakov = "../../Graphics/nakov.png";
         private const string Nasko = "../../Graphics/nasko.png";
         private const string SuperVlado = "../../Graphics/superVlado.png";
-        private const string Alex = "../../Graphics/tedi.png";
+        private const string Alex = "../../Graphics/alex.png";
         private const string Vlado = "../../Graphics/vlado.png";
         private const string Wall = "../../Graphics/wall.jpg";
         private const string Railing = "../../Graphics/railing.png";

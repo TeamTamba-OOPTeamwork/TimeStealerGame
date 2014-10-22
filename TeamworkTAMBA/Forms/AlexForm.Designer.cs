@@ -55,7 +55,7 @@
             // 
             // alexPictureBox
             // 
-            this.alexPictureBox.Image = global::TeamworkTAMBA.Properties.Resources.tedi;
+            this.alexPictureBox.Image = global::TeamworkTAMBA.Properties.Resources.alex;
             this.alexPictureBox.Location = new System.Drawing.Point(98, 2);
             this.alexPictureBox.Name = "alexPictureBox";
             this.alexPictureBox.Size = new System.Drawing.Size(100, 100);
