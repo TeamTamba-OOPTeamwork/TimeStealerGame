@@ -45,51 +45,51 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Characters\Characters.cs" />
-    <Compile Include="CombatForm.cs">
+    <Compile Include="Forms\CombatForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CombatForm.Designer.cs">
+    <Compile Include="Forms\CombatForm.Designer.cs">
       <DependentUpon>CombatForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeadForm.cs">
+    <Compile Include="Forms\DeadForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeadForm.Designer.cs">
+    <Compile Include="Forms\DeadForm.Designer.cs">
       <DependentUpon>DeadForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DrawEngine.cs" />
     <Compile Include="Enums\WeaponTypes.cs" />
-    <Compile Include="FriendForm.cs">
+    <Compile Include="Forms\FriendForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FriendForm.Designer.cs">
+    <Compile Include="Forms\FriendForm.Designer.cs">
       <DependentUpon>FriendForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenuForm.cs">
+    <Compile Include="Forms\MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenuForm.Designer.cs">
+    <Compile Include="Forms\MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MapItems\StaticObjects\Gate.cs" />
-    <Compile Include="PickupForm.cs">
+    <Compile Include="Forms\PickupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PickupForm.Designer.cs">
+    <Compile Include="Forms\PickupForm.Designer.cs">
       <DependentUpon>PickupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="IDrawable.cs" />
     <Compile Include="MapItems\StaticObjects\Air.cs" />
     <Compile Include="MapItems\StaticObjects\Coffee.cs" />
     <Compile Include="MapItems\StaticObjects\Floor.cs" />
-    <Compile Include="SpriteType.cs" />
+    <Compile Include="Enums\SpriteType.cs" />
     <Compile Include="Characters\Friends\Didko.cs" />
     <Compile Include="Characters\Enemies\Enemy.cs" />
     <Compile Include="Characters\Friends\Friend.cs" />
-    <Compile Include="GameForm.cs">
+    <Compile Include="Forms\GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GameForm.Designer.cs">
+    <Compile Include="Forms\GameForm.Designer.cs">
       <DependentUpon>GameForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GameEngine.cs" />
@@ -110,26 +110,26 @@
     <Compile Include="Characters\Friends\Tedi.cs" />
     <Compile Include="Characters\Friends\Vlado.cs" />
     <Compile Include="MapItems\StaticObjects\Wall.cs" />
-    <Compile Include="StoryForm.cs">
+    <Compile Include="Forms\StoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StoryForm.Designer.cs">
+    <Compile Include="Forms\StoryForm.Designer.cs">
       <DependentUpon>StoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Weapons\Weapons.cs" />
-    <EmbeddedResource Include="CombatForm.resx">
+    <EmbeddedResource Include="Forms\CombatForm.resx">
       <DependentUpon>CombatForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeadForm.resx">
+    <EmbeddedResource Include="Forms\DeadForm.resx">
       <DependentUpon>DeadForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FriendForm.resx">
+    <EmbeddedResource Include="Forms\FriendForm.resx">
       <DependentUpon>FriendForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PickupForm.resx">
+    <EmbeddedResource Include="Forms\PickupForm.resx">
       <DependentUpon>PickupForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GameForm.resx">
+    <EmbeddedResource Include="Forms\GameForm.resx">
       <DependentUpon>GameForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -142,7 +142,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="StoryForm.resx">
+    <EmbeddedResource Include="Forms\StoryForm.resx">
       <DependentUpon>StoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />

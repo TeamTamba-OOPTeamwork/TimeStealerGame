@@ -195,16 +195,18 @@
 
             if (charactesAndItems is Enemy)
             {
-                combatForm = new CombatForm(player, charactesAndItems as Enemy, drawEngine);
+                combatForm = new CombatForm(player, charactesAndItems as Enemy, drawEngine, gameForm);
                 combatForm.Visible = true;
                 player.Health = combatForm.GetPlayerHelth();
                 RemoveObject(charactesAndItems);
             }
+
             if (charactesAndItems is Coffee)
             {
                 _pickupForm = new PickupForm(player, charactesAndItems as Coffee);
                 _pickupForm.Visible = true;
             }
+
             if (charactesAndItems is Friend)
             {
                 friendForm = new FriendForm(player, charactesAndItems as Friend);
