@@ -1,18 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace TeamworkTAMBA
+﻿namespace TeamworkTAMBA
 {
     using System.Drawing;
 
-    public class Alex : Friend
+    using TeamworkTAMBA.Interfaces;
+
+    public class Alex : Friend, IDanceable
     {
         public Alex(SpriteType spriteType,Point location,int id) :
             base(spriteType, location, id)
         {
             
+        }
+
+        public void Chaka_RakaDance()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

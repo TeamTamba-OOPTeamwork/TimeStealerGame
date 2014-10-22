@@ -5,8 +5,9 @@
     using System.Windows.Forms;
 
     using TeamworkTAMBA.Enums;
+    using TeamworkTAMBA.Interfaces;
 
-    public class Player : Characters
+    public class Player : Characters, IMovable
     {
         private int knowledge;
         private int money;

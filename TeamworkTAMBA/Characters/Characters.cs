@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TeamworkTAMBA
+﻿namespace TeamworkTAMBA
 {
     using System.Drawing;
 

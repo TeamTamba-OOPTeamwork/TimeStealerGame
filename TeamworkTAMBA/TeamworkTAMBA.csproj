@@ -79,6 +79,10 @@
     <Compile Include="Forms\MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IDanceable.cs" />
+    <Compile Include="Interfaces\ISingable.cs" />
+    <Compile Include="Interfaces\IMovable.cs" />
+    <Compile Include="Interfaces\IPederasable.cs" />
     <Compile Include="MapItems\StaticObjects\Gate.cs" />
     <Compile Include="Forms\PickupForm.cs">
       <SubType>Form</SubType>
