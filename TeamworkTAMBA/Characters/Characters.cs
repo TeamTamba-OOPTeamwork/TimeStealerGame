@@ -4,7 +4,7 @@ namespace TeamworkTAMBA
 {
     using System.Drawing;
 
-    public class Characters : GameObject
+    public abstract class Characters : GameObject
     {
         private int health;
         private int attackPower;

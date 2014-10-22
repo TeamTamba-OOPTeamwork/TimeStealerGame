@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Characters\Characters.cs" />
     <Compile Include="Characters\Friends\Time.cs" />
+    <Compile Include="Exceptions\InvalidLineLength.cs" />
     <Compile Include="Forms\AlexForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,7 +86,7 @@
     <Compile Include="Forms\PickupForm.Designer.cs">
       <DependentUpon>PickupForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IDrawable.cs" />
+    <Compile Include="Interfaces\IDrawable.cs" />
     <Compile Include="MapItems\StaticObjects\Air.cs" />
     <Compile Include="MapItems\StaticObjects\Coffee.cs" />
     <Compile Include="MapItems\StaticObjects\Floor.cs" />
@@ -169,9 +170,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Exceptions\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Graphics\air.png" />
     <None Include="Graphics\alex.png" />

@@ -7,6 +7,8 @@
     using System.Security.Cryptography.X509Certificates;
     using System.Windows.Forms;
 
+    using TeamworkTAMBA.Exceptions;
+
     public class Map
     {
         public const int mapTileSize = 40;
@@ -73,9 +75,24 @@
                 {
                     int col = 0;
 
+                    bool firstLine = true;
+                    int lineLength = 0;
                     while (!sr.EndOfStream)
                     {
                         string line = sr.ReadLine();
+
+                        if (firstLine)
+                        {
+                            firstLine = false;
+                            lineLength = line.Length;
+                        }
+                        else
+                        {
+                            if (line.Length != lineLength)
+                            {
+                                throw new InvalidLineLengthException("Invalid Line Length in map file");
+                            }
+                        }
 
                         for (int row = 0; row < line.Length; row++)
                         {
