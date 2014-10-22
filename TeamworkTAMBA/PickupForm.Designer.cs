@@ -38,13 +38,15 @@
             this.redbulPriceLabel = new System.Windows.Forms.Label();
             this.playerMoneyLabel = new System.Windows.Forms.Label();
             this.totalPriceLabel = new System.Windows.Forms.Label();
+            this.playerHealthLabel = new System.Windows.Forms.Label();
+            this.buyButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(61, 198);
+            this.exitButton.Location = new System.Drawing.Point(145, 205);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(160, 50);
+            this.exitButton.Size = new System.Drawing.Size(120, 45);
             this.exitButton.TabIndex = 1;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
@@ -53,7 +55,7 @@
             // takeNotofication
             // 
             this.takeNotofication.AutoSize = true;
-            this.takeNotofication.Location = new System.Drawing.Point(114, 9);
+            this.takeNotofication.Location = new System.Drawing.Point(101, 9);
             this.takeNotofication.Name = "takeNotofication";
             this.takeNotofication.Size = new System.Drawing.Size(64, 13);
             this.takeNotofication.TabIndex = 3;
@@ -123,7 +125,7 @@
             // playerMoneyLabel
             // 
             this.playerMoneyLabel.AutoSize = true;
-            this.playerMoneyLabel.Location = new System.Drawing.Point(9, 61);
+            this.playerMoneyLabel.Location = new System.Drawing.Point(26, 61);
             this.playerMoneyLabel.Name = "playerMoneyLabel";
             this.playerMoneyLabel.Size = new System.Drawing.Size(70, 13);
             this.playerMoneyLabel.TabIndex = 10;
@@ -132,17 +134,38 @@
             // totalPriceLabel
             // 
             this.totalPriceLabel.AutoSize = true;
-            this.totalPriceLabel.Location = new System.Drawing.Point(82, 168);
+            this.totalPriceLabel.Location = new System.Drawing.Point(26, 169);
             this.totalPriceLabel.Name = "totalPriceLabel";
             this.totalPriceLabel.Size = new System.Drawing.Size(82, 13);
             this.totalPriceLabel.TabIndex = 11;
             this.totalPriceLabel.Text = "Total price label";
+            // 
+            // playerHealthLabel
+            // 
+            this.playerHealthLabel.AutoSize = true;
+            this.playerHealthLabel.Location = new System.Drawing.Point(195, 61);
+            this.playerHealthLabel.Name = "playerHealthLabel";
+            this.playerHealthLabel.Size = new System.Drawing.Size(70, 13);
+            this.playerHealthLabel.TabIndex = 12;
+            this.playerHealthLabel.Text = "Player Health";
+            // 
+            // buyButton
+            // 
+            this.buyButton.Location = new System.Drawing.Point(12, 205);
+            this.buyButton.Name = "buyButton";
+            this.buyButton.Size = new System.Drawing.Size(120, 45);
+            this.buyButton.TabIndex = 13;
+            this.buyButton.Text = "Buy";
+            this.buyButton.UseVisualStyleBackColor = true;
+            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
             // 
             // PickupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.buyButton);
+            this.Controls.Add(this.playerHealthLabel);
             this.Controls.Add(this.totalPriceLabel);
             this.Controls.Add(this.playerMoneyLabel);
             this.Controls.Add(this.redbulPriceLabel);
@@ -172,6 +195,8 @@
         private System.Windows.Forms.Label redbulPriceLabel;
         private System.Windows.Forms.Label playerMoneyLabel;
         private System.Windows.Forms.Label totalPriceLabel;
+        private System.Windows.Forms.Label playerHealthLabel;
+        private System.Windows.Forms.Button buyButton;
 
     }
 }

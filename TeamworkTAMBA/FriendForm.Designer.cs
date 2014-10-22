@@ -30,6 +30,9 @@
         {
             this.okButton = new System.Windows.Forms.Button();
             this.speach = new System.Windows.Forms.Label();
+            this.playerHealthLabel = new System.Windows.Forms.Label();
+            this.playerSolvedLabel = new System.Windows.Forms.Label();
+            this.playerKnowledgeLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // okButton
@@ -45,18 +48,48 @@
             // speach
             // 
             this.speach.AutoSize = true;
-            this.speach.Location = new System.Drawing.Point(31, 147);
+            this.speach.Location = new System.Drawing.Point(28, 151);
             this.speach.Name = "speach";
             this.speach.Size = new System.Drawing.Size(50, 13);
             this.speach.TabIndex = 2;
             this.speach.Text = "Speache";
             this.speach.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // playerHealthLabel
+            // 
+            this.playerHealthLabel.AutoSize = true;
+            this.playerHealthLabel.Location = new System.Drawing.Point(13, 13);
+            this.playerHealthLabel.Name = "playerHealthLabel";
+            this.playerHealthLabel.Size = new System.Drawing.Size(70, 13);
+            this.playerHealthLabel.TabIndex = 3;
+            this.playerHealthLabel.Text = "Player Health";
+            // 
+            // playerSolvedLabel
+            // 
+            this.playerSolvedLabel.AutoSize = true;
+            this.playerSolvedLabel.Location = new System.Drawing.Point(13, 59);
+            this.playerSolvedLabel.Name = "playerSolvedLabel";
+            this.playerSolvedLabel.Size = new System.Drawing.Size(72, 13);
+            this.playerSolvedLabel.TabIndex = 4;
+            this.playerSolvedLabel.Text = "Player Solved";
+            // 
+            // playerKnowledgeLabel
+            // 
+            this.playerKnowledgeLabel.AutoSize = true;
+            this.playerKnowledgeLabel.Location = new System.Drawing.Point(13, 36);
+            this.playerKnowledgeLabel.Name = "playerKnowledgeLabel";
+            this.playerKnowledgeLabel.Size = new System.Drawing.Size(92, 13);
+            this.playerKnowledgeLabel.TabIndex = 5;
+            this.playerKnowledgeLabel.Text = "Player Knowledge";
+            // 
             // FriendForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.playerKnowledgeLabel);
+            this.Controls.Add(this.playerSolvedLabel);
+            this.Controls.Add(this.playerHealthLabel);
             this.Controls.Add(this.speach);
             this.Controls.Add(this.okButton);
             this.Name = "FriendForm";
@@ -71,5 +104,8 @@
 
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Label speach;
+        private System.Windows.Forms.Label playerHealthLabel;
+        private System.Windows.Forms.Label playerSolvedLabel;
+        private System.Windows.Forms.Label playerKnowledgeLabel;
     }
 }

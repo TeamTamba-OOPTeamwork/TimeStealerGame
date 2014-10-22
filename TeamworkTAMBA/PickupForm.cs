@@ -19,13 +19,16 @@ namespace TeamworkTAMBA
         private int redbulPrice = 10;
         private int totoalPrice = 0;
         private int currentPlayerMoney;
+        private int currentPlayerHealth;
+        private int coffeeTimeGive = 25;
+        private int colaTimeGive = 50;
+        private int redbulTimeGive = 100;
         public PickupForm(Player player, Coffee coffee)
         {
             InitializeComponent();
 
             this.player = player;
             this.coffee = coffee;
-            player.Health = 100;
             //player.Money = 5;
             currentPlayerMoney = player.Money;
             
@@ -37,6 +40,8 @@ namespace TeamworkTAMBA
             cofeePriceLabel.Text = coffeePrice.ToString();
             colaPriceLabel.Text = colaPrice.ToString();
             redbulPriceLabel.Text = redbulPrice.ToString();
+
+            playerHealthLabel.Text = "Time: " + player.Health;
 
             TotalCheck();
         }
@@ -51,70 +56,128 @@ namespace TeamworkTAMBA
 
         private void shopCoffee_CheckedChanged(object sender, EventArgs e)
         {
-            TotalCheck();
             if (shopCoffee.Checked)
             {
-                player.Health += 25;
-                player.Money -= coffeePrice;
-                playerMoneyLabel.Text = "You have: " + player.Money;
+                currentPlayerMoney = player.Money - coffeePrice;
+                playerMoneyLabel.Text = "You have: " + currentPlayerMoney;
                 totoalPrice += coffeePrice;
                 totalPriceLabel.Text = "Total: " + totoalPrice;
+                currentPlayerHealth = player.Health + coffeeTimeGive;
+                playerHealthLabel.Text = "Time: " + currentPlayerHealth;
                 TotalCheck();
             }
             else
             {
-                player.Health -= 25;
-                player.Money += 2;
                 playerMoneyLabel.Text = "You have: " + player.Money;
                 totoalPrice -= coffeePrice;
                 totalPriceLabel.Text = "Total: " + totoalPrice;
+                currentPlayerHealth = player.Health;
+                playerHealthLabel.Text = "Time: " + currentPlayerHealth;
                 TotalCheck();
             }
+            //TotalCheck();
+            //if (shopCoffee.Checked)
+            //{
+            //    player.Health += 25;
+            //    player.Money -= coffeePrice;
+            //    playerMoneyLabel.Text = "You have: " + player.Money;
+            //    totoalPrice += coffeePrice;
+            //    totalPriceLabel.Text = "Total: " + totoalPrice;
+            //    TotalCheck();
+            //}
+            //else
+            //{
+            //    player.Health -= 25;
+            //    player.Money += 2;
+            //    playerMoneyLabel.Text = "You have: " + player.Money;
+            //    totoalPrice -= coffeePrice;
+            //    totalPriceLabel.Text = "Total: " + totoalPrice;
+            //    TotalCheck();
+            //}
         }
 
         private void shopCola_CheckedChanged(object sender, EventArgs e)
         {
             if (shopCola.Checked)
             {
-                player.Health += 50;
-                player.Money -= colaPrice;
-                playerMoneyLabel.Text = "You have: " + player.Money;
+                currentPlayerMoney = player.Money - colaPrice;
+                playerMoneyLabel.Text = "You have: " + currentPlayerMoney;
                 totoalPrice += colaPrice;
                 totalPriceLabel.Text = "Total: " + totoalPrice;
+                currentPlayerHealth = player.Health + colaTimeGive;
+                playerHealthLabel.Text = "Time: " + currentPlayerHealth;
                 TotalCheck();
             }
             else
             {
-                player.Health -= 50;
-                player.Money += colaPrice;
                 playerMoneyLabel.Text = "You have: " + player.Money;
                 totoalPrice -= colaPrice;
                 totalPriceLabel.Text = "Total: " + totoalPrice;
+                currentPlayerHealth = player.Health;
+                playerHealthLabel.Text = "Time: " + currentPlayerHealth;
                 TotalCheck();
             }
+            //if (shopCola.Checked)
+            //{
+            //    player.Health += 50;
+            //    player.Money -= colaPrice;
+            //    playerMoneyLabel.Text = "You have: " + player.Money;
+            //    totoalPrice += colaPrice;
+            //    totalPriceLabel.Text = "Total: " + totoalPrice;
+            //    TotalCheck();
+            //}
+            //else
+            //{
+            //    player.Health -= 50;
+            //    player.Money += colaPrice;
+            //    playerMoneyLabel.Text = "You have: " + player.Money;
+            //    totoalPrice -= colaPrice;
+            //    totalPriceLabel.Text = "Total: " + totoalPrice;
+            //    TotalCheck();
+            //}
         }
 
         private void shopRedbul_CheckedChanged(object sender, EventArgs e)
         {
-            
             if (shopRedbul.Checked)
             {
-                player.Health += 100;
-                player.Money -= redbulPrice;
-                playerMoneyLabel.Text = "You have: " + player.Money;
+                currentPlayerMoney = player.Money - redbulPrice;
+                playerMoneyLabel.Text = "You have: " + currentPlayerMoney;
                 totoalPrice += redbulPrice;
                 totalPriceLabel.Text = "Total: " + totoalPrice;
+                currentPlayerHealth = player.Health + redbulTimeGive;
+                playerHealthLabel.Text = "Time: " + currentPlayerHealth;
                 TotalCheck();
             }
             else
             {
-                player.Health -= 100;
-                player.Money += 10;
                 playerMoneyLabel.Text = "You have: " + player.Money;
                 totoalPrice -= redbulPrice;
                 totalPriceLabel.Text = "Total: " + totoalPrice;
+                currentPlayerHealth = player.Health;
+                playerHealthLabel.Text = "Time: " + currentPlayerHealth;
                 TotalCheck();
             }
+
+            
+            //if (shopRedbul.Checked)
+            //{
+            //    player.Health += 100;
+            //    player.Money -= redbulPrice;
+            //    playerMoneyLabel.Text = "You have: " + player.Money;
+            //    totoalPrice += redbulPrice;
+            //    totalPriceLabel.Text = "Total: " + totoalPrice;
+            //    TotalCheck();
+            //}
+            //else
+            //{
+            //    player.Health -= 100;
+            //    player.Money += 10;
+            //    playerMoneyLabel.Text = "You have: " + player.Money;
+            //    totoalPrice -= redbulPrice;
+            //    totalPriceLabel.Text = "Total: " + totoalPrice;
+            //    TotalCheck();
+            //}
 
         }
 
@@ -122,11 +185,11 @@ namespace TeamworkTAMBA
         {
             if (this.player.Money < 0)
             {
-                exitButton.Enabled = false;
+                buyButton.Enabled = false;
             }
             else
             {
-                exitButton.Enabled = true;
+                buyButton.Enabled = true;
             }
         }
 
@@ -141,6 +204,41 @@ namespace TeamworkTAMBA
         {
             CheckPlayerHealth();
             this.Close();
+        }
+
+        private void buyButton_Click(object sender, EventArgs e)
+        {
+            if (shopCoffee.Checked)
+            {
+                player.Health += 25;
+                player.Money -= coffeePrice;
+                playerMoneyLabel.Text = "You have: " + player.Money;
+                //totoalPrice += coffeePrice;
+                //totalPriceLabel.Text = "Total: " + totoalPrice;
+                //TotalCheck();
+            }
+
+            if (shopCola.Checked)
+            {
+                player.Health += 50;
+                player.Money -= colaPrice;
+                playerMoneyLabel.Text = "You have: " + player.Money;
+                //totoalPrice += colaPrice;
+                //totalPriceLabel.Text = "Total: " + totoalPrice;
+                //TotalCheck();
+            }
+            if (shopRedbul.Checked)
+            {
+                player.Health += 100;
+                player.Money -= redbulPrice;
+                playerMoneyLabel.Text = "You have: " + player.Money;
+                //totoalPrice += redbulPrice;
+                //totalPriceLabel.Text = "Total: " + totoalPrice;
+                //TotalCheck();
+            }
+            CheckPlayerHealth();
+            playerHealthLabel.Text = "Time: " + player.Health;
+            
         }
     }
 }
