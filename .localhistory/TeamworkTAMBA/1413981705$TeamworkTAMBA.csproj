@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC9CB558-D6C8-4412-94CA-3C2B66954725}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TeamworkTAMBA</RootNamespace>
+    <AssemblyName>TeamworkTAMBA</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Characters\Characters.cs" />
+    <Compile Include="CombatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CombatForm.Designer.cs">
+      <DependentUpon>CombatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeadForm.Designer.cs">
+      <DependentUpon>DeadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrawEngine.cs" />
+    <Compile Include="Enums\WeaponTypes.cs" />
+    <Compile Include="FriendForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FriendForm.Designer.cs">
+      <DependentUpon>FriendForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapItems\StaticObjects\Gate.cs" />
+    <Compile Include="PickupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickupForm.Designer.cs">
+      <DependentUpon>PickupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDrawable.cs" />
+    <Compile Include="MapItems\StaticObjects\Air.cs" />
+    <Compile Include="MapItems\StaticObjects\Coffee.cs" />
+    <Compile Include="MapItems\StaticObjects\Floor.cs" />
+    <Compile Include="SpriteType.cs" />
+    <Compile Include="Characters\Friends\Didko.cs" />
+    <Compile Include="Characters\Enemies\Enemy.cs" />
+    <Compile Include="Characters\Friends\Friend.cs" />
+    <Compile Include="GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameForm.Designer.cs">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameEngine.cs" />
+    <Compile Include="MapItems\StaticObjects\Desk.cs" />
+    <Compile Include="GameObject.cs" />
+    <Compile Include="Characters\Enemies\Homework.cs" />
+    <Compile Include="MapItems\MapItems.cs" />
+    <Compile Include="Characters\Enemies\Exam.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="Characters\Friends\Nakov.cs" />
+    <Compile Include="Characters\Friends\Nasko.cs" />
+    <Compile Include="Characters\Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MapItems\StaticObjects\StaticObjects.cs" />
+    <Compile Include="Characters\Friends\SuperVlado.cs" />
+    <Compile Include="Characters\Enemies\Teamwork.cs" />
+    <Compile Include="Characters\Friends\Tedi.cs" />
+    <Compile Include="Characters\Friends\Vlado.cs" />
+    <Compile Include="MapItems\StaticObjects\Wall.cs" />
+    <Compile Include="StoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoryForm.Designer.cs">
+      <DependentUpon>StoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Weapons\Weapons.cs" />
+    <EmbeddedResource Include="CombatForm.resx">
+      <DependentUpon>CombatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeadForm.resx">
+      <DependentUpon>DeadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FriendForm.resx">
+      <DependentUpon>FriendForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickupForm.resx">
+      <DependentUpon>PickupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameForm.resx">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StoryForm.resx">
+      <DependentUpon>StoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Graphics\air.png" />
+    <Content Include="Graphics\coffee.png" />
+    <Content Include="Graphics\desk.png" />
+    <Content Include="Graphics\dido.jpg" />
+    <Content Include="Graphics\exam.jpg" />
+    <Content Include="Graphics\floor.jpg" />
+    <Content Include="Graphics\gate.png" />
+    <Content Include="Graphics\homework.png" />
+    <Content Include="Graphics\monster.jpg" />
+    <Content Include="Graphics\nasko.jpg" />
+    <Content Include="Graphics\Player.png" />
+    <Content Include="Graphics\railing.png" />
+    <Content Include="Graphics\superVlado.jpg" />
+    <Content Include="Graphics\teamwork.jpg" />
+    <Content Include="Graphics\tedi.jpg" />
+    <Content Include="Graphics\Time.jpg" />
+    <Content Include="Graphics\vlado.png" />
+    <Content Include="Graphics\wall.jpg" />
+    <Content Include="Resources\coffee.png" />
+    <None Include="Resources\Dead.jpg" />
+    <None Include="Resources\DeadLabel.jpg" />
+    <Content Include="Sprites\floorplan-legend.txt" />
+    <Content Include="Sprites\spriteCharacter01.txt" />
+    <Content Include="Sprites\sprite01.txt" />
+    <Content Include="Sprites\spriteCharacter02.txt" />
+    <Content Include="Sprites\sprite02.txt" />
+    <Content Include="Sprites\spriteCharacter03.txt" />
+    <Content Include="Sprites\sprite03.txt" />
+    <Content Include="Sprites\spriteCharacter04.txt" />
+    <Content Include="Sprites\sprite04.txt" />
+    <Content Include="Sprites\spriteCharacter05.txt" />
+    <Content Include="Sprites\sprite05.txt" />
+    <Content Include="Sprites\spriteCharacter06.txt" />
+    <Content Include="Sprites\sprite06.txt" />
+    <Content Include="Sprites\spriteCharacter07.txt" />
+    <Content Include="Sprites\sprite07.txt" />
+    <Content Include="Sprites\spriteCharacter08.txt" />
+    <Content Include="Sprites\sprite08.txt" />
+    <Content Include="Sprites\spriteCharacter09.txt" />
+    <Content Include="Sprites\sprite09.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
