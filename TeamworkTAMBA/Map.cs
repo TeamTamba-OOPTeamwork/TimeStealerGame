@@ -89,10 +89,10 @@
                                     item = new Wall(SpriteType.Wall, itemlocation, 0);
                                     break;
                                 case "r":
-                                    item = new Wall(SpriteType.Wall, itemlocation, 0);
+                                    item = new Wall(SpriteType.Railing, itemlocation, 0);
                                     break;
                                 case "g":
-                                    item = new Floor(SpriteType.Floor, itemlocation, 0);
+                                    item = new Gate(SpriteType.Gate, itemlocation, 0);
                                     break;
                                 case "d":
                                     item = new Desk(SpriteType.Desk, itemlocation, 0);
@@ -200,7 +200,7 @@
                                 //    item = new Exam(SpriteType.Exam, itemlocation, 3);
                                 //    break;
                                 case "N":
-                                    item = new Nakov(SpriteType.Player, itemlocation, 0);
+                                    item = new Nakov(SpriteType.Nakov, itemlocation, 0);
                                     break;
                                 case "A":
                                     item = new Nasko(SpriteType.Nasko, itemlocation, 0);

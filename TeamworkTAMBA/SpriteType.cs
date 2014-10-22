@@ -15,8 +15,10 @@
         Tedi,
         Vlado,
         Wall,
+        Railing,
         Coffee,
         Floor,
+        Gate,
         Desk,
         Air,
         Time

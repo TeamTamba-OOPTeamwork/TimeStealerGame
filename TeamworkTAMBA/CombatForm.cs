@@ -43,12 +43,12 @@ namespace TeamworkTAMBA
 
             labelPlayersTime.Text = "Time: " + player.Health;
             labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
-            labelPlayerKnowlage.Text = "Knowlage: " + player.Knowledge;
-            labelEnemyHealth.Text = "Health: " + enemy.Health;
+            labelPlayerKnowlage.Text = "Knowledge: " + player.Knowledge;
+            labelEnemyHealth.Text = "Strength: " + enemy.Health;
             labelEnemyDmg.Text = "Damage: " + "1-" + enemy.AttackPower;
 
             playerMoneyLabel.Text = "Money: " + player.Money;
-            killsLabel.Text = "Kills: " + player.KillsCounter;
+            killsLabel.Text = "Solved: " + player.KillsCounter;
 
             //Disables the weapon checkboxes if still not taken from the teacher
             foreach (var weapon in this.player.Weapons)
@@ -85,7 +85,7 @@ namespace TeamworkTAMBA
             }
             else
             {
-                playerTextBox.Text = "You can not fight the Homeworks without programing skills!";
+                playerTextBox.Text = "You can not solve the Homeworks without programming skills! Learn some! Go and find a teacher!";
                 CSharpCheckBox.Checked = true;
             }
         }
@@ -96,13 +96,13 @@ namespace TeamworkTAMBA
             {
                 player.AttackPower += 10;
                 knowlageUsage += 10;
-                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
+                labelPlayerDmg.Text = "Part solved for: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
                 knowlageUsage -= 10;
-                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
+                labelPlayerDmg.Text = "Part solved for: " + "1-" + player.AttackPower;
             }
         }
 
@@ -113,13 +113,13 @@ namespace TeamworkTAMBA
             {
                 player.AttackPower += 10;
                 knowlageUsage += 1;
-                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
+                labelPlayerDmg.Text = "Part solved for: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
                 knowlageUsage -= 1;
-                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
+                labelPlayerDmg.Text = "Part solved for: " + "1-" + player.AttackPower;
             }
         }
 
@@ -129,13 +129,13 @@ namespace TeamworkTAMBA
             {
                 player.AttackPower += 10;
                 knowlageUsage += 1;
-                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
+                labelPlayerDmg.Text = "Part solved for: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
                 knowlageUsage -= 1;
-                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
+                labelPlayerDmg.Text = "Part solved for: " + "1-" + player.AttackPower;
             }
         }
 
@@ -145,13 +145,13 @@ namespace TeamworkTAMBA
             {
                 player.AttackPower += 10;
                 knowlageUsage += 1;
-                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
+                labelPlayerDmg.Text = "Part solved for: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
                 knowlageUsage -= 1;
-                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
+                labelPlayerDmg.Text = "Part solved for: " + "1-" + player.AttackPower;
             }
         }
 
@@ -161,13 +161,13 @@ namespace TeamworkTAMBA
             {
                 player.AttackPower += 10;
                 knowlageUsage += 1;
-                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
+                labelPlayerDmg.Text = "Part solved for: " + "1-" + player.AttackPower;
             }
             else
             {
                 player.AttackPower -= 10;
                 knowlageUsage -= 1;
-                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
+                labelPlayerDmg.Text = "Part solved for: " + "1-" + player.AttackPower;
             }
         }
 
@@ -196,7 +196,7 @@ namespace TeamworkTAMBA
                     phpCheckBox.Checked = true;
                 }
 
-                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
+                labelPlayerDmg.Text = "Part solved for: " + "1-" + player.AttackPower;
             }
             else
             {
@@ -205,7 +205,7 @@ namespace TeamworkTAMBA
                 cssCheckBox.Checked = false;
                 javascriptCheckBox.Checked = false;
                 phpCheckBox.Checked = false;
-                labelPlayerDmg.Text = "Damage: " + "1-" + player.AttackPower;
+                labelPlayerDmg.Text = "Part solved for: " + "1-" + player.AttackPower;
             }
         }
 
@@ -222,7 +222,7 @@ namespace TeamworkTAMBA
             {
                 if (knowlageUsage > player.Knowledge)
                 {
-                    playerTextBox.Text = "Not enought Knowledge";
+                    playerTextBox.Text = "You don't have enough knowledge!";
                     checkAllBox.Checked = false;
                     javaCheckBox.Checked = false;
                     htmlCheckBox.Checked = false;
@@ -240,8 +240,8 @@ namespace TeamworkTAMBA
                 {
                     Combat();
                     labelPlayersTime.Text = "Time: " + player.Health;
-                    labelEnemyHealth.Text = "Health: " + enemy.Health;
-                    labelPlayerKnowlage.Text = "Knowlage: " + player.Knowledge;
+                    labelEnemyHealth.Text = "Strength: " + enemy.Health;
+                    labelPlayerKnowlage.Text = "Knowledge: " + player.Knowledge;
                 }
             }
 
@@ -277,16 +277,16 @@ namespace TeamworkTAMBA
             if (enemy.Health > 0)
             {
                 enemyHealthProgressBar.Value = newEnemyHealth;
-                playerTextBox.Text = "You have hit the Homework for " + playerRandomDamage + "\nThe Homework now have " + enemy.Health + " health.";
+                playerTextBox.Text = "You have solved a part of the Homework for " + playerRandomDamage + "\nThe Homework now has " + enemy.Health + " strength.";
             }
             else
             {
                 enemyHealthProgressBar.Value = enemyHealthProgressBar.Minimum;
                 isEnemyAlive = false;
-                playerTextBox.Text = "You have hit the Homework for " + playerRandomDamage + "\nThe Homework is dead!";
+                playerTextBox.Text = "You have solved a part of the Homework for " + playerRandomDamage + "\nThe Homework is solved!";
                 player.Health = newPlayerHealth;
                 player.KillsCounter++;
-                killsLabel.Text = "Kills: " + player.KillsCounter;
+                killsLabel.Text = "Solved: " + player.KillsCounter;
                 player.Money += 10;
                 playerMoneyLabel.Text = "Money: " + player.Money;
 
@@ -296,15 +296,15 @@ namespace TeamworkTAMBA
             if (player.Health > 0)
             {
                 playerHealthProgressBar.Value = newPlayerHealth;
-                EnemyTextBox.Text = "But the Homework hit you back for " + enemyRandomDamage +
-                    "\nYou have now " + player.Health + " health";
+                EnemyTextBox.Text = "But that took you some time - exactly : " + enemyRandomDamage +
+                    "\nYou have now " + player.Health + " time left.";
             }
             else
             {
                 playerHealthProgressBar.Value = playerHealthProgressBar.Minimum;
                 isPlayerAlive = false;
-                EnemyTextBox.Text = "The Homework hit you back for " + enemyRandomDamage +
-                                    "\nYou were killed form a Homework.. You sux!";
+                EnemyTextBox.Text = "The Homework took from you " + enemyRandomDamage +
+                                    "\nThe Homework took all your health and you are DONE... You suck!!! You are no good for a developer!";
                 exit.Visible = true;
             }
         }

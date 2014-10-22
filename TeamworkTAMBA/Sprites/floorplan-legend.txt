@@ -18,6 +18,10 @@ u - upper sprite
 
 C - coffee
 
+42*h
+6*t
+6*e
+
 h - c# homework
 t - c# teamwork
 e - c# exam

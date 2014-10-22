@@ -71,6 +71,7 @@
     <Compile Include="MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MapItems\StaticObjects\Gate.cs" />
     <Compile Include="PickupForm.cs">
       <SubType>Form</SubType>
     </Compile>

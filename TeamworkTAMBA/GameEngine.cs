@@ -152,7 +152,7 @@
                 player.Move(0, 0);
             }
 
-            if (mapItemType is Floor)
+            if (mapItemType is Floor || mapItemType is Gate)
             {
                 player.Move(playerNextMove.X, playerNextMove.Y);
             }
@@ -193,7 +193,6 @@
                 this.drawEngine.ChangeCharactersAndItemsSprites(this.CharatersAndItems[this.currentSprite]);
             }
 
-            // TO DO: same thing for friends
             if (charactesAndItems is Enemy)
             {
                 combatForm = new CombatForm(player, charactesAndItems as Enemy, drawEngine);

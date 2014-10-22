@@ -11,26 +11,28 @@
     public class DrawEngine
     {
         private const string Player = "../../Graphics/player.png";
-        private const string Enemy = "../../Graphics/monster.jpg";
+        //private const string Enemy = "../../Graphics/monster.jpg";
         private const string Homework = "../../Graphics/homework.png";
-        private const string Exam = "../../Graphics/exam.jpg";
-        private const string Teamwork = "../../Graphics/teamwork.jpg";
-        private const string Didko = "../../Graphics/dido.jpg";
-        private const string Nakov = "../../Graphics/player.png"; //TO DO: have to be change
-        private const string Nasko = "../../Graphics/nasko.jpg";
-        private const string SuperVlado = "../../Graphics/superVlado.jpg";
-        private const string Tedi = "../../Graphics/tedi.jpg";
+        private const string Exam = "../../Graphics/exam.png";
+        private const string Teamwork = "../../Graphics/teamwork.png";
+        private const string Didko = "../../Graphics/dido.png";
+        private const string Nakov = "../../Graphics/nakov.png";
+        private const string Nasko = "../../Graphics/nasko.png";
+        private const string SuperVlado = "../../Graphics/superVlado.png";
+        private const string Tedi = "../../Graphics/tedi.png";
         private const string Vlado = "../../Graphics/vlado.png";
         private const string Wall = "../../Graphics/wall.jpg";
+        private const string Railing = "../../Graphics/railing.png";
         private const string Coffee = "../../Graphics/coffee.png";
         private const string Floor = "../../Graphics/floor.jpg";
+        private const string Gate = "../../Graphics/gate.png";
         private const string Desk = "../../Graphics/desk.png";
         private const string Air = "../../Graphics/air.png";
-        private const string Time = "../../Graphics/Time.jpg";
+        private const string Time = "../../Graphics/time.png";
 
 
         Image playerSpr, enemySpr, homeworkSpr, examSpr, teamworkSpr, didkoSpr, nakovSpr, naskoSpr, superVladoSpr, tediSpr,
-        vladoSpr, wallSpr, coffeeSpr, floorSpr, deskSpr, airSpr, timeSpr;
+        vladoSpr, wallSpr, railingSpr, coffeeSpr, floorSpr, gateSpr, deskSpr, airSpr, timeSpr;
 
 
         private Graphics device;
@@ -132,9 +134,13 @@
                     break;
                 case SpriteType.Wall: image = this.wallSpr;
                     break;
+                case SpriteType.Railing: image = this.railingSpr;
+                    break;
                 case SpriteType.Coffee: image = this.coffeeSpr;
                     break;
                 case SpriteType.Floor: image = this.floorSpr;
+                    break;
+                case SpriteType.Gate: image = this.gateSpr;
                     break;
                 case SpriteType.Desk: image = this.deskSpr;
                     break;
@@ -152,7 +158,7 @@
         public void LoadResources()
         {
             this.playerSpr = Image.FromFile(Player);
-            this.enemySpr = Image.FromFile(Enemy);
+            //this.enemySpr = Image.FromFile(Enemy);
             this.homeworkSpr = Image.FromFile(Homework);
             this.examSpr = Image.FromFile(Exam);
             this.teamworkSpr = Image.FromFile(Teamwork);
@@ -163,8 +169,10 @@
             this.tediSpr = Image.FromFile(Tedi);
             this.vladoSpr = Image.FromFile(Vlado);
             this.wallSpr = Image.FromFile(Wall);
+            this.railingSpr = Image.FromFile(Railing);
             this.coffeeSpr = Image.FromFile(Coffee);
             this.floorSpr = Image.FromFile(Floor);
+            this.gateSpr = Image.FromFile(Gate);
             this.deskSpr = Image.FromFile(Desk);
             this.airSpr = Image.FromFile(Air);
             this.timeSpr = Image.FromFile(Time);
