@@ -1,4 +1,6 @@
-﻿namespace TeamworkTAMBA
+﻿using TeamworkTAMBA.Forms;
+
+namespace TeamworkTAMBA
 {
     using System.Collections.Generic;
     using System.Drawing;
@@ -18,6 +20,7 @@
         private CombatForm combatForm;
         private PickupForm _pickupForm;
         private HostesForm friendForm;
+        private AlexForm alexfrom;
         private Form gameForm;
         private List<GameObject> enemies;  // TO DO characters
         private Dictionary<int, List<GameObject>> CharatersAndItems;
@@ -209,13 +212,15 @@
             {
                 if (charactesAndItems is Alex)
                 {
-                    friendForm = new HostesForm(charactesAndItems as Friend);
+                    alexfrom = new AlexForm(player, charactesAndItems as Friend);
+                    alexfrom.Visible = true;
                 }
                 else
                 {
                     friendForm = new HostesForm(player, charactesAndItems as Friend);
+                    friendForm.Visible = true;
                 }              
-                friendForm.Visible = true;
+                
             }
         }
 

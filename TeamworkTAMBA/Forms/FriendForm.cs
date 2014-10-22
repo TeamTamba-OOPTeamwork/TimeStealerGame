@@ -193,21 +193,21 @@ namespace TeamworkTAMBA
                 }
             }
 
-            else if (this.friend is Alex)
-            {
-                speach.Text = "Hi! My name is Alex! Congratulations! You are a student of SoftUni now! You voluntary gave us your FREE TIME. Now you have none. In order to gain it back, finish all the Homeworks, Teamworks and Exams in the SoftUni! Good luck!";
-                //foreach (var wep in player.Weapons)
-                //{
-                //    if (player.KillsCounter > )
-                //    {
-                //        wep.Power = 100;
-                //    }
-                //    else
-                //    {
-                //        speach.Text = "You must kill at least 5 Homework to earn PHP!";
-                //    }
-                //}
-            }
+            //else if (this.friend is Alex)
+            //{
+            //    speach.Text = "Hi! My name is Alex! Congratulations! You are a student of SoftUni now! You voluntary gave us your FREE TIME. Now you have none. In order to gain it back, finish all the Homeworks, Teamworks and Exams in the SoftUni! Good luck!";
+            //    //foreach (var wep in player.Weapons)
+            //    //{
+            //    //    if (player.KillsCounter > )
+            //    //    {
+            //    //        wep.Power = 100;
+            //    //    }
+            //    //    else
+            //    //    {
+            //    //        speach.Text = "You must kill at least 5 Homework to earn PHP!";
+            //    //    }
+            //    //}
+            //}
         }
 
         private void bribeBeerCheckbox_CheckedChanged(object sender, EventArgs e)
