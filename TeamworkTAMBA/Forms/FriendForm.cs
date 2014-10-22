@@ -11,11 +11,19 @@ using TeamworkTAMBA.Enums;
 
 namespace TeamworkTAMBA
 {
-    public partial class FriendForm : Form
+    public partial class HostesForm : Form
     {
         private Player player;
         private Friend friend;
-        public FriendForm(Player player, Friend friend)
+
+        public HostesForm(Friend friend)
+        {
+            InitializeComponent();
+
+            this.friend = friend;
+            WhoIsIt(this.friend);
+        }
+        public HostesForm(Player player, Friend friend)
         {
             InitializeComponent();
 
@@ -62,6 +70,7 @@ namespace TeamworkTAMBA
                     }
                 }
             }
+
             else if (this.friend is Vlado)
             {
 
@@ -92,6 +101,7 @@ namespace TeamworkTAMBA
                     }
                 }
             }
+
             else if (this.friend is Didko)
             {
                 foreach (var weapon in player.Weapons)
@@ -121,6 +131,7 @@ namespace TeamworkTAMBA
                     }
                 }
             }
+
             else if (this.friend is Nasko)
             {
                 foreach (var weapon in player.Weapons)
@@ -150,6 +161,7 @@ namespace TeamworkTAMBA
                     }
                 }
             }
+
             else if (this.friend is SuperVlado)
             {
                 
@@ -180,9 +192,10 @@ namespace TeamworkTAMBA
                     }
                 }
             }
-            else if (this.friend is Tedi)
+
+            else if (this.friend is Alex)
             {
-                speach.Text = "Hi, I`m Teodor! I dont know what to give you yet!";
+                speach.Text = "Hi! My name is Alex! Congratulations! You are a student of SoftUni now! You voluntary gave us your FREE TIME. Now you have none. In order to gain it back, finish all the Homeworks, Teamworks and Exams in the SoftUni! Good luck!";
                 //foreach (var wep in player.Weapons)
                 //{
                 //    if (player.KillsCounter > )
@@ -202,7 +215,7 @@ namespace TeamworkTAMBA
             
         }
 
-        private void okButton_Click(object sender, EventArgs e)
+        protected void okButton_Click(object sender, EventArgs e)
         {
             if (bribeBeerCheckbox.Checked)
             {

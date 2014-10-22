@@ -3,8 +3,6 @@
     using System.Collections.Generic;
     using System.Drawing;
     using System.Windows.Forms;
-    using System.Linq;
-    using System.Diagnostics;
 
     // Glavnata logika
     // TO DO: mnogo metodi mnogo ne6to trqbva da se podredqt po regioni mojebi 
@@ -19,7 +17,7 @@
         private Player player;
         private CombatForm combatForm;
         private PickupForm _pickupForm;
-        private FriendForm friendForm;
+        private HostesForm friendForm;
         private Form gameForm;
         private List<GameObject> enemies;  // TO DO characters
         private Dictionary<int, List<GameObject>> CharatersAndItems;
@@ -209,7 +207,14 @@
 
             if (charactesAndItems is Friend)
             {
-                friendForm = new FriendForm(player, charactesAndItems as Friend);
+                if (charactesAndItems is Alex)
+                {
+                    friendForm = new HostesForm(charactesAndItems as Friend);
+                }
+                else
+                {
+                    friendForm = new HostesForm(player, charactesAndItems as Friend);
+                }              
                 friendForm.Visible = true;
             }
         }

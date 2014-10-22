@@ -1,6 +1,6 @@
 ﻿namespace TeamworkTAMBA
 {
-    partial class FriendForm
+    partial class HostesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -54,7 +54,7 @@
             this.speach.Name = "speach";
             this.speach.Size = new System.Drawing.Size(50, 13);
             this.speach.TabIndex = 2;
-            this.speach.Text = "Speache";
+            this.speach.Text = "Speach";
             this.speach.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // playerHealthLabel

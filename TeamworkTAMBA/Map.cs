@@ -214,8 +214,8 @@
                                 case "K":
                                     item = new SuperVlado(SpriteType.SuperVlado, itemlocation, 0);
                                     break;
-                                case "T":
-                                    item = new Nakov(SpriteType.Tedi, itemlocation, 0);
+                                case "L":
+                                    item = new Alex(SpriteType.Alex, itemlocation, 0);
                                     break;
                                 case "C":
                                     item = new Coffee(SpriteType.Coffee, itemlocation, 0);

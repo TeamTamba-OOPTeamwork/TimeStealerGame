@@ -12,7 +12,7 @@
         Nakov,
         Nasko,
         SuperVlado,
-        Tedi,
+        Alex,
         Vlado,
         Wall,
         Railing,

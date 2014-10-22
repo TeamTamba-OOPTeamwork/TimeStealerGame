@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Characters\Characters.cs" />
+    <Compile Include="Characters\Friends\Time.cs" />
     <Compile Include="Forms\CombatForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,7 +108,7 @@
     <Compile Include="MapItems\StaticObjects\StaticObjects.cs" />
     <Compile Include="Characters\Friends\SuperVlado.cs" />
     <Compile Include="Characters\Enemies\Teamwork.cs" />
-    <Compile Include="Characters\Friends\Tedi.cs" />
+    <Compile Include="Characters\Friends\Alex.cs" />
     <Compile Include="Characters\Friends\Vlado.cs" />
     <Compile Include="MapItems\StaticObjects\Wall.cs" />
     <Compile Include="Forms\StoryForm.cs">
@@ -159,7 +160,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Graphics\air.png" />
     <Content Include="Graphics\coffee.png" />

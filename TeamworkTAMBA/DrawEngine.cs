@@ -19,7 +19,7 @@
         private const string Nakov = "../../Graphics/nakov.png";
         private const string Nasko = "../../Graphics/nasko.png";
         private const string SuperVlado = "../../Graphics/superVlado.png";
-        private const string Tedi = "../../Graphics/tedi.png";
+        private const string Alex = "../../Graphics/tedi.png";
         private const string Vlado = "../../Graphics/vlado.png";
         private const string Wall = "../../Graphics/wall.jpg";
         private const string Railing = "../../Graphics/railing.png";
@@ -31,7 +31,7 @@
         private const string Time = "../../Graphics/time.png";
 
 
-        Image playerSpr, enemySpr, homeworkSpr, examSpr, teamworkSpr, didkoSpr, nakovSpr, naskoSpr, superVladoSpr, tediSpr,
+        Image playerSpr, enemySpr, homeworkSpr, examSpr, teamworkSpr, didkoSpr, nakovSpr, naskoSpr, superVladoSpr, alexSpr,
         vladoSpr, wallSpr, railingSpr, coffeeSpr, floorSpr, gateSpr, deskSpr, airSpr, timeSpr;
 
 
@@ -128,7 +128,7 @@
                     break;
                 case SpriteType.SuperVlado: image = this.superVladoSpr;
                     break;
-                case SpriteType.Tedi: image = this.tediSpr;
+                case SpriteType.Alex: image = this.alexSpr;
                     break;
                 case SpriteType.Vlado: image = this.vladoSpr;
                     break;
@@ -166,7 +166,7 @@
             this.nakovSpr = Image.FromFile(Nakov);
             this.naskoSpr = Image.FromFile(Nasko);
             this.superVladoSpr = Image.FromFile(SuperVlado);
-            this.tediSpr = Image.FromFile(Tedi);
+            this.alexSpr = Image.FromFile(Alex);
             this.vladoSpr = Image.FromFile(Vlado);
             this.wallSpr = Image.FromFile(Wall);
             this.railingSpr = Image.FromFile(Railing);
