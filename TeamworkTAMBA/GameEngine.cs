@@ -6,14 +6,10 @@ namespace TeamworkTAMBA
     using System.Drawing;
     using System.Windows.Forms;
 
-    // Glavnata logika
-    // TO DO: mnogo metodi mnogo ne6to trqbva da se podredqt po regioni mojebi 
-    // i da se optimizirat malko ?
-
     public class GameEngine
     {
 
-        public readonly int LAST_VISIBLE_CELL = 560; // 14 * 40 for x
+        public readonly int LAST_VISIBLE_CELL = 560;
         public readonly int FIRST_VISIBLE_CELL = 0;
 
         private Player player;
@@ -23,9 +19,10 @@ namespace TeamworkTAMBA
         private AlexForm alexfrom;
         private WinForm winForm;
         private Form gameForm;
-        private List<GameObject> enemies;  // TO DO characters
+        private List<GameObject> enemies;
         private Dictionary<int, List<GameObject>> CharatersAndItems;
         private int currentSprite;
+        private int solvedToWin = 1;
 
         private bool isInCombat;
         public Map map;
@@ -39,22 +36,9 @@ namespace TeamworkTAMBA
             this.currentSprite = 1;
 
             isInCombat = false;
-            // Bitmap playerSpr = new Bitmap("../../Graphics/Player.png");
             this.player = new Player(SpriteType.Player, new Point(40, 40), 1);
-
-
-
-            //// TO DO: da se iznese v metod i da se mahnat izmislenite kordinati
-            //// za da se polu4at to4ni kordinati trqbva da sa kratni na goleminata na 1 Tile(40 v momenta)
-            //// Bitmap monsterSpr = new Bitmap("../../Graphics/monster.jpg");
-            //enemies = new List<GameObject>(){
-            //    new Enemy(SpriteType.Enemy, new Point(240, 280), 0),
-            //    new Enemy(SpriteType.Enemy, new Point(80, 80), 0)
-            //};
             this.drawEngine = new DrawEngine(gameForm, this.map.MapTiles, this.CharatersAndItems[this.currentSprite], player);
             drawEngine.Draw();
-
-            // Draw();
         }
 
 
@@ -84,36 +68,9 @@ namespace TeamworkTAMBA
             }
         }
 
-
-        // risuva/prerisuva vsi4ko na formata
-        //private void Draw()
-        //{
-
-        //    Image img = new Bitmap(gameForm.Width, gameForm.Height); //o4ertava ramkata na PictureBox-a
-        //    device = Graphics.FromImage(img);
-
-        //    // kolkoto po nadolu se risuva obekt tolkova po-napred sedi vav formata
-        //    map.DrawMap(device);
-
-        //    // risuva celiq list sas jivotni posle 6te se pravi koliziq 
-        //    // sas sa6tiqt list
-
-        //    foreach (Enemy en in enemies)
-        //    {
-        //        en.Draw(device);
-        //    }
-
-        //    player.Draw(device);
-        //    mapSprites.Image = img; // slaga vsi4ki spritove v pictureboxa
-        //}
-
-        // sybira skorossta na igra4a sas sega6nite mu kordinata i polu4ava novite
-        // vrazva se sas Form1.cs za da se dviji po neq
         public void MovementControls(KeyEventArgs e)
         {
             Point nextMove = new Point(0, 0);
-            // mojebi trqbva da se zade kato field v Player.cs
-            // Problem!? Ako e razli4no ot razmera na 1 Tile ili "n" Tile-a ne se dviji 
             int playerSpeed = 40;
 
             if (e.KeyCode == Keys.Left)
@@ -133,15 +90,11 @@ namespace TeamworkTAMBA
                 nextMove = new Point(0, playerSpeed);
             }
 
-            // drawEngine.RemoveObject(player);
-
             DetectCollision(nextMove, map);
 
-            //drawEngine.AddObject(player);
             drawEngine.Draw();
         }
 
-        // TO DO: logika za koliziq s jivotnite
         private void DetectCollision(Point playerNextMove, Map map)
         {
             Point playerNextLocation = new Point(player.location.X + playerNextMove.X, player.Location.Y + playerNextMove.Y);
@@ -227,7 +180,7 @@ namespace TeamworkTAMBA
             if (charactesAndItems is Padlock)
             {
 
-                if (player.KillsCounter == 1)
+                if (player.KillsCounter == solvedToWin)
                 {
                     friendForm.Hide();
                     RemoveObject(charactesAndItems);
