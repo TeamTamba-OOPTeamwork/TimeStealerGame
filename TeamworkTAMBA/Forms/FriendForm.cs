@@ -11,19 +11,19 @@ using TeamworkTAMBA.Enums;
 
 namespace TeamworkTAMBA
 {
-    public partial class HostesForm : Form
+    public partial class FriendForm : Form
     {
         private Player player;
         private Friend friend;
 
-        public HostesForm(Friend friend)
+        public FriendForm(Friend friend)
         {
             InitializeComponent();
 
             this.friend = friend;
             WhoIsIt(this.friend);
         }
-        public HostesForm(Player player, Friend friend)
+        public FriendForm(Player player, Friend friend)
         {
             InitializeComponent();
 

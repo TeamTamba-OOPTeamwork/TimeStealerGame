@@ -32,6 +32,7 @@
             this.storyBtn = new System.Windows.Forms.Button();
             this.hotToPlayBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // startBtn
@@ -81,6 +82,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::TeamworkTAMBA.Properties.Resources.StartLabel;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 600);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.hotToPlayBtn);
@@ -88,7 +92,7 @@
             this.Controls.Add(this.startBtn);
             this.Name = "MainMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main Menu";
+            this.Text = "Saving Private Life - The Quest - Main Menu";
             this.ResumeLayout(false);
 
         }
@@ -99,5 +103,6 @@
         private System.Windows.Forms.Button storyBtn;
         private System.Windows.Forms.Button hotToPlayBtn;
         private System.Windows.Forms.Button exitBtn;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
