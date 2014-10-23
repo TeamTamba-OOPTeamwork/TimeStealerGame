@@ -18,7 +18,7 @@ namespace TeamworkTAMBA
 
         private Player player;
         private CombatForm combatForm;
-        private PickupForm _pickupForm;
+        private PickupForm pickupForm;
         private FriendForm friendForm;
         private AlexForm alexfrom;
         private WinForm winForm;
@@ -205,8 +205,8 @@ namespace TeamworkTAMBA
 
             if (charactesAndItems is Coffee)
             {
-                _pickupForm = new PickupForm(player, charactesAndItems as Coffee);
-                _pickupForm.Visible = true;
+                pickupForm = new PickupForm(player, charactesAndItems as Coffee);
+                pickupForm.Visible = true;
             }
 
             if (charactesAndItems is Friend)
@@ -224,15 +224,22 @@ namespace TeamworkTAMBA
                 
             }
 
-            if (charactesAndItems is Padlock && player.KillsCounter == 54)
+            if (charactesAndItems is Padlock)
             {
-                RemoveObject(charactesAndItems);
-            }
 
-            if (charactesAndItems is Time)
-            {
-                winForm = new WinForm();
-                winForm.Visible = true;
+                if (player.KillsCounter == 1)
+                {
+                    friendForm.Hide();
+                    RemoveObject(charactesAndItems);
+
+                }
+                else
+                {
+                    player.Move(40, 0);
+                    friendForm.Visible = false;
+                    MessageBox.Show("You must solve all the 54 Homeworks, Teamworks and Exams to unlock the door!");
+
+                }
             }
         }
 

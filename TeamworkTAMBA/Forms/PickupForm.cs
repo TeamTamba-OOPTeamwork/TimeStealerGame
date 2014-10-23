@@ -40,7 +40,7 @@ namespace TeamworkTAMBA
             cofeePriceLabel.Text = coffeePrice.ToString();
             colaPriceLabel.Text = colaPrice.ToString();
             redbulPriceLabel.Text = redbulPrice.ToString();
-
+            beerPriceLabel.Text = beerPrice.ToString();
             playerHealthLabel.Text = "Time: " + player.Health;
             bearsHaveLabel.Text = "You have: " + player.Beers + " beers.";
 
