@@ -174,7 +174,7 @@ namespace TeamworkTAMBA
                 if (charactesAndItems is Padlock)
                 {
 
-                    if (player.KillsCounter == solvedToWin)
+                    if (player.KillsCounter >= solvedToWin)
                     {
                         friendForm.Hide();
                         RemoveObject(charactesAndItems);
