@@ -27,7 +27,6 @@
         public const int KILLSCOUNTER = 0;
         public const int BEERS = 0;
 
-        // constructor for the Form1
         public Player(SpriteType sriteType, Point location, int id) :
             base(sriteType, location, id)
         {
@@ -38,7 +37,6 @@
             this.InitializeWeapons();
         }
 
-        // constructor for the battle form
         public Player(SpriteType sriteType, int health, int attackPower) :
             base(sriteType, health, attackPower)
         {

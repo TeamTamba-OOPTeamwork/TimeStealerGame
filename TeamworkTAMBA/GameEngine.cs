@@ -5,10 +5,8 @@ namespace TeamworkTAMBA
     using System.Collections.Generic;
     using System.Drawing;
     using System.Windows.Forms;
-
     public class GameEngine
     {
-
         public readonly int LAST_VISIBLE_CELL = 560;
         public readonly int FIRST_VISIBLE_CELL = 0;
 
@@ -40,7 +38,6 @@ namespace TeamworkTAMBA
             this.drawEngine = new DrawEngine(gameForm, this.map.MapTiles, this.CharatersAndItems[this.currentSprite], player);
             drawEngine.Draw();
         }
-
 
         public List<GameObject> Enemies
         {
@@ -91,7 +88,6 @@ namespace TeamworkTAMBA
             }
 
             DetectCollision(nextMove, map);
-
             drawEngine.Draw();
         }
 
@@ -175,8 +171,6 @@ namespace TeamworkTAMBA
                     friendForm.Visible = true;
                 }
 
-
-
                 if (charactesAndItems is Padlock)
                 {
 
@@ -191,9 +185,9 @@ namespace TeamworkTAMBA
                         player.Move(40, 0);
                         friendForm.Visible = false;
                         MessageBox.Show("You must solve all the 54 Homeworks, Teamworks and Exams to unlock the door!");
-
                     }
                 }
+
                 if (charactesAndItems is Time)
                 {
                     friendForm.Visible = false;

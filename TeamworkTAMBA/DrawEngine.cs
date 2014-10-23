@@ -11,7 +11,6 @@
     public class DrawEngine
     {
         private const string Player = "../../Graphics/player.png";
-        //private const string Enemy = "../../Graphics/monster.jpg";
         private const string Homework = "../../Graphics/homework.png";
         private const string Exam = "../../Graphics/exam.png";
         private const string Teamwork = "../../Graphics/teamwork.png";
@@ -31,10 +30,8 @@
         private const string Time = "../../Graphics/time.png";
         private const string Padlock = "../../Graphics/padlock.png";
 
-
         Image playerSpr, enemySpr, homeworkSpr, examSpr, teamworkSpr, didkoSpr, nakovSpr, naskoSpr, superVladoSpr, alexSpr,
         vladoSpr, wallSpr, railingSpr, coffeeSpr, floorSpr, gateSpr, deskSpr, airSpr, timeSpr, padlockSpr;
-
 
         private Graphics device;
         private PictureBox mapSprites;
@@ -61,8 +58,6 @@
             mapSprites.Parent = form;
             this.LoadResources();
         }
-
-        // risuva/prerisuva vsi4ko na formata
         public void Draw()
         {
             img = new Bitmap(this.form.Width, this.form.Height); //o4ertava ramkata na PictureBox-a
@@ -82,7 +77,6 @@
 
             mapSprites.Image = img;
         }
-
         public void Remove(GameObject gameobj)
         {
             this.charactersAndItems.Remove(gameobj);
@@ -161,7 +155,6 @@
         public void LoadResources()
         {
             this.playerSpr = Image.FromFile(Player);
-            //this.enemySpr = Image.FromFile(Enemy);
             this.homeworkSpr = Image.FromFile(Homework);
             this.examSpr = Image.FromFile(Exam);
             this.teamworkSpr = Image.FromFile(Teamwork);

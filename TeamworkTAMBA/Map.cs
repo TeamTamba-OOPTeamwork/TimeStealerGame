@@ -63,10 +63,6 @@
             Initiaize("../../Sprites/sprite" + CurrentSprite.ToString("0#") + ".txt");
         }
 
-        // ednovremmeno 4ete ot file red po red i preobrazuva char-ovete v Tile (40X40) ot kartata
-        // TO DO: da se slojat razmera na bloka koito 6te se polzva v igrata
-        // da se narisuva nivoto realno kak 6te izglejda
-        // da se slojat kartinkite i drugite nedvijimi predmeti koito 6te se polzvat
         private void Initiaize(string mapName)
         {
             try
@@ -97,7 +93,7 @@
                         for (int row = 0; row < line.Length; row++)
                         {
                             GameObject item = new GameObject();
-                            // -40 so we can hide first tile from screen
+
                             var itemlocation = new Point(row * mapTileSize - 40, col * mapTileSize - 40);
 
                             switch (line[row].ToString())
@@ -138,6 +134,7 @@
                                 default:
                                     break;
                             }
+
                             if (item.SpiteType == SpriteType.None)
                             {
                                 continue;
@@ -148,6 +145,7 @@
                     }
                 }
             }
+
             catch (Exception e)
             {
                 Console.WriteLine("The file could not be read:");
@@ -172,7 +170,7 @@
                         for (int row = 0; row < line.Length; row++)
                         {
                             GameObject item = new GameObject();
-                            // -40 so we can hide first tile from screen
+
                             var itemlocation = new Point(row * mapTileSize - 40, col * mapTileSize - 40);
 
                             switch (line[row].ToString())
@@ -186,36 +184,6 @@
                                 case "e":
                                     item = new Exam(SpriteType.Exam, itemlocation, 1);
                                     break;
-
-                                //case "d":
-                                //    item = new Homework(SpriteType.Homework, itemlocation, 2);
-                                //    break;
-                                //case "e":
-                                //    item = new Teamwork(SpriteType.Teamwork, itemlocation, 2);
-                                //    break;
-                                //case "f":
-                                //    item = new Exam(SpriteType.Exam, itemlocation, 2);
-                                //    break;
-
-                                //case "g":
-                                //    item = new Homework(SpriteType.Homework, itemlocation, 3);
-                                //    break;
-                                //case "h":
-                                //    item = new Teamwork(SpriteType.Teamwork, itemlocation, 3);
-                                //    break;
-                                //case "i":
-                                //    item = new Exam(SpriteType.Exam, itemlocation, 3);
-                                //    break;
-
-                                //case "j":
-                                //    item = new Homework(SpriteType.Homework, itemlocation, 3);
-                                //    break;
-                                //case "k":
-                                //    item = new Teamwork(SpriteType.Teamwork, itemlocation, 3);
-                                //    break;
-                                //case "l":
-                                //    item = new Exam(SpriteType.Exam, itemlocation, 3);
-                                //    break;
                                 case "N":
                                     item = new Nakov(SpriteType.Nakov, itemlocation, 0);
                                     break;
