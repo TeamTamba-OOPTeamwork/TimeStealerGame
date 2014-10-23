@@ -141,6 +141,9 @@
     <EmbeddedResource Include="Forms\FriendForm.resx">
       <DependentUpon>FriendForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PickupForm.resx">
       <DependentUpon>PickupForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +201,7 @@
     <Content Include="Resources\coffee.png" />
     <None Include="Resources\Dead.jpg" />
     <None Include="Resources\DeadLabel.jpg" />
+    <Content Include="Resources\StartLabel.jpg" />
     <Content Include="Sprites\floorplan-legend.txt" />
     <Content Include="Sprites\spriteCharacter01.txt" />
     <Content Include="Sprites\sprite01.txt" />
