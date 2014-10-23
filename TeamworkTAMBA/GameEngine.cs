@@ -21,6 +21,7 @@ namespace TeamworkTAMBA
         private PickupForm _pickupForm;
         private FriendForm friendForm;
         private AlexForm alexfrom;
+        private WinForm winForm;
         private Form gameForm;
         private List<GameObject> enemies;  // TO DO characters
         private Dictionary<int, List<GameObject>> CharatersAndItems;
@@ -221,6 +222,17 @@ namespace TeamworkTAMBA
                     friendForm.Visible = true;
                 }              
                 
+            }
+
+            if (charactesAndItems is Padlock && player.KillsCounter == 54)
+            {
+                RemoveObject(charactesAndItems);
+            }
+
+            if (charactesAndItems is Time)
+            {
+                winForm = new WinForm();
+                winForm.Visible = true;
             }
         }
 
