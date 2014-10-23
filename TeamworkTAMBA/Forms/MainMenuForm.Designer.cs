@@ -92,7 +92,7 @@
             this.Controls.Add(this.startBtn);
             this.Name = "MainMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Time Saviour - Main Menu";
+            this.Text = "Saving Private Life - The Quest - Main Menu";
             this.ResumeLayout(false);
 
         }
