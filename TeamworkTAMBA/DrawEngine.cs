@@ -29,10 +29,11 @@
         private const string Desk = "../../Graphics/desk.png";
         private const string Air = "../../Graphics/air.png";
         private const string Time = "../../Graphics/time.png";
+        private const string Padlock = "../../Graphics/padlock.png";
 
 
         Image playerSpr, enemySpr, homeworkSpr, examSpr, teamworkSpr, didkoSpr, nakovSpr, naskoSpr, superVladoSpr, alexSpr,
-        vladoSpr, wallSpr, railingSpr, coffeeSpr, floorSpr, gateSpr, deskSpr, airSpr, timeSpr;
+        vladoSpr, wallSpr, railingSpr, coffeeSpr, floorSpr, gateSpr, deskSpr, airSpr, timeSpr, padlockSpr;
 
 
         private Graphics device;
@@ -148,6 +149,8 @@
                     break;
                 case SpriteType.Time: image = this.timeSpr;
                     break;
+                case SpriteType.Padlock: image = this.padlockSpr;
+                    break;
                 default:
                     break;
             }
@@ -176,6 +179,7 @@
             this.deskSpr = Image.FromFile(Desk);
             this.airSpr = Image.FromFile(Air);
             this.timeSpr = Image.FromFile(Time);
+            this.padlockSpr = Image.FromFile(Padlock);
         }
     }
 }

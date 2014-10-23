@@ -21,6 +21,7 @@
         Gate,
         Desk,
         Air,
-        Time
+        Time,
+        Padlock
     }
 }

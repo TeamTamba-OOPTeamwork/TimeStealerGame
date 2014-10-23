@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Characters\Characters.cs" />
+    <Compile Include="Characters\Friends\Padlock.cs" />
     <Compile Include="Characters\Friends\Time.cs" />
     <Compile Include="Exceptions\InvalidLineLength.cs" />
     <Compile Include="Forms\AlexForm.cs">
@@ -171,7 +172,9 @@
       <DependentUpon>StoryForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram1.cd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -191,19 +194,19 @@
     <None Include="Graphics\alex.png" />
     <Content Include="Graphics\coffee.png" />
     <Content Include="Graphics\desk.png" />
-    <Content Include="Graphics\dido.jpg" />
-    <Content Include="Graphics\exam.jpg" />
+    <Content Include="Graphics\dido.png" />
+    <Content Include="Graphics\exam.png" />
     <Content Include="Graphics\floor.jpg" />
     <Content Include="Graphics\gate.png" />
     <Content Include="Graphics\homework.png" />
-    <Content Include="Graphics\monster.jpg" />
-    <Content Include="Graphics\nasko.jpg" />
+    <Content Include="Graphics\nakov.png" />
+    <Content Include="Graphics\nasko.png" />
+    <Content Include="Graphics\padlock.png" />
     <Content Include="Graphics\Player.png" />
     <Content Include="Graphics\railing.png" />
-    <Content Include="Graphics\superVlado.jpg" />
-    <Content Include="Graphics\teamwork.jpg" />
-    <Content Include="Graphics\tedi.jpg" />
-    <Content Include="Graphics\Time.jpg" />
+    <Content Include="Graphics\superVlado.png" />
+    <Content Include="Graphics\teamwork.png" />
+    <Content Include="Graphics\time.png" />
     <Content Include="Graphics\vlado.png" />
     <Content Include="Graphics\wall.jpg" />
     <Content Include="Resources\coffee.png" />
