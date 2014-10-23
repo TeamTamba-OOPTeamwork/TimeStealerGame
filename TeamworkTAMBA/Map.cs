@@ -241,7 +241,7 @@
                                     item = new Time(SpriteType.Time, itemlocation, 0);
                                     break;
                                 case "P":
-                                    item = new Padlock(SpriteType.Alex, itemlocation, 0);
+                                    item = new Padlock(SpriteType.Padlock, itemlocation, 0);
                                     break;
                                 default:
                                     break;

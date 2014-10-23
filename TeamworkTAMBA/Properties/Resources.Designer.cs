@@ -109,5 +109,7 @@ namespace TeamworkTAMBA.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        public static System.Drawing.Image WinLabel { get; set; }
     }
 }
