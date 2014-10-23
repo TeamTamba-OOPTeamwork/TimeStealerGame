@@ -173,25 +173,33 @@ namespace TeamworkTAMBA
                 {
                     friendForm = new FriendForm(player, charactesAndItems as Friend);
                     friendForm.Visible = true;
-                }              
-                
-            }
-
-            if (charactesAndItems is Padlock)
-            {
-
-                if (player.KillsCounter == solvedToWin)
-                {
-                    friendForm.Hide();
-                    RemoveObject(charactesAndItems);
-
                 }
-                else
-                {
-                    player.Move(40, 0);
-                    friendForm.Visible = false;
-                    MessageBox.Show("You must solve all the 54 Homeworks, Teamworks and Exams to unlock the door!");
 
+
+
+                if (charactesAndItems is Padlock)
+                {
+
+                    if (player.KillsCounter == solvedToWin)
+                    {
+                        friendForm.Hide();
+                        RemoveObject(charactesAndItems);
+
+                    }
+                    else
+                    {
+                        player.Move(40, 0);
+                        friendForm.Visible = false;
+                        MessageBox.Show("You must solve all the 54 Homeworks, Teamworks and Exams to unlock the door!");
+
+                    }
+                }
+                if (charactesAndItems is Time)
+                {
+                    friendForm.Visible = false;
+                    winForm = new WinForm();
+                    winForm.Visible = true;
+                    gameForm.Visible = false;
                 }
             }
         }

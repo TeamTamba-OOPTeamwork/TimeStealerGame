@@ -64,8 +64,6 @@ namespace TeamworkTAMBA
                             bribeBeerCheckbox.Visible = true;
                             BeersCheck();
                             speach.Text = "Bribe me a beer and I will give you more knowledge";
-
-                            
                         }
                     }
                 }
