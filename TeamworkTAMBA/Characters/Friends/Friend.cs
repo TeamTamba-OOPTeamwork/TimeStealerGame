@@ -5,9 +5,8 @@
     public class Friend : Characters
     {
         public Friend(SpriteType sriteType, Point location, int id) :
-            base(sriteType, location, id)
+            base(sriteType, location, id, 0)
         {
-
         }
     }
 }

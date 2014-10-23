@@ -6,16 +6,10 @@
     {
         private bool isAlive;
 
-        public Enemy(SpriteType sriteType, Point location, int id) :
-            base(sriteType, location, id)
+        public Enemy(SpriteType sriteType, Point location, int id, int attackPower) :
+            base(sriteType, location, id, attackPower)
         {
             this.IsAlive = true;
-        }
-
-        public Enemy(SpriteType sriteType, int health, int attackPower) :
-            base(sriteType, health, attackPower)
-        {
-            
         }
 
         public bool IsAlive { get; set; }

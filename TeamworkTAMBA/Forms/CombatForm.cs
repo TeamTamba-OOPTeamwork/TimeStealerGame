@@ -28,7 +28,6 @@ namespace TeamworkTAMBA
         {
             InitializeComponent();
             this.enemy = enemy;
-            this.enemy.AttackPower = 5;
             this.player = player;
             this.player.AttackPower = 10;
             this.drawEngine = drawEngine;

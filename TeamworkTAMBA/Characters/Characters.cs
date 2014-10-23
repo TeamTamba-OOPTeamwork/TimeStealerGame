@@ -4,18 +4,11 @@
 
     public abstract class Characters : GameObject
     {
-        private int health;
-        private int attackPower;
-
-        public Characters(SpriteType sriteType, Point location, int id) :
+        
+        public Characters(SpriteType sriteType, Point location, int id, int attackPower) :
             base(sriteType, location, id)
         {
             this.Health = 100;
-        }
-
-        public Characters(SpriteType sriteType, int health, int attackPower)
-        {
-            this.Health = health;
             this.AttackPower = attackPower;
         }
 

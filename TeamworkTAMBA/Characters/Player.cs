@@ -28,22 +28,12 @@
         public const int BEERS = 0;
 
         public Player(SpriteType sriteType, Point location, int id) :
-            base(sriteType, location, id)
+            base(sriteType, location, id, 10)
         {
             this.Knowledge = KNOWLEDGE;
             this.Money = MONEY;
             this.KillsCounter = KILLSCOUNTER;
             this.beers = BEERS;
-            this.InitializeWeapons();
-        }
-
-        public Player(SpriteType sriteType, int health, int attackPower) :
-            base(sriteType, health, attackPower)
-        {
-            this.Knowledge = KNOWLEDGE;
-            this.Money = MONEY;
-            this.KillsCounter = KILLSCOUNTER;
-            this.Beers = BEERS;
             this.InitializeWeapons();
         }
 
