@@ -66,6 +66,7 @@
             this.hotToPlayBtn.TabIndex = 2;
             this.hotToPlayBtn.Text = "How to play";
             this.hotToPlayBtn.UseVisualStyleBackColor = true;
+            this.hotToPlayBtn.Click += new System.EventHandler(this.hotToPlayBtn_Click);
             // 
             // exitBtn
             // 

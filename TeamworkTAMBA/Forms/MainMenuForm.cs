@@ -40,5 +40,18 @@ namespace TeamworkTAMBA
             about.Show();
             this.Hide();
         }
+
+        private void hotToPlayBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("How to play the game? You need to solve all the Homeworks, " +
+                            "Teamworks and Exams in order to get to your free time. " +
+                            "Before you do that the door to your Private Life is gonna be locked." +
+                            " You can solve the Homeworks, Teamworks and Exams by using coding skills. " +
+                            "You start by coding on C#. When you solve certain amount of homeworks, " +
+                            "you can go to your Mentors – the SoftUni team, and they will give you new knowledge. " +
+                            "During the entire game you have own time – it ticks out. In order to reload it you can buy coffee," +
+                            " cola etc from the café and earn time. From the café you can buy beer as well. With beer you can bribe" +
+                            " your mentors to get knowledge sooner.Enjoy you quest for Saving your Private Life!");
+        }
     }
 }
