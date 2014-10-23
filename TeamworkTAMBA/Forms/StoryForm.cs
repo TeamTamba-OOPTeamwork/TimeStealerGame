@@ -21,21 +21,25 @@ namespace TeamworkTAMBA
             InitializeComponent();
             this.main = mainForm;
 
-            this.str = @"Lorem Ipsum is simply dummy text of the printing and
- typesetting industry. 
-Lorem Ipsum has been the industry's standard dummy
- text ever since the 1500s,
- when an unknown printer took a galley of type and 
-scrambled it to make a type
- specimen book. It has survived not only five centuries,
- but also the leap into electronic
- typesetting, remaining essentially unchanged. 
-It was popularised in the 1960s
- with the release of Letraset sheets containing 
-Lorem Ipsum passages, and more 
-recently with desktop publishing software like 
-Aldus PageMaker including versions 
-of Lorem Ipsum.";
+            this.str = @"You are taking a stroll in Software University, after you have passed the entry 
+C# exam, daydream of how awesome it would be to become a software engineer, 
+when you suddenly realize that your Private Life is missing!
+“Where is it!?!” – You shout!
+You start looking all over for it and ask everyone if they have seen it, 
+but no one have. The hope inside you that you will find it starts to 
+slip away, when suddenly a voice from behind calls you. You turn around 
+and see a girl standing behind the lobby desk and waving at you.
+You approach her and she says:
+“Hi there, I am Alex.
+Congratulations! You are now a student of Software University! 
+You “voluntary” gave us your Private Life and now you have none. In order
+to gain it back, you must finish all the Homeworks, Teamworks and Exams 
+in the Software University. Have a nice day!”
+(Alex smiles and gets back to doing her stuff.)
+After two minutes of staring at the wall and making sense of what she 
+just said, you realize that you are on a never-ending quest of 
+Saving Private Life!
+";
         }
 
         private void AboutForm_FormClosed(object sender, FormClosedEventArgs e)

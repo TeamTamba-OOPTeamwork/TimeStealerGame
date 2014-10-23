@@ -55,7 +55,7 @@
             this.Controls.Add(this.label1);
             this.Name = "StoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Story";
+            this.Text = "Story of the Game";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AboutForm_FormClosed);
             this.Click += new System.EventHandler(this.AboutForm_Click);
             this.ResumeLayout(false);

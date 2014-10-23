@@ -109,7 +109,15 @@ namespace TeamworkTAMBA.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
-        public static System.Drawing.Image WinLabel { get; set; }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinLabel {
+            get {
+                object obj = ResourceManager.GetObject("WinLabel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

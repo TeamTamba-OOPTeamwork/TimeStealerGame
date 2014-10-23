@@ -4,7 +4,7 @@
 
     public class Exam : Enemy
     {
-        public Exam(SpriteType spriteType,Point location,int id) :
+        public Exam(SpriteType spriteType, Point location, int id) :
             base(spriteType, location, id)
         {
             

@@ -7,7 +7,7 @@
         private int health;
         private int attackPower;
 
-        public Characters(SpriteType sriteType,Point location,int id) :
+        public Characters(SpriteType sriteType, Point location, int id) :
             base(sriteType, location, id)
         {
             this.Health = 100;

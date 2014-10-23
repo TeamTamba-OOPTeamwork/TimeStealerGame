@@ -1,35 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="TeamworkTAMBA.Characters" Collapsed="true">
-    <Position X="11.75" Y="1.75" Width="1.5" />
+    <Position X="13" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAg=</HashCode>
       <FileName>Characters\Characters.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Enemy" Collapsed="true">
-    <Position X="18.5" Y="3.25" Width="1.5" />
+    <Position X="23" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Characters\Enemies\Enemy.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Exam" Collapsed="true">
-    <Position X="16.25" Y="4.75" Width="1.5" />
+    <Position X="20.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Characters\Enemies\Exam.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Homework" Collapsed="true">
-    <Position X="18.5" Y="4.75" Width="1.5" />
+    <Position X="23" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Characters\Enemies\Homework.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Teamwork" Collapsed="true">
-    <Position X="20.75" Y="4.75" Width="1.5" />
+    <Position X="25.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Characters\Enemies\Teamwork.cs</FileName>
@@ -38,9 +38,10 @@
   <Class Name="TeamworkTAMBA.Alex" Collapsed="true">
     <Position X="9.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Characters\Friends\Alex.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="TeamworkTAMBA.Didko" Collapsed="true">
     <Position X="14" Y="4.75" Width="1.5" />
@@ -50,7 +51,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Friend" Collapsed="true">
-    <Position X="7.25" Y="3.25" Width="1.5" />
+    <Position X="8.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Characters\Friends\Friend.cs</FileName>
@@ -59,9 +60,10 @@
   <Class Name="TeamworkTAMBA.Nakov" Collapsed="true">
     <Position X="0.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>Characters\Friends\Nakov.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="TeamworkTAMBA.Nasko" Collapsed="true">
     <Position X="2.75" Y="4.75" Width="1.5" />
@@ -70,99 +72,115 @@
       <FileName>Characters\Friends\Nasko.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TeamworkTAMBA.SuperVlado" Collapsed="true">
+  <Class Name="TeamworkTAMBA.Padlock" Collapsed="true">
     <Position X="5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Characters\Friends\SuperVlado.cs</FileName>
+      <FileName>Characters\Friends\Padlock.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TeamworkTAMBA.Time" Collapsed="true">
+  <Class Name="TeamworkTAMBA.SuperVlado" Collapsed="true">
     <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Characters\Friends\SuperVlado.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TeamworkTAMBA.Time" Collapsed="true">
+    <Position X="11.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Characters\Friends\Time.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Vlado" Collapsed="true">
-    <Position X="11.75" Y="4.75" Width="1.5" />
+    <Position X="16.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Characters\Friends\Vlado.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Player" Collapsed="true">
-    <Position X="23" Y="3.25" Width="1.5" />
+    <Position X="18.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABASABgBAIAYABAAAAAQIAAIAACAAAAAABAAIBAAEBI=</HashCode>
       <FileName>Characters\Player.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="TeamworkTAMBA.DrawEngine" Collapsed="true">
-    <Position X="42.5" Y="0.5" Width="1.5" />
+    <Position X="46.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQCgEAQCISAAEggAJyAABAhYgCqCAARBiIpAEQBEAZQ=</HashCode>
+      <HashCode>AQCgEAQCISAAEggAJyIABAhYgCqCAARBiIpAEQBFAZQ=</HashCode>
       <FileName>DrawEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.CombatForm" Collapsed="true">
-    <Position X="39" Y="0.5" Width="1.5" />
+    <Position X="43" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>oRCCkEEQACARACEABgjVIAACgAMAABRlAAQIATBIgAI=</HashCode>
       <FileName>Forms\CombatForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.DeadForm" Collapsed="true">
-    <Position X="40.75" Y="0.5" Width="1.5" />
+    <Position X="44.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAIAAACABAABAIQCAAAACAAAAIAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Forms\DeadForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.FriendForm" Collapsed="true">
-    <Position X="40.75" Y="1.5" Width="1.5" />
+    <Position X="48.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAICAAAAACAAgAAAAACICAACAAAgEAARACACAAgIAAA=</HashCode>
       <FileName>Forms\FriendForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.GameForm" Collapsed="true">
-    <Position X="39" Y="1.5" Width="1.5" />
+    <Position X="43" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAADAAAAAAAACAAAACAAAAAAAIIAAAAAAAAAA=</HashCode>
       <FileName>Forms\GameForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.MainMenuForm" Collapsed="true">
-    <Position X="42.5" Y="1.5" Width="1.5" />
+    <Position X="46.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAABCAAAAAAgACAAAACAACAAAAAAEgAAAAIAAA=</HashCode>
+      <HashCode>AAQAAAAABCAAAAAAgACAAAACAACAAAQAAEgAAAAIAAA=</HashCode>
       <FileName>Forms\MainMenuForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.PickupForm" Collapsed="true">
-    <Position X="39" Y="2.5" Width="1.5" />
+    <Position X="41.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAgQAAAoCIAAAgAIgCgYAACIIAACCmpEAACAgAIBA4=</HashCode>
       <FileName>Forms\PickupForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.StoryForm" Collapsed="true">
-    <Position X="39" Y="3.5" Width="1.5" />
+    <Position X="48.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQBAAAAACAAABAAAACAAAACCAAAICAAAAAAAAAAAIQ=</HashCode>
       <FileName>Forms\StoryForm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TeamworkTAMBA.GameEngine" Collapsed="true">
-    <Position X="44.25" Y="0.5" Width="1.5" />
+  <Class Name="TeamworkTAMBA.WinForm" Collapsed="true">
+    <Position X="43" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>kIAAECAAACABAAQIAAAAAAAAAAMAEAABAAAAASQAAAA=</HashCode>
+      <HashCode>AAACAAAAACAJAABAIQCAAAACAAAAIAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Forms\WinForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamworkTAMBA.GameEngine" Collapsed="true">
+    <Position X="41.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kIAAECAAACABAAQICAAAAQAAAAMAEAABAAAAASQAAAA=</HashCode>
       <FileName>GameEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.GameObject" Collapsed="true">
-    <Position X="18.5" Y="0.5" Width="1.5" />
+    <Position X="19.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAIAAIAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameObject.cs</FileName>
@@ -170,110 +188,152 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="TeamworkTAMBA.Map" Collapsed="true">
-    <Position X="44.25" Y="1.5" Width="1.5" />
+    <Position X="48.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>DAgAAAAEAAAAAgAEAAAAAAAAAAIAAAIAAEARAAAAAAA=</HashCode>
       <FileName>Map.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.MapItems" Collapsed="true">
-    <Position X="30.75" Y="1.75" Width="1.5" />
+    <Position X="33.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MapItems\MapItems.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Air" Collapsed="true">
-    <Position X="25.25" Y="4.75" Width="1.5" />
+    <Position X="29.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MapItems\StaticObjects\Air.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Coffee" Collapsed="true">
-    <Position X="27.5" Y="4.75" Width="1.5" />
+    <Position X="32" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MapItems\StaticObjects\Coffee.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Desk" Collapsed="true">
-    <Position X="29.75" Y="4.75" Width="1.5" />
+    <Position X="34.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MapItems\StaticObjects\Desk.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Floor" Collapsed="true">
-    <Position X="32" Y="4.75" Width="1.5" />
+    <Position X="36.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MapItems\StaticObjects\Floor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Gate" Collapsed="true">
-    <Position X="34.25" Y="4.75" Width="1.5" />
+    <Position X="38.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MapItems\StaticObjects\Gate.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.StaticObjects" Collapsed="true">
-    <Position X="30.75" Y="3.25" Width="1.5" />
+    <Position X="33.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MapItems\StaticObjects\StaticObjects.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Wall" Collapsed="true">
-    <Position X="36.5" Y="4.75" Width="1.5" />
+    <Position X="27.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MapItems\StaticObjects\Wall.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Program" Collapsed="true">
-    <Position X="40.75" Y="2.5" Width="1.5" />
+    <Position X="43" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Weapons" Collapsed="true">
-    <Position X="40.75" Y="3.5" Width="1.5" />
+    <Position X="41.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAIAAAA=</HashCode>
       <FileName>Weapons\Weapons.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TeamworkTAMBA.Properties.Resources" Collapsed="true">
-    <Position X="42.5" Y="2.5" Width="1.5" />
+  <Class Name="TeamworkTAMBA.Exceptions.InvalidLineLengthException" Collapsed="true">
+    <Position X="44.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAQAAAAAAAAAAABEAAAAQAAAAAAAAAACQAAAIA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\InvalidLineLength.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamworkTAMBA.Forms.AlexForm" Collapsed="true">
+    <Position X="41.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAQAAAECAAAACAAAIAAABAEAAAAgAAAA=</HashCode>
+      <FileName>Forms\AlexForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamworkTAMBA.Properties.Resources" Collapsed="true">
+    <Position X="44.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEQAAAAAAAAAACBEAAAAQAAEAAAAAAACQAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamworkTAMBA.Properties.Settings" Collapsed="true">
-    <Position X="44.25" Y="2.5" Width="1.5" />
+    <Position X="46.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Interface Name="TeamworkTAMBA.IDrawable" Collapsed="true">
-    <Position X="39" Y="4.75" Width="1.5" />
+    <Position X="43" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IDrawable.cs</FileName>
+      <FileName>Interfaces\IDrawable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TeamworkTAMBA.Interfaces.IDanceable" Collapsed="true">
+    <Position X="41.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDanceable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TeamworkTAMBA.Interfaces.IMovable" Collapsed="true">
+    <Position X="44.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IMovable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TeamworkTAMBA.Interfaces.IPederasable" Collapsed="true">
+    <Position X="46.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IPederasable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TeamworkTAMBA.Interfaces.ISingable" Collapsed="true">
+    <Position X="48.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Interfaces\ISingable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="TeamworkTAMBA.SpriteType" Collapsed="true">
-    <Position X="39" Y="5.75" Width="1.5" />
+    <Position X="41.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACgAgQAAAAAAAgAAQAAAAAIgAgAAARAiABAAQEAAYQ=</HashCode>
+      <HashCode>AACgAgQAAAAAAAgAAQIAAAAIgAgAAARAiABAAQEAAYQ=</HashCode>
       <FileName>Enums\SpriteType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="TeamworkTAMBA.Enums.WeaponTypes" Collapsed="true">
-    <Position X="40.75" Y="5.75" Width="1.5" />
+    <Position X="43" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAACAAEAAAAAAAAAABAAAAAAAAAAAAABAAAAAAAEAA=</HashCode>
       <FileName>Enums\WeaponTypes.cs</FileName>
