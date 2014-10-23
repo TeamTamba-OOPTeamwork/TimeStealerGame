@@ -1,6 +1,6 @@
 ﻿namespace TeamworkTAMBA
 {
-    partial class HostesForm
+    partial class FriendForm
     {
         /// <summary>
         /// Required designer variable.

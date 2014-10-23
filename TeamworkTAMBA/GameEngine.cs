@@ -19,7 +19,7 @@ namespace TeamworkTAMBA
         private Player player;
         private CombatForm combatForm;
         private PickupForm _pickupForm;
-        private HostesForm friendForm;
+        private FriendForm friendForm;
         private AlexForm alexfrom;
         private Form gameForm;
         private List<GameObject> enemies;  // TO DO characters
@@ -217,7 +217,7 @@ namespace TeamworkTAMBA
                 }
                 else
                 {
-                    friendForm = new HostesForm(player, charactesAndItems as Friend);
+                    friendForm = new FriendForm(player, charactesAndItems as Friend);
                     friendForm.Visible = true;
                 }              
                 

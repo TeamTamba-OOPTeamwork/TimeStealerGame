@@ -119,7 +119,7 @@
       <FileName>Forms\DeadForm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TeamworkTAMBA.HostesForm" Collapsed="true">
+  <Class Name="TeamworkTAMBA.FriendForm" Collapsed="true">
     <Position X="40.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAICAAAAACAAgAAAAACICAACAAAgEAARACACAAgIAAA=</HashCode>
